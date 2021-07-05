@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+{% load static %}
+<!---->
+
+<!---->
+{% block content %}
+<div class="content content_first">
+    <div class="content_first_left">
+        <h2>취업 준비 빠르고 쉽게 하자</h2>
+        <h2>학교 선배들의 자소서 참고해 스펙 쌓자</h2>
+        <h4>취업에 관련된 정보를 활용해보고 담아보세요</h4>
+        <a href="{% url 'introduce' %}"><button class="content_first_left__more">알아보기</button></a>
+    </div>
+    <div class="content_first_right">
+        <img src="{% static 'images/취야호.jpg' %}">
+    </div>
+</div>
+<!---->
+<div class="content_second_h2">여기는 자소서 나열 공간</div>
+<div class="content_second">
+    <div class="content_second_left">
+        <div class="content_second_left_application">
+            <h2>자기소개서 샘플 받아보기</h2>
+            <div class="content_second_select">
+                <select class="content_second_selects" name="jobs" id="job-select">
+                    <option value="">직무설정</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <select class="content_second_selects" name="types" id="type-select">
+                    <option value="">유형설정</option>
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="c">c</option>
+                </select>
+                <select class="content_second_selects" name="companies" id="company-select">
+                    <option value="">기업형</option>
+                    <option value="nike">nike</option>
+                    <option value="adidas">adidas</option>
+                    <option value="umbro">umbro</option>
+                </select>
+            </div>
+            <input class="underline content_second_name" type="text" id="name" name="name" placeholder="이름">
+            <input class="underline content_second_email" type="text" id="email" name="email" placeholder="이메일">
+            <div class="content_second_private">개인정보제공 동의
+                <input type="checkbox" id="private" name="private" checked placeholder="개인정보제공동의">
+            </div>
+            <input class="content_second_submit" type="submit" value="샘플 자기소개서 받아보기">
+        </div>
+    </div>
+    <div class="content_second_right">
+        
+    </div>
+</div>
+<!---->
+<div class="content_popular">
+    <div class="content_popular_title">인기 자소서 TOP 8</div>
+    <div class="content_popular_top">
+        <div class="content_popular_top_contents">
+            <h4>LG전자</h4>
+            <h5>sbjfsabnjlkfnqwpknfpiqwnipfbqwiofbqwip</h5>
+            <h6>2021년도</h6>
+        </div>
+        <div class="content_popular_top_contents">
+            <h4>LG전자</h4>
+            <h5>sbjfsabnjlkfnqwpknfpiqwnipfbqwiofbqwip</h5>
+            <h6>2021년도</h6>
+        </div>
+        <div class="content_popular_top_contents">
+            <h4>LG전자</h4>
+            <h5>sbjfsabnjlkfnqwpknfpiqwnipfbqwiofbqwip</h5>
+            <h6>2021년도</h6>
+        </div>
+        <div class="content_popular_top_contents">
+            <h4>LG전자</h4>
+            <h5>sbjfsabnjlkfnqwpknfpiqwnipfbqwiofbqwip</h5>
+            <h6>2021년도</h6>
+        </div>
+    </div>
+    <div class="content_popular_bottom">
+        <div class="content_popular_bottom_contents">
+            <h4>LG전자</h4>
+            <h5>sbjfsabnjlkfnqwpknfpiqwnipfbqwiofbqwip</h5>
+            <h6>2021년도</h6>
+        </div>
+        <div class="content_popular_bottom_contents">
+            <h4>LG전자</h4>
+            <h5>sbjfsabnjlkfnqwpknfpiqwnipfbqwiofbqwip</h5>
+            <h6>2021년도</h6>
+        </div>
+        <div class="content_popular_bottom_contents">
+            <h4>LG전자</h4>
+            <h5>sbjfsabnjlkfnqwpknfpiqwnipfbqwiofbqwip</h5>
+            <h6>2021년도</h6>
+        </div>
+        <div class="content_popular_bottom_contents">
+            <h4>LG전자</h4>
+            <h5>sbjfsabnjlkfnqwpknfpiqwnipfbqwiofbqwip</h5>
+            <h6>2021년도</h6>
+        </div>
+    </div>
+</div>
+<!---->
+<div class="content_issue">
+    <div class="content_issue_title">취업에 도움되는 최신 이슈</div>
+    <div class="content_issue_top">
+        <div class="content_issue_top_contents">
+            <h4>LG전자</h4>
+            <h5>sbjfsabnjlkfnqwpknfpiqwnipfbqwiofbqwip</h5>
+            <h6>2021년도</h6>
+        </div>
+        <div class="content_issue_top_contents">
+            <h4>LG전자</h4>
+            <h5>sbjfsabnjlkfnqwpknfpiqwnipfbqwiofbqwip</h5>
+            <h6>2021년도</h6>
+        </div>
+    </div>
+    <div class="content_issue_bottom">
+        <div class="content_issue_bottom_contents">
+            <h4>LG전자</h4>
+            <h5>sbjfsabnjlkfnqwpknfpiqwnipfbqwiofbqwip</h5>
+            <h6>2021년도</h6>
+        </div>
+        <div class="content_issue_bottom_contents">
+            <h4>LG전자</h4>
+            <h5>sbjfsabnjlkfnqwpknfpiqwnipfbqwiofbqwip</h5>
+            <h6>2021년도</h6>
+        </div>
+    </div>
+</div>
+<!---->
+<div class="content_ready">
+    <div class="content_ready_title">취업 준비 시작하기</div>
+    <div class="content_ready_content">
+        <div class="content_ready_content_contents">
+            <iframe width="270" height="270" src="https://www.youtube.com/embed/0tLTEg-ftvI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h5>막막한 나의 취준에 그저 빛이 되어 줄 '취업준비 순서 5단계'</h5>
+            <h6>인싸담당자</h6>
+        </div>
+        <div class="content_ready_content_contents">
+            <iframe width="270" height="270" src="https://www.youtube.com/embed/AJ8rhNnoPSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h5>이런 분들은 개발자 하지 마세요</h5>
+            <h6>테크보이 워니</h6>
+        </div>
+        <div class="content_ready_content_contents">
+            <iframe width="270" height="270" src="https://www.youtube.com/embed/nmFsFdNBQm8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h5>공기업 취업 준비 나도 지원해볼까? 고민 중이라면 클릭!</h5>
+            <h6>취업예감TV</h6>
+        </div>
+    </div>
+</div>    
+{% endblock %}

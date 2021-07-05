@@ -1,0 +1,267 @@
+html{
+    background-color: rgb(248,248,250);
+}
+body{
+    margin: 0;
+}
+.menu{
+    display: flex;
+    border: 1px solid rgb(237,237,237);
+    height: 140px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0% 16%;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.menu_company{
+    font-size: 48px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.menu_left{
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.menu_right{
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.dropbtn {
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.fa-folder-plus, .fa-user{
+    font-size: 20px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content p {
+    color: black;
+    text-decoration: none;
+    padding: .75px 8px;
+    display: block;
+}
+.dropdown-content a {
+    color: black;
+    padding: .5px 12px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+  
+.dropdown:hover .dropbtn{
+    color: orange;
+}
+
+.content_first{
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 18%;
+    height: 450px;
+    background-color: rgba(130, 168, 212, 0.1);
+}
+
+.content_first_left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.content_first_left > button{
+    width: 100px;
+    height: 25px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, .1);
+    border-radius: 50px;
+}
+.content_first_left > h2{
+    margin-top: 4px;
+}
+.content_first_left > h4{
+    margin-top: 8px;
+}
+.content_first_left__more{
+    border-radius: 20%;
+}
+
+.content_first_right{
+    width: 50%;
+}
+
+.content_second_h2{
+    padding: 100px 50px 30px 50px;
+}
+
+.content_second{
+    display: flex;
+    padding: 0px 50px;
+}
+.content_second_left{
+    width: 50%;
+    height: 480px;
+    border: 1px solid orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content_second_left_application{
+    height: 400px;
+    width: 80%;
+    background-color: white;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.content_second_left_application > h2{
+    margin-top: 60px;
+}
+.content_second_select{
+    margin-bottom: 40px;
+    margin-top: 20px;
+    border: 1px solid black;
+}
+.content_second_selects{
+    width: 100px;
+}
+.underline{
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+}
+.content_second_name, .content_second_email{
+    height: 30px;
+}
+.content_second_private{
+    margin: 20px 0px;
+}
+.content_second_submit{
+    margin: 20px 0px;
+    border-radius: 50px;
+    width: 40%;
+    background-color: rgba(130, 168, 212, 0.1);
+}
+.content_second_right{
+    width: 50%;
+    height: 480px;
+    border: 1px solid teal;
+}
+
+.content_second_search{
+    text-align: center;
+    margin: 2px;
+    width: 30%;
+}
+.content_second_h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+
+.content_popular{
+    padding: 0% 10%;
+    margin: 5% 0%;
+}
+.content_popular_title{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+.content_popular_top{
+    display: flex;
+}
+.content_popular_top_contents{
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+    width: 25%;
+}
+.content_popular_bottom{
+    display: flex;
+}
+.content_popular_bottom_contents{
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+    width: 25%;
+}
+.content_issue{
+    padding: 0% 10%;
+    margin: 5% 0%;
+}
+.content_issue_title{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+.content_issue_top{
+    display: flex;
+}
+.content_issue_top_contents{
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    width: 50%;
+}
+.content_issue_bottom{
+    display: flex;
+}
+.content_issue_bottom_contents{
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    width: 50%;
+}
+.content_ready{
+    padding: 0% 10%;
+    margin: 5% 0%;
+}
+.content_ready_title{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+.content_ready_content{
+    display:flex;
+}
+.content_ready_content_contents{
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    width: 33%;
+}
+.footer{
+    text-align: center;
+}
