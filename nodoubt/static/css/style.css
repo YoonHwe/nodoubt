@@ -185,7 +185,6 @@ a{
     margin-bottom: 2%;
 }
 
-
 .content_popular{
     padding: 0% 10%;
     margin: 5% 0%;
@@ -200,7 +199,7 @@ a{
     display: flex;
 }
 .content_popular_top_contents{
-    border: 1px solid black;
+    border: 1px solid orange;
     padding: 10px;
     margin: 5px;
     width: 25%;
