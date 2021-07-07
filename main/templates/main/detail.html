@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+<!---->
+
+<!---->
+{% block content %}
+
+<h1>{{data.company}}</h1>
+<br>
+<br>직무: {{data.job}}
+<br>취업년도: {{data.employed_year}}
+<br>날짜: {{data.pub_date}}
+<br>
+{% if data.image %}
+    <p><img src="{{data.image.url}}" alt="사진"></p>
+{% endif %}
+<br><p>{{data.body}}</p>
+
+
+{% endblock %}

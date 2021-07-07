@@ -9,7 +9,7 @@
         <h2>취업 준비 빠르고 쉽게 하자</h2>
         <h2>학교 선배들의 자소서 참고해 스펙 쌓자</h2>
         <h4>취업에 관련된 정보를 활용해보고 담아보세요</h4>
-        <a href="{% url 'introduce' %}"><button class="content_first_left__more">알아보기</button></a>
+        <a href="{% url 'main:introduce' %}"><button class="content_first_left__more">알아보기</button></a>
     </div>
     <div class="content_first_right">
         <img src="{% static 'images/취야호.jpg' %}">
@@ -57,29 +57,18 @@
     </div>
 </div>
 <!---->
+
 <div class="content_popular">
     <div class="content_popular_title">인기 자소서 TOP 8</div>
     <div class="content_popular_top">
+        {% for data in datas %}
         <div class="content_popular_top_contents">
-            <h4>LG전자</h4>
-            <h5>sbjfsabnjlkfnqwpknfpiqwnipfbqwiofbqwip</h5>
-            <h6>2021년도</h6>
+            <h4>{{data.company}}</h4>
+            <h5>{{data.job}}</h5>
+            <h6>{{data.employed_year}}</h6>
+            <a href ="{%url 'main:detail' data.id %}">...자세히</a>
         </div>
-        <div class="content_popular_top_contents">
-            <h4>LG전자</h4>
-            <h5>sbjfsabnjlkfnqwpknfpiqwnipfbqwiofbqwip</h5>
-            <h6>2021년도</h6>
-        </div>
-        <div class="content_popular_top_contents">
-            <h4>LG전자</h4>
-            <h5>sbjfsabnjlkfnqwpknfpiqwnipfbqwiofbqwip</h5>
-            <h6>2021년도</h6>
-        </div>
-        <div class="content_popular_top_contents">
-            <h4>LG전자</h4>
-            <h5>sbjfsabnjlkfnqwpknfpiqwnipfbqwiofbqwip</h5>
-            <h6>2021년도</h6>
-        </div>
+        {%endfor%}
     </div>
     <div class="content_popular_bottom">
         <div class="content_popular_bottom_contents">
@@ -103,6 +92,9 @@
             <h6>2021년도</h6>
         </div>
     </div>
+    <div>
+        <h2><a href="{% url 'main:new' %}">자소서 업로드</a></h2>
+    </div>    
 </div>
 <!---->
 <div class="content_issue">
@@ -152,5 +144,6 @@
             <h6>취업예감TV</h6>
         </div>
     </div>
-</div>    
+</div>
+
 {% endblock %}
