@@ -29,13 +29,20 @@
     <div class="menu_form menu_right">
         <div class="dropdown">
             <i class="fas fa-user dropbtn"></i>
+            {% if user.is_authenticated %}
             <div class="dropdown-content">
-              <a href="#">user.name</a>
-              <a href="#">내 컨텐츠</a>
-              <a href="#">설정</a>
-              <a href="#">커뮤니티</a>
-              <a href="#">자소서 쓰기</a>
+                <a href="#">user.name</a>
+                <a href="#">내 컨텐츠</a>
+                <a href="#">커뮤니티</a>
+                <a href="#">자소서 쓰기</a>
+                <a href="{% url 'account_logout' %}">로그아웃</a>
             </div>
+            {% else %}
+            <div class="dropdown-content">
+                <a href="{% url 'account_login' %}">로그인</a>
+                <a href="{% url 'account_signup' %}">회원가입</a>
+            </div>
+            {% endif %}
         </div>
         <div class="dropdown">
             <i class="fas fa-folder-plus dropbtn"></i>

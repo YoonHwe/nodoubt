@@ -27,3 +27,23 @@ def create(request):
     new_data.image = request.FILES['image']
     new_data.save()
     return redirect('main:detail', new_data.id)
+
+def edit(request, id):
+    edit_data = Data.objects.get(id = id)
+    return render(request, 'main/edit.html', {'data': edit_data})
+
+def update(request, id):
+    update_data = Data.objects.get(id = id)
+    update_data.company = request.POST['company']
+    update_data.job = request.POST['job']
+    update_data.employed_year = request.POST['employed_year']
+    update_data.pub_date = timezone.now() 
+    update_data.body = request.POST['body']
+    update_data.image = request.FILES['image']
+    update_data.save()
+    return redirect('main:detail', update_data.id)
+
+def delete(request, id):
+    delete_data = Data.objects.get(id = id)
+    delete_data.delete()
+    return redirect ('main:showmain')

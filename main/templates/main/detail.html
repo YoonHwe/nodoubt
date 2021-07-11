@@ -5,6 +5,7 @@
 <!---->
 {% block content %}
 
+{% if user.is_authenticated %}
 <h1>{{data.company}}</h1>
 <br>
 <br>직무: {{data.job}}
@@ -16,5 +17,12 @@
 {% endif %}
 <br><p>{{data.body}}</p>
 
-
+<br><br><br><br>
+<a href="{% url 'main:edit' data.id %}">수정하기</a>
+<a href="{% url 'main:delete' data.id %}">삭제하기</a>
+{% else %}
+<h3>로그인 후 이용 가능</h3>
+<a href="{% url 'account_login' %}">로그인</a>
+<a href="{% url 'account_signup' %}">회원가입</a>
+{% endif %}
 {% endblock %}
