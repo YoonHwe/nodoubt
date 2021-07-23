@@ -7,8 +7,7 @@
 
 {% block content %}
 <!--로그인-->
-<div class="login">
-  <h1 class="login_title">{% trans "Sign In" %}</h1>
+<h1 class="logi">{% trans "Sign In" %}</h1>
 
   {% get_providers as socialaccount_providers %}
 
@@ -34,7 +33,7 @@
     <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
   {% endif %}
 
-  <form class="login" method="POST" action="{% url 'account_login' %}">
+  <form class="login_go" method="POST" action="{% url 'account_login' %}">
     {% csrf_token %}
     {{ form.as_p }}
     {% if redirect_field_value %}
@@ -43,6 +42,41 @@
     <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
     <button class="primaryAction" type="submit">{% trans "찾기" %}</button>
   </form>
+
+
+<div class="login">
+  <h1 class="login_title">{% trans "Sign In" %}</h1>
+
+  
+  <form class="login_go" method="POST" action="{% url 'account_login' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    {% endif %}
+    <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "비밀번호 초기화" %}</a>
+  </form>
+
+  {% get_providers as socialaccount_providers %}
+
+  {% if socialaccount_providers %}
+    <p class="login_signup">{% blocktrans with site.name as site_name %} 아이디가 없다면? <a class="login_signup_link" href="{{ signup_url }}">회원가입</a>
+    {% endblocktrans %}</p>
+
+    <div class="login_socialaccount">
+      <div class="login_socialaccount_or">{% trans 'or' %}</div>
+      <h1 class="login_title">소셜 로그인</h1>
+      <ul class="login_socialaccount_providers">
+        <div class="login_socialaccount_providers_list">{% include "socialaccount/snippets/provider_list.html" with process="login" %}</div>
+      </ul>
+    </div>
+
+    {% include "socialaccount/snippets/login_extra.html" %}
+
+  {% else %}
+    <p>{% blocktrans %}If you have not created an account yet, then please
+    <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+  {% endif %}
 
 </div>
 
