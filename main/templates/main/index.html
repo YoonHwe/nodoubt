@@ -6,58 +6,92 @@
 {% block content %}
 <div class="content content_first">
     <div class="content_first_left">
-        <h2>취업 준비 빠르고 쉽게 하자</h2>
-        <h2>학교 선배들의 자소서 참고해 스펙 쌓자</h2>
-        <h4>취업에 관련된 정보를 활용해보고 담아보세요</h4>
-        <a href="{% url 'main:introduce' %}"><button class="content_first_left__more">알아보기</button></a>
-    </div>
-    <div class="content_first_right">
-        <img src="{% static 'images/취야호.jpg' %}">
-    </div>
-</div>
-<!---->
-<div class="content_second_h2">여기는 자소서 나열 공간</div>
-<div class="content_second">
-    <div class="content_second_left">
-        <div class="content_second_left_application">
-            <h2>자기소개서 샘플 받아보기</h2>
-            <div class="content_second_select">
-                <select class="content_second_selects" name="jobs" id="job-select">
-                    <option value="">직무설정</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                </select>
-                <select class="content_second_selects" name="types" id="type-select">
-                    <option value="">유형설정</option>
-                    <option value="a">a</option>
-                    <option value="b">b</option>
-                    <option value="c">c</option>
-                </select>
-                <select class="content_second_selects" name="companies" id="company-select">
-                    <option value="">기업형</option>
-                    <option value="nike">nike</option>
-                    <option value="adidas">adidas</option>
-                    <option value="umbro">umbro</option>
-                </select>
+        <div class="content_first_left_exp">
+            <h1 id="content_first_left_exp_first">취업 준비 힘들지?</h1>
+            <h2>우리가 도와줄게!</h2>
+            <h3>우리 학교 선배들은 어떻게 했는지 보자!</h3>
+        </div>
+        <div class="content_first_left_icon">
+            <div class="content_first_left_icon_content">
+                <div class="content_first_left_icon_content">
+                    <i class="fas fa-book-open fa-2x left_icon"></i>
+                    <h4>선배 정보 받기</h4>
+                    <h6>선배들의 활동을 받아보세요!</h6>
+                </div>
             </div>
-            <input class="underline content_second_name" type="text" id="name" name="name" placeholder="이름">
-            <input class="underline content_second_email" type="text" id="email" name="email" placeholder="이메일">
-            <div class="content_second_private">개인정보제공 동의
-                <input type="checkbox" id="private" name="private" checked placeholder="개인정보제공동의">
+            <div class="content_first_left_icon_content">
+                <div class="content_first_left_icon_content">
+                    <i class="fas fa-exclamation-circle fa-2x left_icon"></i>
+                    <h4>취업 최신 이슈</h4>
+                    <h6>최신 이슈를 확인하세요!</h6>
+                </div>
             </div>
-            <input class="content_second_submit" type="submit" value="샘플 자기소개서 받아보기">
+            <div class="content_first_left_icon_content">
+                <div class="content_first_left_icon_content">
+                    <i class="fab fa-youtube fa-2x left_icon"></i>
+                    <h4>취업 관련 영상</h4>
+                    <h6>취업 준비를 영상과 함께!</h6>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="content_second_right">
-        
+    <div class="content_first_right">
+        <div class="content_first_right_paper">
+            <img class="content_first_right_paper_image" src="#">
+        </div>
     </div>
 </div>
 <!---->
-
+<div class="content_second_h2">선배들의 정보를 받아봐!</div>
+<div class="content_second">
+    <div class="content_second_right">
+        <div class="content_second_right_instruction">
+            <h2>정보 샘플</h2>
+            <img class="content_second_right_instruction_image" src="1.jpg">
+            <p>1. 당신의 학교 선배가 어떤 자격증을 가졌는지</p>
+            <p>2. 당신의 학교 선배가 어떤 대외활동을 하였는지</p>
+            <p>2. 당신의 학교 선배가 어떤 공모전에 참여하였는지</p>            
+        </div>
+    </div>
+    <div class="content_second_left">
+        <div class="content_second_left_application">
+            <h2>신청서</h2>
+                
+            <div class="content_second_left_application_submit">
+                <div class="content_second_select">
+                    선호직군:     
+                    <select class="content_second_selects" name="jobs" id="job-select">
+                        <option value="">직군</option>
+                        <option value="1">마케팅원론</option>
+                        <option value="2">회계원리</option>
+                        <option value="3">인사관리</option>
+                        <option value="4">재무관리</option>
+                        <option value="5">경영정보론</option>
+                        <option value="6">운영관리</option>
+                    </select>
+                    <select class="content_second_selects" name="types" id="type-select">
+                        <option value="">유형</option>
+                        <option value="a">공채</option>
+                        <option value="b">IPP</option>
+                        <option value="c">?</option>
+                    </select>
+                </div>
+                <input class="underline content_second_name" type="text" id="name" name="name" placeholder="이름">
+                <input class="underline content_second_name" type="text" id="school_number" name="school_number" placeholder="학번">
+                <input class="underline content_second_email" type="text" id="email" name="email" placeholder="이메일">
+                <div class="content_second_private">개인정보제공 동의
+                    <input type="checkbox" id="private" name="private" checked placeholder="개인정보제공동의">
+                </div>
+                <input class="content_second_submit" type="submit" value="자기소개서 받기">
+            </div>
+            <div class="content_second_left_application_inst">
+                <h5>조건에 부합하는 선배의 정보를 이메일로 전송해준다!</h5>
+            </div>
+        </div>
+    </div>
+</div>
+<!---->
+<!-- 
 <div class="content_popular">
     <div class="content_popular_title">인기 자소서 TOP 8</div>
     <div class="content_popular_top">
@@ -95,55 +129,61 @@
     <div>
         <h2><a href="{% url 'main:new' %}">자소서 업로드</a></h2>
     </div>    
-</div>
+</div> -->
 <!---->
 <div class="content_issue">
-    <div class="content_issue_title">취업에 도움되는 최신 이슈</div>
-    <div class="content_issue_top">
-        <div class="content_issue_top_contents">
-            <h4>LG전자</h4>
-            <h5>sbjfsabnjlkfnqwpknfpiqwnipfbqwiofbqwip</h5>
-            <h6>2021년도</h6>
-        </div>
-        <div class="content_issue_top_contents">
-            <h4>LG전자</h4>
-            <h5>sbjfsabnjlkfnqwpknfpiqwnipfbqwiofbqwip</h5>
-            <h6>2021년도</h6>
-        </div>
+    <div class="content_issue_title">취업에 도움되는 최신 이슈를 보자!</div>
+    <div class="content_issue_category">
+        <a class="content_issue_category_list category_list_first" onclick="paintList(1)"><h3>학교</h3></a>
+        <a class="content_issue_category_list category_list_second" onclick="paintList(2)"><h3>인강</h3></a>
+        <a class="content_issue_category_list category_list_third" onclick="paintList(3)"><h3>뉴스레터</h3></a>
+        <a class="content_issue_category_list category_list_fourth" onclick="paintList(4)"><h3>블로그</h3></a>
     </div>
-    <div class="content_issue_bottom">
-        <div class="content_issue_bottom_contents">
-            <h4>LG전자</h4>
-            <h5>sbjfsabnjlkfnqwpknfpiqwnipfbqwiofbqwip</h5>
-            <h6>2021년도</h6>
-        </div>
-        <div class="content_issue_bottom_contents">
-            <h4>LG전자</h4>
-            <h5>sbjfsabnjlkfnqwpknfpiqwnipfbqwiofbqwip</h5>
-            <h6>2021년도</h6>
-        </div>
+    <div class="content_issue_list">
+        <div class="list_content list_first"><h3 style="text-align: center;">보고 싶은 카테고리를 클릭하세요!</h3></div>
+        <div class="list_content list_second"></div>
+        <div class="list_content list_third"></div>
+        <div class="list_content list_fourth"></div>
+        <div class="list_content list_fifth"></div>
+        <div class="list_content list_sixth"></div>
     </div>
 </div>
 <!---->
 <div class="content_ready">
-    <div class="content_ready_title">취업 준비 시작하기</div>
+    <div class="content_ready_title">취업 준비를 영상과 함께 하자!</div>
     <div class="content_ready_content">
         <div class="content_ready_content_contents">
-            <iframe width="270" height="270" src="https://www.youtube.com/embed/0tLTEg-ftvI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <h5>막막한 나의 취준에 그저 빛이 되어 줄 '취업준비 순서 5단계'</h5>
+            <iframe width="270" height="200" src="https://www.youtube.com/embed/0tLTEg-ftvI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h5>막막한 나의 취준에 그저 빛이 되어 줄 '취업준비 순서'</h5>
             <h6>인싸담당자</h6>
         </div>
         <div class="content_ready_content_contents">
-            <iframe width="270" height="270" src="https://www.youtube.com/embed/AJ8rhNnoPSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="270" height="200" src="https://www.youtube.com/embed/AJ8rhNnoPSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <h5>이런 분들은 개발자 하지 마세요</h5>
             <h6>테크보이 워니</h6>
         </div>
         <div class="content_ready_content_contents">
-            <iframe width="270" height="270" src="https://www.youtube.com/embed/nmFsFdNBQm8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <h5>공기업 취업 준비 나도 지원해볼까? 고민 중이라면 클릭!</h5>
+            <iframe width="270" height="200" src="https://www.youtube.com/embed/nmFsFdNBQm8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h5>공기업 취업 준비 나도 지원해볼까? 고민 중이라면!</h5>
+            <h6>취업예감TV</h6>
+        </div>
+    </div>
+    <div class="content_ready_content">
+        <div class="content_ready_content_contents">
+            <iframe width="270" height="200" src="https://www.youtube.com/embed/0tLTEg-ftvI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h5>막막한 나의 취준에 그저 빛이 되어 줄 '취업준비 순서'</h5>
+            <h6>인싸담당자</h6>
+        </div>
+        <div class="content_ready_content_contents">
+            <iframe width="270" height="200" src="https://www.youtube.com/embed/AJ8rhNnoPSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h5>이런 분들은 개발자 하지 마세요</h5>
+            <h6>테크보이 워니</h6>
+        </div>
+        <div class="content_ready_content_contents">
+            <iframe width="270" height="200" src="https://www.youtube.com/embed/nmFsFdNBQm8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h5>공기업 취업 준비 나도 지원해볼까? 고민 중이라면!</h5>
             <h6>취업예감TV</h6>
         </div>
     </div>
 </div>
-
 {% endblock %}

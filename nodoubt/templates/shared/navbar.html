@@ -1,51 +1,32 @@
 <div class="menu">
-    <div class="menu_form menu_left">
-        <div class="dropdown">
-            <i class="fas fa-user dropbtn"></i>
-            <div class="dropdown-content">
-              <a href="#">user.name</a>
-              <a href="#">내 컨텐츠</a>
-              <a href="#">설정</a>
-              <a href="#">커뮤니티</a>
-              <a href="#">자소서 쓰기</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <i class="fas fa-folder-plus dropbtn"></i>
-            <div class="dropdown-content">
-                <p>내 자소서</p>
-                <a class=""href="#">내 자소서 1</a>
-                <a href="#">내 자소서 2</a>
-                <a href="#">내 자소서 3</a>
-                <p>내 뉴스</p>
-                <a href="#">내 뉴스 1</a>
-                <a href="#">내 뉴스 2</a>
-                <a href="#">내 뉴스 3</a>
-            </div>
-        </div>
-    </div>
     <div class="menu_form menu_company">
-        <a href="{% url 'main:showmain' %}">NODOUBT</a></div>
+        <a href="{% url 'main:showmain' %}">NODOUBT</a>
+    </div>
+    <div class="menu_form menu_content">
+        <div class="menu_content_page"><a onclick="fnMove('first')">자소서 받기</a></div>
+        <div class="menu_content_page"><a onclick="fnMove('second_h2')">자소서 보기</a></div>
+        <div class="menu_content_page"><a onclick="fnMove('issue')">취업 뉴이슈</a></div>
+        <div class="menu_content_page"><a onclick="fnMove('ready')">취업 동영상</a></div>
+    </div>
+    
     <div class="menu_form menu_right">
-        <div class="dropdown">
-            <i class="fas fa-user dropbtn"></i>
-            {% if user.is_authenticated %}
+        <div class="dropdown dropdown_left">
+            <i class="fas fa-user fa-lg dropbtn"></i>
             <div class="dropdown-content">
+                {% if user.is_authenticated %}
+                <a href="{% url 'account_logout' %}">로그아웃</a>
+                {% else %}
+                <a href="{% url 'account_login' %}">로그인</a>
+                <a href="{% url 'account_signup' %}">회원가입</a>
+                {% endif %}
                 <a href="#">user.name</a>
                 <a href="#">내 컨텐츠</a>
                 <a href="#">커뮤니티</a>
                 <a href="#">자소서 쓰기</a>
-                <a href="{% url 'account_logout' %}">로그아웃</a>
             </div>
-            {% else %}
-            <div class="dropdown-content">
-                <a href="{% url 'account_login' %}">로그인</a>
-                <a href="{% url 'account_signup' %}">회원가입</a>
-            </div>
-            {% endif %}
         </div>
         <div class="dropdown">
-            <i class="fas fa-folder-plus dropbtn"></i>
+            <i class="fas fa-folder-plus fa-lg dropbtn"></i>
             <div class="dropdown-content">
                 <p>내 자소서</p>
                 <a class=""href="#">내 자소서 1</a>
