@@ -37,7 +37,7 @@
     </div>
     <div class="content_first_right">
         <div class="content_first_right_paper">
-            <img class="content_first_right_paper_image" src="#">
+            <img class="content_first_right_paper_image" src="{% static 'images/2.jpg' %}">
         </div>
     </div>
 </div>
@@ -47,7 +47,7 @@
     <div class="content_second_right">
         <div class="content_second_right_instruction">
             <h2>정보 샘플</h2>
-            <img class="content_second_right_instruction_image" src="1.jpg">
+            <img class="content_second_right_instruction_image" src="{% static 'images/1.jpg' %}">
             <p>1. 당신의 학교 선배가 어떤 자격증을 가졌는지</p>
             <p>2. 당신의 학교 선배가 어떤 대외활동을 하였는지</p>
             <p>2. 당신의 학교 선배가 어떤 공모전에 참여하였는지</p>            
@@ -58,31 +58,22 @@
             <h2>신청서</h2>
                 
             <div class="content_second_left_application_submit">
-                <div class="content_second_select">
-                    선호직군:     
-                    <select class="content_second_selects" name="jobs" id="job-select">
-                        <option value="">직군</option>
-                        <option value="1">마케팅원론</option>
-                        <option value="2">회계원리</option>
-                        <option value="3">인사관리</option>
-                        <option value="4">재무관리</option>
-                        <option value="5">경영정보론</option>
-                        <option value="6">운영관리</option>
-                    </select>
-                    <select class="content_second_selects" name="types" id="type-select">
-                        <option value="">유형</option>
-                        <option value="a">공채</option>
-                        <option value="b">IPP</option>
-                        <option value="c">?</option>
-                    </select>
-                </div>
-                <input class="underline content_second_name" type="text" id="name" name="name" placeholder="이름">
-                <input class="underline content_second_name" type="text" id="school_number" name="school_number" placeholder="학번">
-                <input class="underline content_second_email" type="text" id="email" name="email" placeholder="이메일">
-                <div class="content_second_private">개인정보제공 동의
-                    <input type="checkbox" id="private" name="private" checked placeholder="개인정보제공동의">
-                </div>
-                <input class="content_second_submit" type="submit" value="자기소개서 받기">
+                <form action = "{% url 'main:request_create' %}" method = "post">
+                    {% csrf_token %}
+                    <div class="content_second_select">
+                        <select class="content_second_selects" name="employ_type" id="employ_type">
+                            <option value="">유형</option>
+                            <option value="정규">정규</option>
+                            <option value="인턴">인턴</option>
+                            <option value="IPP">IPP</option>
+                        </select>
+                    </div>
+                    <input class="underline content_second_name" type="text" id="job_type" name="job_type" placeholder="선호직무" required>
+                    <input class="underline content_second_name" type="text" id="name" name="name" placeholder="이름" required>
+                    <input class="underline content_second_name" type="text" id="school_number" name="school_number" placeholder="학번" required>
+                    <input class="underline content_second_email" type="text" id="email" name="email" placeholder="이메일" required>
+                    <input class="content_second_submit" type="submit" value="자기소개서 받기">
+                </form>
             </div>
             <div class="content_second_left_application_inst">
                 <h5>조건에 부합하는 선배의 정보를 이메일로 전송해준다!</h5>

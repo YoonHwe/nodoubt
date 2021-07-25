@@ -12,3 +12,19 @@ class Data(models.Model):
 
     def __str__(self):
         return self.company
+
+class Request(models.Model):
+    EMPLOY_TYPE_CHOICES = {
+        ('정규', '정규'),
+        ('인턴', '인턴'),
+        ('IPP', 'IPP')
+    }
+    id = models.AutoField(primary_key=True)
+    employ_type = models.CharField(max_length=20, choices=EMPLOY_TYPE_CHOICES)
+    job_type = models.CharField(max_length=30)
+    name = models.CharField(max_length=20)
+    school_number = models.CharField(max_length=30)
+    email = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name

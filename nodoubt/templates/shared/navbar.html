@@ -19,23 +19,12 @@
                 <a href="{% url 'account_login' %}">로그인</a>
                 <a href="{% url 'account_signup' %}">회원가입</a>
                 {% endif %}
-                <a href="#">user.name</a>
+                {% if user.is_authenticated %}
+                <a href="#">{{user.last_name}}{{user.first_name}} 님</a>
+                {% endif %}
                 <a href="#">내 컨텐츠</a>
-                <a href="#">커뮤니티</a>
-                <a href="#">자소서 쓰기</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <i class="fas fa-folder-plus fa-lg dropbtn"></i>
-            <div class="dropdown-content">
-                <p>내 자소서</p>
-                <a class=""href="#">내 자소서 1</a>
-                <a href="#">내 자소서 2</a>
-                <a href="#">내 자소서 3</a>
-                <p>내 뉴스</p>
-                <a href="#">내 뉴스 1</a>
-                <a href="#">내 뉴스 2</a>
-                <a href="#">내 뉴스 3</a>
+                <!-- <a href="#">커뮤니티</a> -->
+                <!-- <a href="#">자소서 쓰기</a> -->
             </div>
         </div>
     </div>

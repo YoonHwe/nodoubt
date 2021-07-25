@@ -12,5 +12,6 @@ urlpatterns = [
     path('edit/<str:id>',views.edit, name="edit"),
     path('update/<str:id>',views.update, name="update"),
     path('delete/<str:id>',views.delete, name="delete"),
+    path('request_create/',views.request_create, name="request_create"),
 ]
     

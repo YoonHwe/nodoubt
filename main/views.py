@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Data
+from .models import Data, Request
 from django.utils import timezone
 
 # Create your views here.
@@ -47,3 +47,13 @@ def delete(request, id):
     delete_data = Data.objects.get(id = id)
     delete_data.delete()
     return redirect ('main:showmain')
+
+def request_create(request):
+    new_request = Request()
+    new_request.employ_type = request.POST['employ_type']
+    new_request.job_type = request.POST['job_type']
+    new_request.name = request.POST['name']
+    new_request.school_number = request.POST['school_number']
+    new_request.email = request.POST['email']
+    new_request.save()
+    return redirect('main:showmain') 

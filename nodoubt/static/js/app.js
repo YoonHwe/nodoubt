@@ -43,7 +43,7 @@ function paintList(event){
         category_second.style.color = "black";
         category_third.style.color = "orange";
         category_fourth.style.color = "black";
-        first.innerHTML = "<a class='list_content_link' href=''><h2>뉴스레터 1</h2></a>";
+        first.innerHTML = "<a class='list_content_link' href='https://page.stibee.com/subscriptions/91763' target='_blank'><h2>한경 잡(Job)아라 – 취업</h2></a><h3 style='opacity: 0.5'>설명설명설명</h3>";
         second.innerHTML = "<a class='list_content_link' href=''><h2>뉴스레터 2</h2></a>";
         third.innerHTML = "<a class='list_content_link' href=''><h2>뉴스레터 3</h2></a>";
         fourth.innerHTML = "<a class='list_content_link' href=''><h2>뉴스레터 4</h2></a>";
