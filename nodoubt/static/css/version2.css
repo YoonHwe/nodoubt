@@ -16,7 +16,7 @@ a{
     height: 140px;
     justify-content: space-between;
     align-items: center;
-    padding: 0% 16%;
+    padding: 0% 8%;
 }
 .menu_company{
     font-size: 36px;
@@ -91,7 +91,7 @@ a{
 .content_first{
     display: flex;
     justify-content: space-between;
-    padding: 0% 16%;
+    padding: 0% 10%;
     height: 600px;
     background-color: rgba(130, 168, 212, 0.1);
     border: 1px solid black;
@@ -175,7 +175,10 @@ a{
     padding: 20px;
     border-radius: 50%;
 }
-
+.content_first_left_icon{
+    width: 360px;
+    border: 1px solid greenyellow;
+}
 .content_first_left_icon_content > i{
     margin-top: 10px;
     margin-bottom: 30px;
@@ -187,6 +190,7 @@ a{
 .content_first_left_icon_content > h6{
     margin-top: -20px;
     opacity: 0.5;
+    border: 1px solid teal;
 }
 .content_first_right{
     width: 50%;
@@ -211,7 +215,7 @@ a{
 
 .content_second{
     display: flex;
-    padding: 0% 16%;
+    padding: 0% 10%;
 }
 .content_second_left{
     width: 50%;
@@ -285,8 +289,8 @@ a{
     flex-direction: column;
 }
 .content_second_right_instruction > h2{
-    margin-top: 37px;
     text-align: center;
+    margin-top: 37px;
 }
 .content_second_right_instruction_image{
     box-shadow: 0px 3px 3px rgba(0, 0, 0, .5);
@@ -296,8 +300,8 @@ a{
 .content_second_right_instruction p{
     font-size: 20px;
     margin-bottom: -10px;
-    text-align: start;
     margin-left: 20px;
+    text-align: start;
 }
 
 .content_second_search{
@@ -341,7 +345,7 @@ a{
     width: 25%;
 }
 .content_issue{
-    padding: 0% 16%;
+    padding: 0% 10%;
     margin: 5% 0%;
     background-color: rgba(130, 168, 212, 0.1);
 }
@@ -390,8 +394,7 @@ a{
     text-align: center;
 }
 .content_ready_content{
-    display:flex;
-    justify-content: center;
+    display: flex;
 }
 .content_ready_content_contents{
     text-align: center;
@@ -401,13 +404,8 @@ a{
     width: 33%;
 }
 iframe{
-    width: 270px;
-    height: 200px;
-}
-
-.footer{
-    margin-top: 40px;
-    text-align: center;
+    width: 190px;
+    height: 140px;
 }
 
 .footer{
