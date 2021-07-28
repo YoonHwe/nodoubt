@@ -55,11 +55,11 @@ function paintList(event){
         category_second.style.color = "black";
         category_third.style.color = "black";
         category_fourth.style.color = "orange";   
-        first.innerHTML = "<a class='list_content_link' href=''><h2>블로그 1</h2></a>";
-        second.innerHTML = "<a class='list_content_link' href=''><h2>블로그 2</h2></a>";
-        third.innerHTML = "<a class='list_content_link' href=''><h2>블로그 3</h2></a>";
-        fourth.innerHTML = "<a class='list_content_link' href=''><h2>블로그 4</h2></a>";
-        fifth.innerHTML = "<a class='list_content_link' href=''><h2>블로그 5</h2></a>";
-        sixth.innerHTML = "<a class='list_content_link' href=''><h2>블로그 6</h2></a>";
+        first.innerHTML = "<a class='list_content_link' href='https://brunch.co.kr/@kindoublej#articles' target='_blank'><h2>하리하리</h2></a><h3 style='opacity: 0.5; margin-left: 10px;'>자소서 예시 및 정보를 공유하는 블로그</h3>";
+        second.innerHTML = "<a class='list_content_link' href='https://brunch.co.kr/@insateam#articles' target='_blank'><h2>성공 취업 진로 종결자 윤호상</h2></a><h3 style='opacity: 0.5; margin-left: 10px;'>인사팀 출신 면접관이 운영하는 블로그/h3>";
+        third.innerHTML = "<a class='list_content_link' href='https://blog.naver.com/darddong' target='_blank'><h2>옴스잡스</h2></a><h3 style='opacity: 0.5; margin-left: 10px;'>자소서 및 면접에 관한 팁을 공유하는 블로그</h3>";
+        fourth.innerHTML = "<a class='list_content_link' href='https://cafe.daum.net/breakjob' target='_blank'><h2>취업뽀개기</h2></a><h3 style='opacity: 0.5; margin-left: 10px;'>각종 취업관련 자료 및 정보를 공유하는 커뮤니티</h3>";
+        fifth.innerHTML = "<a class='list_content_link' href='https://cafe.naver.com/dokchi/' target='_blank'><h2>한경 잡(Job)아라</h2></a><h3 style='opacity: 0.5; margin-left: 10px;'>각종 취업관련 자료 및 정보를 공유하는 커뮤니티 </h3>";
+        sixth.innerHTML = "<a class='list_content_link' href='https://cafe.naver.com/specup' target='_blank'><h2>한경 잡(Job)아라</h2></a><h3 style='opacity: 0.5; margin-left: 10px;'>취업정보 및 스펙을 위한 정보를 공유하는 커뮤니티</h3>";
     }
 }

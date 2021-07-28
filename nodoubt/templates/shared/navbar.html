@@ -3,8 +3,8 @@
         <a href="{% url 'main:showmain' %}">NODOUBT</a>
     </div>
     <div class="menu_form menu_content">
-        <div class="menu_content_page"><a onclick="fnMove('first')">자소서 받기</a></div>
-        <div class="menu_content_page"><a onclick="fnMove('second_h2')">자소서 보기</a></div>
+        <div class="menu_content_page"><a onclick="fnMove('first')">노답 설명서</a></div>
+        <div class="menu_content_page"><a onclick="fnMove('second_h2')">자소서 받기</a></div>
         <div class="menu_content_page"><a onclick="fnMove('issue')">취업 뉴이슈</a></div>
         <div class="menu_content_page"><a onclick="fnMove('ready')">취업 동영상</a></div>
     </div>
@@ -20,12 +20,20 @@
                 <a href="{% url 'account_signup' %}">회원가입</a>
                 {% endif %}
                 {% if user.is_authenticated %}
-                <a href="#">{{user.last_name}}{{user.first_name}} 님</a>
+                {{user.last_name}}{{user.first_name}} 님
                 {% endif %}
-                <a href="#">내 컨텐츠</a>
+                <a class="dropdown-content_mypage" href="">내 컨텐츠</a>
                 <!-- <a href="#">커뮤니티</a> -->
                 <!-- <a href="#">자소서 쓰기</a> -->
             </div>
         </div>
     </div>
 </div>
+<script>
+    const mypage = document.querySelector(".dropdown-content_mypage")
+    function mypageReady(event){
+        event.preventDefault();
+        alert("서비스 준비 중입니다.");
+    }
+    mypage.addEventListener("click", mypageReady);
+</script>
