@@ -16,7 +16,7 @@ a{
     height: 140px;
     justify-content: space-between;
     align-items: center;
-    padding: 0% 8%;
+    padding: 0% 10%;
 }
 .menu_company{
     font-size: 36px;
@@ -31,6 +31,7 @@ a{
 .menu_content_page{
     font-family: 'Roboto', sans-serif;
     margin: 0 15px;
+    width: 75px;
 }
 .menu_content_page a:hover{
     color: orange;
@@ -60,20 +61,14 @@ a{
     display: none;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: 160px;
+    min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    padding: 5px 12px;
     border-radius: 10px;
-}
-.dropdown-content p {
-    color: black;
-    text-decoration: none;
-    padding: .75px 8px;
-    display: block;
 }
 .dropdown-content a {
     color: black;
-    padding: 5px 12px;
     text-decoration: none;
     display: block;
 }
@@ -177,7 +172,6 @@ a{
 }
 .content_first_left_icon{
     width: 360px;
-    border: 1px solid greenyellow;
 }
 .content_first_left_icon_content > i{
     margin-top: 10px;
@@ -190,7 +184,6 @@ a{
 .content_first_left_icon_content > h6{
     margin-top: -20px;
     opacity: 0.5;
-    border: 1px solid teal;
 }
 .content_first_right{
     width: 50%;
