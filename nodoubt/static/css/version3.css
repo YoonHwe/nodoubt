@@ -210,7 +210,7 @@ a{
 
 .content_second{
     display: flex;
-    padding: 0% 10%;
+    padding: 0% 6%;
 }
 .content_second_left{
     width: 50%;
@@ -312,7 +312,7 @@ a{
 }
 
 .content_popular{
-    padding: 0% 10%;
+    padding: 0% 6%;
     margin: 5% 0%;
 }
 .content_popular_title{
@@ -340,7 +340,7 @@ a{
     width: 25%;
 }
 .content_issue{
-    padding: 0% 10%;
+    padding: 0% 6%;
     margin: 5% 0%;
     background-color: rgba(130, 168, 212, 0.1);
 }
@@ -379,7 +379,7 @@ a{
 
 /* 다섯번째 칸 - 취업 준비 자료 */
 .content_ready{
-    padding: 0% 10%;
+    padding: 0% 6%;
 }
 .content_ready_title{
     padding-top: 20px;
