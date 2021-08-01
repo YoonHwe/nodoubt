@@ -13,14 +13,14 @@ a{
 .menu{
     display: flex;
     border: 1px solid rgb(237,237,237);
-    height: 140px;
+    height: 100px;
     justify-content: space-between;
     align-items: center;
     padding: 0% 6%;
 }
 .menu_company{
     font-size: 36px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Monoton', sans-serif;
     width: 170px;
 }
 
@@ -90,7 +90,6 @@ a{
     padding: 0% 6%;
     height: 600px;
     background-color: rgba(130, 168, 212, 0.1);
-    border: 1px solid black;
 }
 .content_first_left{
     width: 50%;
@@ -100,22 +99,36 @@ a{
 }
 .content_first_left_exp{
     padding-left: 5%;
-    margin-top: 143px;
+    margin-top: 110px;
 }
 .content_first_left_icon{
     display: flex;
     justify-content: space-between;
     padding: 0% 5%;
+    margin-top: 20px;
     width: 90%;
 }
 .content_first_left_exp h1{
     animation: Disappearing 5s infinite;
 }
+.content_first_left_exp_first{
+    display: flex;
+}
+#content_first_left_exp_first_second{
+    color: orange;
+}
+#content_first_left_exp_second{
+    margin-top: -24px;
+}
 .content_first_left_exp h2{
     animation: Appearing 5s infinite;
     color: orange;
 }
-@keyframes Disappearing{
+.content_first_left_exp h3{
+    margin-top: -12px;
+    opacity: 0.5;
+}
+/* @keyframes Disappearing{
     0%{
         opacity: 1;
     }
@@ -166,13 +179,17 @@ a{
     100%{
         transform: rotate(1turn);
     }
-}
+} */
 .left_icon{
     padding: 20px;
     border-radius: 50%;
+    border: 1px solid orange;
 }
 .content_first_left_icon{
     width: 330px;
+}
+.content_first_left_icon_content{
+    text-align: center;
 }
 .content_first_left_icon_content > i{
     margin-top: 10px;
@@ -203,11 +220,9 @@ a{
 }
 
 /* 두번째 칸 - 인스트럭션 + 지원서 */
-
 .content_second_h2{
     padding-top: 80px;
 }
-
 .content_second{
     display: flex;
     padding: 0% 6%;
@@ -267,7 +282,12 @@ a{
 .content_second_left_application_inst{
     text-align: center;
 }
-
+#content_second_left_application_inst_first{
+    color: orange;
+}
+#content_second_left_application_inst_second{
+    margin-top: -16px;
+}
 .content_second_right{
     width: 50%;
     height: 484px;
@@ -284,8 +304,8 @@ a{
     flex-direction: column;
 }
 .content_second_right_instruction > h2{
-    text-align: center;
     margin-top: 37px;
+    text-align: center;
 }
 .content_second_right_instruction_image{
     box-shadow: 0px 3px 3px rgba(0, 0, 0, .5);
@@ -294,11 +314,15 @@ a{
 }
 .content_second_right_instruction p{
     font-size: 15px;
+    text-align: start;
     margin-bottom: -10px;
     margin-left: 20px;
-    text-align: start;
+    display: flex;
+    align-items: center;
 }
-
+.fa-circle{
+    font-size: 1px;
+}
 .content_second_search{
     text-align: center;
     margin: 2px;
@@ -310,7 +334,7 @@ a{
     font-weight: bold;
     margin-bottom: 2%;
 }
-
+/**/
 .content_popular{
     padding: 0% 6%;
     margin: 5% 0%;
