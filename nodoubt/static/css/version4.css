@@ -34,6 +34,7 @@ a{
 }
 .menu_content_page a:hover{
     color: orange;
+    cursor: pointer;
 }
 .menu_right{
     display: flex;

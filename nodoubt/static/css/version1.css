@@ -33,6 +33,7 @@ a{
 }
 .menu_content_page a:hover{
     color: orange;
+    cursor: pointer;
 }
 .menu_right{
     width: 170px;
