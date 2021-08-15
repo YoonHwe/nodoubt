@@ -71,6 +71,8 @@ a{
     color: black;
     text-decoration: none;
     display: block;
+    padding: 4px 8px;
+    border-radius: 10px;
 }
 .dropdown-content a:hover {
     background-color: #ddd;
@@ -81,7 +83,6 @@ a{
 .dropdown:hover .dropbtn{
     color: orange;
 }
-
 
 /* 첫번째 칸 - 기업 소개 */
 .content_first{
@@ -328,6 +329,10 @@ a{
     font-weight: bold;
     margin-bottom: 2%;
 }
+.content_dtime{
+    border: 1px solid orange;
+    text-align: center;
+}
 /**/
 .content_popular{
     padding: 0% 2%;
@@ -378,6 +383,7 @@ a{
 }
 .content_issue_category_list h3:hover{
     color: orange;
+    cursor: pointer;
 }
 .content_issue_category_list:focus{
     border: 1px solid black;
@@ -417,6 +423,9 @@ a{
     padding: 10px;
     margin: 10px;
     width: 64%;
+}
+.content_ready_content_contents:hover{
+    border: 1px solid orange;
 }
 iframe{
     width: 232px;

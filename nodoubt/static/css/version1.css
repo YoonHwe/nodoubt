@@ -69,6 +69,8 @@ a{
     color: black;
     text-decoration: none;
     display: block;
+    padding: 4px 8px;
+    border-radius: 10px;
 }
 .dropdown-content a:hover {
     background-color: #ddd;
@@ -265,11 +267,22 @@ a{
 .content_second_private{
     margin: 20px 0px;
 }
+.content_second_right_instruction_sample{
+    text-align: center;
+}
+.content_second_right_instruction_sample_button{
+    margin: 20px 0px;
+    border-radius: 50px;
+    width: 100px;
+    background-color: #82a8d41a;
+    padding: 1px;
+    border: 1px solid teal;
+}
 .content_second_submit{
     margin: 20px 0px;
     border-radius: 50px;
     width: 100px;
-    background-color: rgba(130, 168, 212, 0.1);
+    background-color: #82a8d41a;
 }
 .content_second_left_application_inst{
     text-align: center;
@@ -307,7 +320,6 @@ a{
 .content_second_right_instruction p{
     font-size: 20px;
     text-align: start;
-    margin-bottom: -10px;
     margin-left: 20px;
     display: flex;
     align-items: center;
@@ -325,6 +337,10 @@ a{
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 2%;
+}
+.content_dtime{
+    border: 1px solid orange;
+    text-align: center;
 }
 /**/
 .content_popular{
@@ -375,6 +391,7 @@ a{
 }
 .content_issue_category_list h3:hover{
     color: orange;
+    cursor: pointer;
 }
 .content_issue_category_list:focus{
     border: 1px solid black;
@@ -413,6 +430,9 @@ a{
     padding: 10px;
     margin: 10px;
     width: 33%;
+}
+.content_ready_content_contents:hover{
+    border: 1px solid orange;
 }
 iframe{
     width: 270px;
