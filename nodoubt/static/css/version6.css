@@ -104,7 +104,7 @@ a{
     width: 90%;
 }
 .content_first_left_exp h1{
-    font-size: 28px;
+    font-size: 24px;
 }
 .content_first_left_exp_first{
     display: flex;
@@ -113,8 +113,8 @@ a{
     color: orange;
 }
 #content_first_left_exp_second{
-    font-size: 28px;
-    margin-top: -20px;
+    font-size: 24px;
+    margin-top: -16px;
 }
 .content_first_left_exp h2{
     animation: Appearing 5s infinite;
@@ -122,7 +122,7 @@ a{
 }
 .content_first_left_exp h3{
     margin-top: -12px;
-    font-size: 16px;
+    font-size: 14px;
     opacity: 0.5;
 }
 .left_icon{
@@ -131,7 +131,7 @@ a{
     border: 1px solid orange;
 }
 .content_first_left_icon{
-    width: 330px;
+    width: 290px;
     margin: auto;
 }
 .content_first_left_icon_content{
@@ -144,11 +144,12 @@ a{
 }
 .content_first_left_icon_content > h4{
     margin-top: -20px;
+    font-size: 11px;
 }
 .content_first_left_icon_content > h6{
-    margin-top: -20px;
+    margin-top: -12px;
+    font-size: 8px;
     opacity: 0.5;
-    font-size: 9px;
 }
 .content_first_right{
     width: 50%;
@@ -285,7 +286,7 @@ a{
     padding: 2%;
 }
 .content_dtime h1{
-    font-size: 20px;
+    font-size: 18px;
 }
 /**/
 .content_popular{
@@ -334,7 +335,7 @@ a{
 }
 .content_issue_category_list h3{
     margin-right: 30px;
-    border-bottom: 0px solid blue;
+    font-size: 14px;
 }
 .content_issue_category_list h3:hover{
     color: orange;
@@ -389,8 +390,8 @@ a{
     border: 1px solid orange;
 }
 iframe{
-    width: 232px;
-    height: 160px;
+    width: 192px;
+    height: 108px;
 }
 .mobile_no{
     display: none;
@@ -486,10 +487,11 @@ iframe{
 } */
 .signup_onlygoogle{
     margin: 30px 0px;
+    font-size: 20px;
 }
 .signup_login{
     border: 1px solid orange;
-    padding: 20px 100px;
+    padding: 20px 40px;
     background-color: orange;
     font-size: 30px;
     border-radius: 10px;
