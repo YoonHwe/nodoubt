@@ -24,4 +24,5 @@ urlpatterns = [
     path('', include('main.urls')),
     #allauth의 url 연결
     path('accounts/', include('allauth.urls')),
+    path('users/', include('users.urls')),
 ]  + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

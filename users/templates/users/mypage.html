@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="mypage_first">
+    This is mypage for your spec!
+</div>
+<form id="todo_form">
+    <input type="text" placeholder="Write a To Do and Press Enter!" required>
+</form>
+<ul id="todo_list"></ul>
+<div class="mypage_second">
+    {% for request in requests %}
+    <h3>{{request.EMPLOY_TYPE_CHOICES}}</h1>
+    <h3>{{request.id}}</h3>
+    <h3>{{request.job_type}}</h3>
+    <h3>{{request.writer}}</h3>
+    <h3>{{request.name}}</h3>
+    <h3>{{request.school_number}}</h3>
+    <h3>{{request.email}}</h3>
+    <h3>{{request.pub_date}}</h3>
+    <hr>
+    {% endfor %}
+</div>
+
+{% endblock%}

@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 # Create your models here.
 
 class Data(models.Model):
@@ -22,6 +23,7 @@ class Request(models.Model):
     id = models.AutoField(primary_key=True)
     employ_type = models.CharField(max_length=20, choices=EMPLOY_TYPE_CHOICES)
     job_type = models.CharField(max_length=30)
+    writer = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=20)
     school_number = models.CharField(max_length=30)
     email = models.CharField(max_length=100)

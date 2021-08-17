@@ -56,6 +56,7 @@ def request_create(request):
     new_request.school_number = request.POST['school_number']
     new_request.email = request.POST['email']
     new_request.pub_date = timezone.now()
+    new_request.writer = request.user
     new_request.save()
     return redirect('main:showmain') 
 
