@@ -536,3 +536,21 @@ iframe{
 .signup_login:hover{
     opacity: .7;
 }
+/*마이페이지*/
+.mypage{
+    background-color: rgba(130, 168, 212, 0.1);
+    padding: 80px;
+}
+#mypage_first_title{
+    text-align: center;
+}
+.mypage_first{
+    text-align: center;
+    margin: auto;
+}
+.mypage_first_head_th{
+    border: 2px solid orange;
+}
+.mypage_first_body_td{
+    /* border-bottom: 2px solid orange; */
+}

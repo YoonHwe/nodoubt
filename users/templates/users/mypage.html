@@ -1,25 +1,37 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="mypage_first">
+<!-- <div>
     This is mypage for your spec!
 </div>
 <form id="todo_form">
     <input type="text" placeholder="Write a To Do and Press Enter!" required>
 </form>
-<ul id="todo_list"></ul>
-<div class="mypage_second">
-    {% for request in requests %}
-    <h3>{{request.EMPLOY_TYPE_CHOICES}}</h1>
-    <h3>{{request.id}}</h3>
-    <h3>{{request.job_type}}</h3>
-    <h3>{{request.writer}}</h3>
-    <h3>{{request.name}}</h3>
-    <h3>{{request.school_number}}</h3>
-    <h3>{{request.email}}</h3>
-    <h3>{{request.pub_date}}</h3>
-    <hr>
-    {% endfor %}
-</div>
+<ul id="todo_list"></ul> -->
+<div class="mypage">
+    <h2 id="mypage_first_title">나의 신청내역</h2>
+<table class="mypage_first">
+    <thead class="mypage_first_head">
+        <tr>
+            <th scope="col" id="board" class="mypage_first_head_th">신청일시</th>
+            <th scope="col" id="board" class="mypage_first_head_th">선호직무</th>
+            <th scope="col" id="board" class="mypage_first_head_th">이름</th>
+            <th scope="col" id="board" class="mypage_first_head_th">이메일</th>
+            <th scope="col" id="board" class="mypage_first_head_th">학번</th>
+        </tr>
+    </thead>
+    <tbody class="mypage_first_body">
+        {% for request in requests %}
+        <tr>
+            <td class="mypage_first_body_td">{{request.pub_date}}</td>
+            <td class="mypage_first_body_td">{{request.job_type}}</td>
+            <td class="mypage_first_body_td">{{request.name}}</td>
+            <td class="mypage_first_body_td">{{request.email}}</td>
+            <td class="mypage_first_body_td">{{request.school_number}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 
+</div>
 {% endblock%}

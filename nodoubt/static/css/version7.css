@@ -1,5 +1,6 @@
 html{
     background-color: rgb(248,248,250);
+    margin: auto;
 }
 body{
     margin: 0;
@@ -19,13 +20,11 @@ a{
     padding: 0% 6%;
 }
 .menu_company{
-    font-size: 36px;
+    font-size: 24px;
     font-family: 'Monoton', sans-serif;
     width: 170px;
 }
-
 .menu_content{
-    display: flex;
     margin-left: 10%;
 }
 .menu_content_page{
@@ -38,7 +37,6 @@ a{
     cursor: pointer;
 }
 .menu_right{
-    width: 170px;
     display: flex;
 }
 
@@ -67,6 +65,7 @@ a{
     z-index: 1;
     padding: 5px 12px;
     border-radius: 10px;
+    margin-left: -80px;
 }
 .dropdown-content a {
     color: black;
@@ -85,34 +84,27 @@ a{
     color: orange;
 }
 
-
 /* 첫번째 칸 - 기업 소개 */
 .content_first{
-    display: flex;
-    justify-content: space-between;
-    padding: 0% 6%;
-    height: 600px;
+    padding: 2%;
+    height: 342px;
     background-color: rgba(130, 168, 212, 0.1);
 }
 .content_first_left{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
     font-family: 'Noto Sans KR', sans-serif;
 }
 .content_first_left_exp{
     padding-left: 5%;
-    margin-top: 110px;
 }
 .content_first_left_icon{
     display: flex;
     justify-content: space-between;
-    padding: 0% 5%;
+    padding-left: 5%;
     margin-top: 20px;
     width: 90%;
 }
 .content_first_left_exp h1{
-    animation: Disappearing 5s infinite;
+    font-size: 24px;
 }
 .content_first_left_exp_first{
     display: flex;
@@ -121,7 +113,8 @@ a{
     color: orange;
 }
 #content_first_left_exp_second{
-    margin-top: -24px;
+    font-size: 24px;
+    margin-top: -16px;
 }
 .content_first_left_exp h2{
     animation: Appearing 5s infinite;
@@ -129,67 +122,17 @@ a{
 }
 .content_first_left_exp h3{
     margin-top: -12px;
+    font-size: 14px;
     opacity: 0.5;
 }
-/* @keyframes Disappearing{
-    0%{
-        opacity: 1;
-    }
-    25%{
-        opacity: 0.75;
-    }
-    50%{
-        opacity: 0.5;
-    }
-    75%{
-        opacity: 0.25;
-    }
-    100%{
-        opacity: 0;
-    }
-}
-@keyframes Appearing{
-    0%{
-        opacity: 0;
-    }
-    25%{
-        opacity: 0.25;
-    }
-    50%{
-        opacity: 0.5;
-    }
-    75%{
-        opacity: 0.75;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
-@keyframes Rotating{
-    0%{
-        transform: rotate(0turn);
-    }
-    25%{
-        transform: rotate(0.25turn);
-    }
-    50%{
-        transform: rotate(0.5turn);
-    }
-    75%{
-        transform: rotate(0.75turn);
-    }
-    100%{
-        transform: rotate(1turn);
-    }
-} */
 .left_icon{
     padding: 20px;
     border-radius: 50%;
     border: 1px solid orange;
 }
 .content_first_left_icon{
-    width: 330px;
+    width: 290px;
+    margin: auto;
 }
 .content_first_left_icon_content{
     text-align: center;
@@ -201,14 +144,16 @@ a{
 }
 .content_first_left_icon_content > h4{
     margin-top: -20px;
+    font-size: 11px;
 }
 .content_first_left_icon_content > h6{
-    margin-top: -20px;
+    margin-top: -12px;
+    font-size: 8px;
     opacity: 0.5;
-    font-size: 9px;
 }
 .content_first_right{
     width: 50%;
+    display: none;
 }
 .content_first_right_paper{
     margin: 10% 10%;
@@ -223,15 +168,14 @@ a{
 }
 
 /* 두번째 칸 - 인스트럭션 + 지원서 */
+
 .content_second_h2{
-    padding-top: 80px;
+    padding-top: 40px;
 }
 .content_second{
-    display: flex;
-    padding: 0% 6%;
+    padding: 2%;
 }
 .content_second_left{
-    width: 50%;
     height: 484px;
     padding: 10px;
     display: flex;
@@ -292,8 +236,7 @@ a{
     margin-top: -16px;
 }
 .content_second_right{
-    width: 50%;
-    height: 484px;
+    height: 440px;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -337,13 +280,17 @@ a{
     font-weight: bold;
     margin-bottom: 2%;
 }
+/**/
 .content_dtime{
-    border: 1px solid orange;
     text-align: center;
+    padding: 2%;
+}
+.content_dtime h1{
+    font-size: 18px;
 }
 /**/
 .content_popular{
-    padding: 0% 6%;
+    padding: 0% 2%;
     margin: 5% 0%;
 }
 .content_popular_title{
@@ -370,14 +317,15 @@ a{
     margin: 5px;
     width: 25%;
 }
+/**/
 .content_issue{
-    padding: 0% 6%;
+    padding: 0% 2%;
     margin: 5% 0%;
     background-color: rgba(130, 168, 212, 0.1);
 }
 .content_issue_title{
-    padding-top: 80px;
-    font-size: 30px;
+    padding-top: 40px;
+    font-size: 25px;
     font-weight: bold;
     margin-bottom: 2%;
     text-align: center;
@@ -387,7 +335,7 @@ a{
 }
 .content_issue_category_list h3{
     margin-right: 30px;
-    border-bottom: 0px solid blue;
+    font-size: 14px;
 }
 .content_issue_category_list h3:hover{
     color: orange;
@@ -405,13 +353,19 @@ a{
     margin-top: 9px;
     padding: 0px 10px;
 }
+.list_content a{
+    font-size: 12px;
+}
+.list_content h3{
+    font-size: 12px;
+}
 .list_content_link:hover{
     color: orange;
 }
 
 /* 다섯번째 칸 - 취업 준비 자료 */
 .content_ready{
-    padding: 0% 6%;
+    padding: 0% 2%;
 }
 .content_ready_title{
     padding-top: 20px;
@@ -422,22 +376,26 @@ a{
 }
 .content_ready_content{
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .content_ready_content_contents{
     text-align: center;
     border: 1px solid black;
     padding: 10px;
     margin: 10px;
-    width: 33%;
+    width: 64%;
 }
 .content_ready_content_contents:hover{
     border: 1px solid orange;
 }
 iframe{
-    width: 150px;
-    height: 120px;
+    width: 192px;
+    height: 108px;
 }
-
+.mobile_no{
+    display: none;
+}
 .footer{
     margin-top: 40px;
     text-align: center;
@@ -447,7 +405,7 @@ iframe{
 .login{
     text-align: center;
     background-color: rgba(130, 168, 212, 0.1);
-    padding: 60px 0px;
+    padding: 40px 40px;
 }
 
 .login_signup{
@@ -462,6 +420,9 @@ iframe{
 }
 .login_socialaccount{
     text-align: center;
+}
+.login_socialaccount_title{
+    margin-top: -4px;
 }
 .login_socialaccount_or{
     border: 1px dotted black;
@@ -513,9 +474,8 @@ iframe{
 /*회원가입*/
 .signup{
     text-align: center;
-    border: 1px solid black;
     background-color: rgba(130, 168, 212, 0.1);
-    padding: 60px 0px;
+    padding: 20px 0px 40px 0px;
 }
 /* .signup_button{
     padding: 10px 20px;
@@ -527,10 +487,11 @@ iframe{
 } */
 .signup_onlygoogle{
     margin: 30px 0px;
+    font-size: 20px;
 }
 .signup_login{
     border: 1px solid orange;
-    padding: 20px 100px;
+    padding: 20px 40px;
     background-color: orange;
     font-size: 30px;
     border-radius: 10px;
@@ -541,7 +502,7 @@ iframe{
 /*마이페이지*/
 .mypage{
     background-color: rgba(130, 168, 212, 0.1);
-    padding: 80px;
+    padding: 40px;
 }
 #mypage_first_title{
     text-align: center;

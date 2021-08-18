@@ -104,7 +104,7 @@ a{
     width: 90%;
 }
 .content_first_left_exp h1{
-    font-size: 24px;
+    font-size: 28px;
 }
 .content_first_left_exp_first{
     display: flex;
@@ -113,16 +113,15 @@ a{
     color: orange;
 }
 #content_first_left_exp_second{
-    font-size: 24px;
-    margin-top: -16px;
+    font-size: 28px;
+    margin-top: -20px;
 }
 .content_first_left_exp h2{
-    animation: Appearing 5s infinite;
     color: orange;
 }
 .content_first_left_exp h3{
     margin-top: -12px;
-    font-size: 14px;
+    font-size: 16px;
     opacity: 0.5;
 }
 .left_icon{
@@ -131,7 +130,7 @@ a{
     border: 1px solid orange;
 }
 .content_first_left_icon{
-    width: 290px;
+    width: 330px;
     margin: auto;
 }
 .content_first_left_icon_content{
@@ -144,12 +143,11 @@ a{
 }
 .content_first_left_icon_content > h4{
     margin-top: -20px;
-    font-size: 11px;
 }
 .content_first_left_icon_content > h6{
-    margin-top: -12px;
-    font-size: 8px;
+    margin-top: -20px;
     opacity: 0.5;
+    font-size: 9px;
 }
 .content_first_right{
     width: 50%;
@@ -286,7 +284,7 @@ a{
     padding: 2%;
 }
 .content_dtime h1{
-    font-size: 18px;
+    font-size: 20px;
 }
 /**/
 .content_popular{
@@ -335,7 +333,7 @@ a{
 }
 .content_issue_category_list h3{
     margin-right: 30px;
-    font-size: 14px;
+    border-bottom: 0px solid blue;
 }
 .content_issue_category_list h3:hover{
     color: orange;
@@ -390,8 +388,8 @@ a{
     border: 1px solid orange;
 }
 iframe{
-    width: 192px;
-    height: 108px;
+    width: 232px;
+    height: 160px;
 }
 .mobile_no{
     display: none;
@@ -487,15 +485,32 @@ iframe{
 } */
 .signup_onlygoogle{
     margin: 30px 0px;
-    font-size: 20px;
 }
 .signup_login{
     border: 1px solid orange;
-    padding: 20px 40px;
+    padding: 20px 100px;
     background-color: orange;
     font-size: 30px;
     border-radius: 10px;
 }
 .signup_login:hover{
     opacity: .7;
+}
+/*마이페이지*/
+.mypage{
+    background-color: rgba(130, 168, 212, 0.1);
+    padding: 40px;
+}
+#mypage_first_title{
+    text-align: center;
+}
+.mypage_first{
+    text-align: center;
+    margin: auto;
+}
+.mypage_first_head_th{
+    border: 2px solid orange;
+}
+.mypage_first_body_td{
+    /* border-bottom: 2px solid orange; */
 }
