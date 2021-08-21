@@ -15,5 +15,7 @@ urlpatterns = [
     path('request_create/',views.request_create, name="request_create"),
     path('sample/',views.sample, name="sample"),
     path('letter/',views.letter, name="letter"),
+    path('feedback/',views.feedback, name="feedback"),
+    path('feedback_create/',views.feedback_create, name="feedback_create"),
 ]
     

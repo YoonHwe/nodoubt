@@ -390,7 +390,35 @@ iframe{
     margin-top: 40px;
     text-align: center;
 }
-
+#footer_letter{
+    background-color: orange;
+    border-radius: 10px;
+}
+#letter{
+    border: 1px solid black; 
+    margin: auto; 
+    width: 420px; 
+    padding: 40px;
+    margin-top: 20px;
+}
+/*feedback*/
+#feedback{
+    border: 1px solid black; 
+    width: 440px; 
+    margin: auto;
+    padding: 20px; 
+    margin-top: 20px
+}
+#feedback h1{
+    text-align: center;
+}
+#feedback h2{
+    text-align: center;
+}
+#feedback_submit{
+    display: flex;
+    justify-content: center;
+}
 /*로그인*/
 .login{
     text-align: center;
