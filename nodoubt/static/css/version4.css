@@ -105,7 +105,7 @@ a{
     width: 90%;
 }
 .content_first_left_exp h1{
-    animation: Disappearing 5s infinite;
+    font-size: 40px;
 }
 .content_first_left_exp_first{
     display: flex;
@@ -121,68 +121,19 @@ a{
     color: orange;
 }
 .content_first_left_exp h3{
-    margin-top: -12px;
+    margin-top: -20px;
+    font-size: 24px;
     opacity: 0.5;
 }
-/* @keyframes Disappearing{
-    0%{
-        opacity: 1;
-    }
-    25%{
-        opacity: 0.75;
-    }
-    50%{
-        opacity: 0.5;
-    }
-    75%{
-        opacity: 0.25;
-    }
-    100%{
-        opacity: 0;
-    }
-}
-@keyframes Appearing{
-    0%{
-        opacity: 0;
-    }
-    25%{
-        opacity: 0.25;
-    }
-    50%{
-        opacity: 0.5;
-    }
-    75%{
-        opacity: 0.75;
-    }
-    100%{
-        opacity: 1;
-    }
-}
 
-@keyframes Rotating{
-    0%{
-        transform: rotate(0turn);
-    }
-    25%{
-        transform: rotate(0.25turn);
-    }
-    50%{
-        transform: rotate(0.5turn);
-    }
-    75%{
-        transform: rotate(0.75turn);
-    }
-    100%{
-        transform: rotate(1turn);
-    }
-} */
 .left_icon{
     padding: 20px;
     border-radius: 50%;
     border: 1px solid orange;
 }
 .content_first_left_icon{
-    width: 330px;
+    width: 440px;
+    margin: auto;
 }
 .content_first_left_icon_content{
     text-align: center;
@@ -215,9 +166,7 @@ a{
     width: 100%;
     height: 100%;
 }
-
 /* 두번째 칸 - 인스트럭션 + 지원서 */
-
 .content_second_h2{
     padding-top: 80px;
 }
@@ -249,6 +198,7 @@ a{
     text-align: center;
     padding: 20px 0px;
     border-radius: 10px;
+    width: 280px;
 }
 .content_second_select{
     margin-bottom: 20px;
@@ -307,6 +257,9 @@ a{
     width: 100%;
     height: 250px;
 }
+.content_second_right_instruction_content{
+    display: flex;
+}
 .content_second_right_instruction p{
     font-size: 15px;
     text-align: start;
@@ -330,7 +283,6 @@ a{
     margin-bottom: 2%;
 }
 .content_dtime{
-    border: 1px solid orange;
     text-align: center;
 }
 /**/
@@ -428,8 +380,8 @@ a{
     border: 1px solid orange;
 }
 iframe{
-    width: 232px;
-    height: 160px;
+    width: 328px;
+    height: 214px;
 }
 .mobile_no{
     display: none;
@@ -537,7 +489,7 @@ iframe{
 /*마이페이지*/
 .mypage{
     background-color: rgba(130, 168, 212, 0.1);
-    padding: 40px;
+    padding: 24px;
 }
 #mypage_first_title{
     text-align: center;

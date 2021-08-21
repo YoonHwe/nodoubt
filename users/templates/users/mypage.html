@@ -10,28 +10,27 @@
 <ul id="todo_list"></ul> -->
 <div class="mypage">
     <h2 id="mypage_first_title">나의 신청내역</h2>
-<table class="mypage_first">
-    <thead class="mypage_first_head">
-        <tr>
-            <th scope="col" id="board" class="mypage_first_head_th">신청일시</th>
-            <th scope="col" id="board" class="mypage_first_head_th">선호직무</th>
-            <th scope="col" id="board" class="mypage_first_head_th">이름</th>
-            <th scope="col" id="board" class="mypage_first_head_th">이메일</th>
-            <th scope="col" id="board" class="mypage_first_head_th">학번</th>
-        </tr>
-    </thead>
-    <tbody class="mypage_first_body">
-        {% for request in requests %}
-        <tr>
-            <td class="mypage_first_body_td">{{request.pub_date}}</td>
-            <td class="mypage_first_body_td">{{request.job_type}}</td>
-            <td class="mypage_first_body_td">{{request.name}}</td>
-            <td class="mypage_first_body_td">{{request.email}}</td>
-            <td class="mypage_first_body_td">{{request.school_number}}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
-
+    <table class="mypage_first">
+        <thead class="mypage_first_head">
+            <tr>
+                <th scope="col" id="board" class="mypage_first_head_th mypage_pubdate">신청일시</th>
+                <th scope="col" id="board" class="mypage_first_head_th mypage_job_type">선호직무</th>
+                <th scope="col" id="board" class="mypage_first_head_th mypage_name">이름</th>
+                <th scope="col" id="board" class="mypage_first_head_th mypage_email">이메일</th>
+                <th scope="col" id="board" class="mypage_first_head_th mypage_school_number">학번</th>
+            </tr>
+        </thead>
+        <tbody class="mypage_first_body">
+            {% for request in requests %}
+            <tr>
+                <td class="mypage_first_body_td mypage_pubdate">{{request.pub_date}}</td>
+                <td class="mypage_first_body_td mypage_job_type">{{request.job_type}}</td>
+                <td class="mypage_first_body_td mypage_name">{{request.name}}</td>
+                <td class="mypage_first_body_td mypage_email">{{request.email}}</td>
+                <td class="mypage_first_body_td mypage_school_number">{{request.school_number}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
 {% endblock%}

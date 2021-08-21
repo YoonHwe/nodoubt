@@ -95,7 +95,7 @@ a{
     background-color: rgba(130, 168, 212, 0.1);
 }
 .content_first_left{
-    width: 50%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     font-family: 'Noto Sans KR', sans-serif;
@@ -208,7 +208,7 @@ a{
     font-size: 9px;
 }
 .content_first_right{
-    width: 50%;
+    width: 40%;
 }
 .content_first_right_paper{
     margin: 10% 10%;
@@ -315,6 +315,10 @@ a{
     width: 100%;
     height: 250px;
 }
+.content_second_right_instruction_content{
+    display: flex;
+    margin-top: 28px;
+}
 .content_second_right_instruction p{
     font-size: 15px;
     text-align: start;
@@ -338,7 +342,6 @@ a{
     margin-bottom: 2%;
 }
 .content_dtime{
-    border: 1px solid orange;
     text-align: center;
 }
 /**/

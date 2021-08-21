@@ -14,5 +14,6 @@ urlpatterns = [
     path('delete/<str:id>',views.delete, name="delete"),
     path('request_create/',views.request_create, name="request_create"),
     path('sample/',views.sample, name="sample"),
+    path('letter/',views.letter, name="letter"),
 ]
     

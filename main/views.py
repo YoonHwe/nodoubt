@@ -62,3 +62,6 @@ def request_create(request):
 
 def sample(request):
     return render(request, 'main/sample.html')
+
+def letter(request):
+    return render(request, 'main/letter.html')
