@@ -244,6 +244,9 @@ a{
 #content_second_left_application_inst_second{
     margin-top: -16px;
 }
+#content_second_left_application_submit_signup{
+    padding: 0px 10px;
+}
 .content_second_right{
     width: 50%;
     height: 484px;
