@@ -85,6 +85,12 @@ a{
 .dropdown:hover .dropbtn{
     color: orange;
 }
+.dropbtn_color_orange{
+    color:orange;
+}
+.dropdown_display_block{
+    display: block;
+}
 /* 첫번째 칸 - 기업 소개 */
 .content_first{
     display: flex;

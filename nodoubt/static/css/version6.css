@@ -84,6 +84,12 @@ a{
 .dropdown:hover .dropbtn{
     color: orange;
 }
+.dropbtn_color_orange{
+    color:orange;
+}
+.dropdown_display_block{
+    display: block;
+}
 /* 첫번째 칸 - 기업 소개 */
 .content_first{
     padding: 2%;
@@ -231,6 +237,9 @@ a{
 }
 #content_second_left_application_inst_second{
     margin-top: -16px;
+}
+#content_second_left_application_submit_signup{
+    padding: 0px 10px;
 }
 .content_second_right{
     height: 440px;
