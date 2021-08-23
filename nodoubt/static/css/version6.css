@@ -110,7 +110,7 @@ a{
     width: 90%;
 }
 .content_first_left_exp h1{
-    font-size: 26px;
+    font-size: 20px;
 }
 .content_first_left_exp_first{
     display: flex;
@@ -119,7 +119,7 @@ a{
     color: orange;
 }
 #content_first_left_exp_second{
-    font-size: 26px;
+    font-size: 20px;
     margin-top: -20px;
 }
 .content_first_left_exp h2{
@@ -127,7 +127,7 @@ a{
 }
 .content_first_left_exp h3{
     margin-top: -12px;
-    font-size: 16px;
+    font-size: 14px;
     opacity: 0.5;
 }
 .left_icon{
