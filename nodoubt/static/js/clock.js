@@ -3,7 +3,7 @@ function getClock() {
     const date = new Date();
     const targetDay = new Date();
     targetDay.setMonth(7);
-    targetDay.setDate(30);
+    targetDay.setDate(25);
     targetDay.setHours(0);
     targetDay.setMinutes(0);
     targetDay.setSeconds(0);
@@ -22,7 +22,12 @@ function getClock() {
     const hourGap = Math.floor(timeGap / (1000 * 60 * 60)) % 24;
     const minuteGap = Math.floor(timeGap / (1000 * 60)) % 60;
     const secondGap = Math.floor(timeGap / 1000) % 60;
-    clockTitle.innerText = `D - ${dayGap}일 ${hourGap}시간 ${minuteGap}분 ${secondGap}초`;
+    if(timeGap <= 0){
+        clockTitle.innerText = "D - Day";
+    }
+    else{
+        clockTitle.innerText = `D - ${dayGap}일 ${hourGap}시간 ${minuteGap}분 ${secondGap}초`;
+    }
 }
 
 getClock();

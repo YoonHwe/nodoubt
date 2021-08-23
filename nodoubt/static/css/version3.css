@@ -51,6 +51,7 @@ a{
 .dropdown {
     position: relative;
     display: inline-block;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 .dropdown_left{
     margin-left: 40%;
@@ -84,8 +85,6 @@ a{
 .dropdown:hover .dropbtn{
     color: orange;
 }
-
-
 /* 첫번째 칸 - 기업 소개 */
 .content_first{
     display: flex;
@@ -131,58 +130,6 @@ a{
     margin-top: -12px;
     opacity: 0.5;
 }
-/* @keyframes Disappearing{
-    0%{
-        opacity: 1;
-    }
-    25%{
-        opacity: 0.75;
-    }
-    50%{
-        opacity: 0.5;
-    }
-    75%{
-        opacity: 0.25;
-    }
-    100%{
-        opacity: 0;
-    }
-}
-@keyframes Appearing{
-    0%{
-        opacity: 0;
-    }
-    25%{
-        opacity: 0.25;
-    }
-    50%{
-        opacity: 0.5;
-    }
-    75%{
-        opacity: 0.75;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
-@keyframes Rotating{
-    0%{
-        transform: rotate(0turn);
-    }
-    25%{
-        transform: rotate(0.25turn);
-    }
-    50%{
-        transform: rotate(0.5turn);
-    }
-    75%{
-        transform: rotate(0.75turn);
-    }
-    100%{
-        transform: rotate(1turn);
-    }
-} */
 .left_icon{
     padding: 20px;
     border-radius: 50%;
@@ -209,22 +156,22 @@ a{
 }
 .content_first_right{
     width: 40%;
+    display: flex;
+    align-items: center;
 }
 .content_first_right_paper{
     margin: 10% 10%;
-    height: 500px;
+    height: 300px;
     width: 80%;
-    background-color: white;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 .content_first_right_paper_image{
     width: 100%;
     height: 100%;
 }
-
 /* 두번째 칸 - 인스트럭션 + 지원서 */
 .content_second_h2{
     padding-top: 80px;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 .content_second{
     display: flex;
@@ -343,36 +290,10 @@ a{
 }
 .content_dtime{
     text-align: center;
+    margin-top: 35px;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 /**/
-.content_popular{
-    padding: 0% 6%;
-    margin: 5% 0%;
-}
-.content_popular_title{
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 2%;
-}
-
-.content_popular_top{
-    display: flex;
-}
-.content_popular_top_contents{
-    border: 1px solid orange;
-    padding: 10px;
-    margin: 5px;
-    width: 25%;
-}
-.content_popular_bottom{
-    display: flex;
-}
-.content_popular_bottom_contents{
-    border: 1px solid black;
-    padding: 10px;
-    margin: 5px;
-    width: 25%;
-}
 .content_issue{
     padding: 0% 6%;
     margin: 5% 0%;
@@ -384,13 +305,21 @@ a{
     font-weight: bold;
     margin-bottom: 2%;
     text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 .content_issue_category{
     display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.content_issue_category_list{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 168px;
 }
 .content_issue_category_list h3{
-    margin-right: 30px;
-    border-bottom: 0px solid blue;
+    margin: 0 30px;
 }
 .content_issue_category_list h3:hover{
     color: orange;
@@ -403,10 +332,12 @@ a{
     padding-bottom: 50px;
 }
 .list_content{
-    border-top: 1px solid rgb(146, 140, 140);
-    border-bottom: 1px solid rgb(146, 140, 140);
     margin-top: 9px;
     padding: 0px 10px;
+}
+.list_content_border{
+    border-top: 1px solid rgb(146, 140, 140);
+    /* border-bottom: 1px solid rgb(146, 140, 140); */
 }
 .list_content_link:hover{
     color: orange;
@@ -422,39 +353,59 @@ a{
     font-weight: bold;
     margin-bottom: 2%;
     text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 .content_ready_content{
     display: flex;
+    justify-content: center;
 }
 .content_ready_content_contents{
-    text-align: center;
     border: 1px solid black;
-    padding: 10px;
     margin: 10px;
     width: 33%;
 }
 .content_ready_content_contents:hover{
     border: 1px solid orange;
 }
+#content_ready_content_contents_name{
+    text-align: center;
+    opacity: .7;
+}
+#content_ready_content_contents_exp{
+    display: none;
+}
+.content_ready_content_contents:hover #content_ready_content_contents_exp{
+    display: inline;
+}
 iframe{
-    width: 150px;
+    width: 100%;
     height: 120px;
 }
-
+.content_ready_content_contents h5{
+    font-size: 16px;
+}
 .footer{
     margin-top: 40px;
     text-align: center;
 }
 #footer_letter{
     background-color: orange;
+    opacity: .7;
     border-radius: 10px;
+}
+#footer_letter:hover{
+    opacity: 1;
 }
 #letter{
     border: 1px solid black; 
     margin: auto; 
     width: 420px; 
     padding: 40px;
-    margin-top: 20px;
+    margin-top: 40px;
+}
+.letter_center{
+    display: flex;
+    justify-content: center;
 }
 /*feedback*/
 #feedback{
@@ -462,13 +413,16 @@ iframe{
     width: 440px; 
     margin: auto;
     padding: 20px; 
-    margin-top: 20px
+    margin-top: 40px;
 }
 #feedback h1{
     text-align: center;
 }
 #feedback h2{
     text-align: center;
+}
+#feedback h4{
+    opacity: .5;
 }
 #feedback_submit{
     display: flex;
@@ -479,20 +433,18 @@ iframe{
     text-align: center;
     background-color: rgba(130, 168, 212, 0.1);
     padding: 60px 0px;
-}
-
-.login_signup{
-    font-size: 20px;
-}
-.login_signup_link{
-    border: 1px solid black;
-    background-color: rgb(233, 230, 230);
-    border-radius: 3px;
-    padding-top: 3px;
-    font-size: 20px;
+    width: 40vw;
+    height: 40vh;
+    margin:auto;
+    margin-top: 50px;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .login_socialaccount{
     text-align: center;
+    padding-bottom: 30px;
 }
 .login_socialaccount_or{
     border: 1px dotted black;
@@ -504,7 +456,7 @@ iframe{
 .login_socialaccount_providers_list{
     border: 1px solid orange;
     height: 80px;
-    width: 400px;
+    width: 200px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -513,15 +465,6 @@ iframe{
 }
 .login_socialaccount_providers_list:hover{
     opacity: .7;
-}
-.secondaryAction{
-    border: 1px solid black;
-    background-color: rgb(236, 234, 234);
-    border-radius: 3px;
-    padding: 2px;
-}
-.login_go_password_clear{
-    margin-top: 20px;
 }
 .fa-google{
     margin: 7px;
@@ -534,45 +477,39 @@ iframe{
     text-align: center;
     padding: 60px 0px;
     background-color: rgba(130, 168, 212, 0.1);
+    width: 40vw;
+    height: 40vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    border-radius: 10%;
 }
 .logout_button{
     padding: 30px;
     font-size: 30px;
     font-weight: 800;
+    border-radius: 10%;
 }
-
-/*회원가입*/
-.signup{
-    text-align: center;
-    border: 1px solid black;
-    background-color: rgba(130, 168, 212, 0.1);
-    padding: 60px 0px;
+.logout_button:hover{
+    opacity: .5;
 }
-/* .signup_button{
-    padding: 10px 20px;
-    font-size: 20px;
-    border-radius: 3px;
-}
-.signup_button:hover{
-    opacity: 0.7;
-} */
+/* 회원가입 */
 .signup_onlygoogle{
     margin: 30px 0px;
-}
-.signup_login{
-    border: 1px solid orange;
-    padding: 20px 100px;
-    background-color: orange;
-    font-size: 30px;
-    border-radius: 10px;
-}
-.signup_login:hover{
     opacity: .7;
+    font-size: 20px;
 }
 /*마이페이지*/
 .mypage{
     background-color: rgba(130, 168, 212, 0.1);
     padding: 80px;
+    width: 72vw;
+    height: 40vh;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 50px;
 }
 #mypage_first_title{
     text-align: center;

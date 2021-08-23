@@ -2,18 +2,33 @@ function fnMove(seq){
     var offset = $(".content_" + seq).offset();
     $('html, body').animate({scrollTop : offset.top}, 400);
 }
+const category_first = document.querySelector(".category_list_first");
+const category_second = document.querySelector(".category_list_second");
+const category_third = document.querySelector(".category_list_third");
+const category_fourth = document.querySelector(".category_list_fourth");
+const first = document.querySelector(".list_first");
+const second = document.querySelector(".list_second");
+const third = document.querySelector(".list_third");
+const fourth = document.querySelector(".list_fourth");
+const fifth = document.querySelector(".list_fifth");
+const sixth = document.querySelector(".list_sixth");
+const category_border = document.querySelectorAll(".list_content");
+for (let index = 0; index < category_border.length; index++) {
+    const element = category_border[index];
+    element.classList.add("list_content_border");
+}
+category_first.style.color = "orange";
+category_second.style.color = "black";
+category_third.style.color = "black";
+category_fourth.style.color = "black";
+first.innerHTML = "<a class='list_content_link' href='https://ddp.dongguk.edu/site/main/index001' target='_blank'><h2>동국대학교 취업센터</h2></a><h3 style='opacity: 0.5; margin-left: 10px;'>채용 정보, 교내 취업프로그램, 공모전 정보 등을 제공</h3>";
+second.innerHTML = "<a class='list_content_link' href='https://ddp.dongguk.edu/site/homepage/menu/viewMenu?menuid=001005002003' target='_blank'><h2>동국대학교 취업지원 프로그램 로드맵</h2></a><h3 style='opacity: 0.5; margin-left: 10px;'>단계별 취업프로그램을 한눈에 알아볼 수 있도록 제공</h3>";
+third.innerHTML = "<a class='list_content_link' href='https://ddp.dongguk.edu/site/program/recruit/listCampusRecruit?menuid=001005002002&recruittype=CR' target='_blank'><h2>동국대학교 취업센터 -> 캠퍼스 리크루팅</h2></a><h3 style='opacity: 0.5; margin-left: 10px;'>다양한 기업들의 온라인 채용 설명회를 신청하고 참여할 수 있는 취업센터 내 공간</h3>";
+fourth.innerHTML = "<a class='list_content_link' href='https://www.dongguk.edu/mbs/kr/subview.jsp?id=kr_040000000000' target='_blank'><h2>동국대학교 메인홈페이지 </h2></a><h3 style='opacity: 0.5; margin-left: 10px;'>취업/창업/역량/봉사/IPP 사업단 등 취업 관련 공지 사항 및 학사 정보를 제공</h3>";
+fifth.innerHTML = "<a class='list_content_link' href='https://ddp.dongguk.edu/site/main/index001?prevurl=https%3A%2F%2Fddp.dongguk.edu%2Flogin.jsp' target='_blank'><h2>동국대학교 드림패스</h2></a><h3 style='opacity: 0.5; margin-left: 10px;'>학교 수업 외 다양한 정보를 얻을 수 있으며, 나의 활동을 정리 및 기록 가능</h3>";
+sixth.innerHTML = "";
 
-function paintList(event){
-    const category_first = document.querySelector(".category_list_first");
-    const category_second = document.querySelector(".category_list_second");
-    const category_third = document.querySelector(".category_list_third");
-    const category_fourth = document.querySelector(".category_list_fourth");
-    const first = document.querySelector(".list_first");
-    const second = document.querySelector(".list_second");
-    const third = document.querySelector(".list_third");
-    const fourth = document.querySelector(".list_fourth");
-    const fifth = document.querySelector(".list_fifth");
-    const sixth = document.querySelector(".list_sixth");
+function paintList(event){    
     if(event === 1){
         category_first.style.color = "orange";
         category_second.style.color = "black";

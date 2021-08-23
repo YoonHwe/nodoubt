@@ -1,7 +1,9 @@
 {% extends 'base.html' %} 
-{% load static %} 
+{% load i18n %}
+{% load account socialaccount %}
+{% providers_media_js %}
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
 {% block content %}
-<div class="signup">
   <!-- <form method="POST" action="{% url 'account_signup' %}">
     {% csrf_token %}
     <h1>회원가입</h1>
@@ -11,8 +13,41 @@
     <p><label for="id_password2"></label> <input type="password" name="password2" placeholder="  비밀번호(확인)" required="" id="id_password2" style="border-radius: 10px; height:40px; width:250px; font-size:15px;"></p>
     <p><input class="signup_button" type="submit" value="회원가입"></p>
   </form>   -->
-  <h1>회원가입</h1>
-  <h2 class="signup_onlygoogle">현재는 구글 로그인만이 가능합니다ㅠ</h2>
-  <a class="signup_login" href="{% url 'account_login' %}"><i class="fab fa-google fa-lg"></i>구글 로그인</a>
+<div class="login">
+    <!-- <h1 class="login_title">{% trans "Sign In" %}</h1>
+    <form class="login_go" method="POST" action="{% url 'account_login' %}">
+      {% csrf_token %}
+      <p><label for="id_login"></label> <input type="text" name="login" placeholder="  아이디" autocomplete="username" maxlength="150" required="" id="id_login" style="border-radius: 10px; height:40px; width:250px; font-size:15px;"></p>
+      <p><label for="id_password"></label><input type="password" name="password" placeholder="  비밀번호" autocomplete="current-password" required="" id="id_password" style="border-radius: 10px; height:40px; width:250px; font-size:15px;"></p>
+      {% if redirect_field_value %}
+      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+      {% endif %}
+      <div class="login_go_button">
+        <button class="primaryAction" type="submit" style="font-size: 20px;">{% trans "Login" %}</button>
+      </div>
+      <div class="login_go_password_clear">
+        <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+      </div>  
+      </form>
+  
+    {% get_providers as socialaccount_providers %}
+  
+    {% if socialaccount_providers %}
+      <p class="login_signup">{% blocktrans with site.name as site_name %} 아이디가 없다면?   <a class="button login_signup_link" href="{{ signup_url }}">회원가입</a>
+      {% endblocktrans %}</p> -->
+      <div class="login_socialaccount">
+        <h1>회원가입</h1>
+        <div class="login_socialaccount_providers">
+          <a class="login_socialaccount_providers_list" href=" {% provider_login_url 'google' %}"><i class="fab fa-google fa-3x"></i><h3 class="fa-google_icon_exp">구글 로그인</h3></a>
+        </div>
+        <h2 class="signup_onlygoogle">현재는 구글 로그인만이 가능합니다.</h2>
+      </div>
+  
+      {% include "socialaccount/snippets/login_extra.html" %}
+  
+    {% else %}
+      <p>{% blocktrans %}If you have not created an account yet, then please
+      <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+    {% endif %}
 </div>
 {% endblock %}

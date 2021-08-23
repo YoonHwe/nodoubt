@@ -4,18 +4,17 @@
 {% block content %}
 <div id="feedback">
 	<h1>피드백 / 요청사항</h1>
-	<h4>제목과 내용은 필수적으로 작성해주셔야 합니다.</h4>
+	<h4>※ 제목과 내용은 필수적으로 작성해주셔야 합니다.</h4>
 	<form action = "{% url 'main:feedback_create' %}" method = "post" enctype="multipart/form-data">
     	{% csrf_token %}
     	<p>제목: <input required type="text" name="title" size="30"></p>
-    	<p>내용: <textarea required type="text" name="content" id="" cols="35" rows="4"></textarea></p>
+    	<p>내용: <textarea required type="text" name="content" id="" cols="34" rows="4"></textarea></p>
     	<p>첨부파일: <input type="file" name="image"></p>
     	<p>답변을 받을 이메일: <input type="text" name="email" size="30"></p>
 		<br>
 		<div id="feedback_submit">
 			<button type="submit">제출</button>
 		</div>
-    	
 	</form>
 </div>
 {% endblock %}

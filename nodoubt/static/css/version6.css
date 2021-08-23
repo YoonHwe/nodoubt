@@ -49,6 +49,7 @@ a{
 .dropdown {
     position: relative;
     display: inline-block;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 .dropdown_left{
     margin-left: 40%;
@@ -83,7 +84,6 @@ a{
 .dropdown:hover .dropbtn{
     color: orange;
 }
-
 /* 첫번째 칸 - 기업 소개 */
 .content_first{
     padding: 2%;
@@ -164,11 +164,10 @@ a{
     width: 100%;
     height: 100%;
 }
-
 /* 두번째 칸 - 인스트럭션 + 지원서 */
-
 .content_second_h2{
     padding-top: 40px;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 .content_second{
     padding: 2%;
@@ -284,39 +283,11 @@ a{
 /**/
 .content_dtime{
     text-align: center;
-    padding: 2%;
+    padding: 0% 2%;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 .content_dtime h1{
     font-size: 20px;
-}
-/**/
-.content_popular{
-    padding: 0% 2%;
-    margin: 5% 0%;
-}
-.content_popular_title{
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 2%;
-}
-
-.content_popular_top{
-    display: flex;
-}
-.content_popular_top_contents{
-    border: 1px solid orange;
-    padding: 10px;
-    margin: 5px;
-    width: 25%;
-}
-.content_popular_bottom{
-    display: flex;
-}
-.content_popular_bottom_contents{
-    border: 1px solid black;
-    padding: 10px;
-    margin: 5px;
-    width: 25%;
 }
 /**/
 .content_issue{
@@ -330,13 +301,28 @@ a{
     font-weight: bold;
     margin-bottom: 2%;
     text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 .content_issue_category{
     display: flex;
+    justify-content: center;
+}
+.content_issue_category_list{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 90px;
+    margin-top: 20px;
 }
 .content_issue_category_list h3{
-    margin-right: 30px;
-    border-bottom: 0px solid blue;
+    margin: 0px 10px;
+    font-size: 16px;
+}
+.category_list_third{
+    width: 112px;
+}
+.category_list_fourth{
+    width: 132px;
 }
 .content_issue_category_list h3:hover{
     color: orange;
@@ -349,10 +335,12 @@ a{
     padding-bottom: 50px;
 }
 .list_content{
-    border-top: 1px solid rgb(146, 140, 140);
-    border-bottom: 1px solid rgb(146, 140, 140);
     margin-top: 9px;
     padding: 0px 10px;
+}
+.list_content_border{
+    border-top: 1px solid rgb(146, 140, 140);
+    /* border-bottom: 1px solid rgb(146, 140, 140); */
 }
 .list_content a{
     font-size: 12px;
@@ -374,6 +362,7 @@ a{
     font-weight: bold;
     margin-bottom: 2%;
     text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 .content_ready_content{
     display: flex;
@@ -381,18 +370,29 @@ a{
     align-items: center;
 }
 .content_ready_content_contents{
-    text-align: center;
     border: 1px solid black;
-    padding: 10px;
     margin: 10px;
     width: 64%;
 }
 .content_ready_content_contents:hover{
     border: 1px solid orange;
 }
+#content_ready_content_contents_name{
+    text-align: center;
+    opacity: .7;
+}
+#content_ready_content_contents_exp{
+    display: none;
+}
+.content_ready_content_contents:hover #content_ready_content_contents_exp{
+    display: inline;
+}
 iframe{
-    width: 232px;
+    width: 100%;
     height: 160px;
+}
+.content_ready_content_contents h5{
+    font-size: 15px;
 }
 .mobile_no{
     display: none;
@@ -403,20 +403,28 @@ iframe{
 }
 #footer_letter{
     background-color: orange;
+    opacity: .7;
     border-radius: 10px;
+}
+#footer_letter:hover{
+    opacity: 1;
 }
 #letter{
     border: 1px solid black; 
-    margin: auto; 
+    margin: 0px 20px; 
     width: auto; 
     padding: 20px;
     margin-top: 20px;
 }
+.letter_center{
+    display: flex;
+    justify-content: center;
+}
 /*feedback*/
 #feedback{
     border: 1px solid black; 
-    width: 320px; 
-    margin: auto;
+    width: auto; 
+    margin: 0px 10px;
     padding: 20px; 
     margin-top: 20px
 }
@@ -426,6 +434,9 @@ iframe{
 #feedback h2{
     text-align: center;
 }
+#feedback h4{
+    opacity: .5;
+}
 #feedback_submit{
     display: flex;
     justify-content: center;
@@ -434,24 +445,19 @@ iframe{
 .login{
     text-align: center;
     background-color: rgba(130, 168, 212, 0.1);
-    padding: 40px 40px;
-}
-
-.login_signup{
-    font-size: 20px;
-}
-.login_signup_link{
-    border: 1px solid black;
-    background-color: rgb(233, 230, 230);
-    border-radius: 3px;
-    padding-top: 3px;
-    font-size: 20px;
+    padding: 60px 0px;
+    width: 76vw;
+    height: 40vh;
+    margin:auto;
+    margin-top: 50px;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .login_socialaccount{
     text-align: center;
-}
-.login_socialaccount_title{
-    margin-top: -4px;
+    padding-bottom: 30px;
 }
 .login_socialaccount_or{
     border: 1px dotted black;
@@ -463,7 +469,7 @@ iframe{
 .login_socialaccount_providers_list{
     border: 1px solid orange;
     height: 80px;
-    width: 400px;
+    width: 200px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -472,15 +478,6 @@ iframe{
 }
 .login_socialaccount_providers_list:hover{
     opacity: .7;
-}
-.secondaryAction{
-    border: 1px solid black;
-    background-color: rgb(236, 234, 234);
-    border-radius: 3px;
-    padding: 2px;
-}
-.login_go_password_clear{
-    margin-top: 20px;
 }
 .fa-google{
     margin: 7px;
@@ -493,44 +490,39 @@ iframe{
     text-align: center;
     padding: 60px 0px;
     background-color: rgba(130, 168, 212, 0.1);
+    width: 70vw;
+    height: 40vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    border-radius: 10%;
 }
 .logout_button{
     padding: 30px;
     font-size: 30px;
     font-weight: 800;
+    border-radius: 10%;
 }
-
-/*회원가입*/
-.signup{
-    text-align: center;
-    background-color: rgba(130, 168, 212, 0.1);
-    padding: 20px 0px 40px 0px;
+.logout_button:hover{
+    opacity: .5;
 }
-/* .signup_button{
-    padding: 10px 20px;
-    font-size: 20px;
-    border-radius: 3px;
-}
-.signup_button:hover{
-    opacity: 0.7;
-} */
+/* 회원가입 */
 .signup_onlygoogle{
     margin: 30px 0px;
-}
-.signup_login{
-    border: 1px solid orange;
-    padding: 20px 100px;
-    background-color: orange;
-    font-size: 30px;
-    border-radius: 10px;
-}
-.signup_login:hover{
     opacity: .7;
+    font-size: 20px;
 }
 /*마이페이지*/
 .mypage{
     background-color: rgba(130, 168, 212, 0.1);
-    padding: 24px;
+    padding: 20px;
+    width: 80vw;
+    height: 40vh;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 50px;
 }
 #mypage_first_title{
     text-align: center;
@@ -539,18 +531,18 @@ iframe{
     text-align: center;
     margin: auto;
 }
+.mypage_name{
+    width: 60px;
+}
+.mypage_school_number{
+    display: none;
+}
+.mypage_job_type{
+    display: none;
+}
 .mypage_first_head_th{
     border: 2px solid orange;
 }
 .mypage_first_body_td{
     /* border-bottom: 2px solid orange; */
-}
-.mypage_job_type{
-    width: 72px;
-}
-.mypage_name{
-    display: none;
-}
-.mypage_school_number{
-    display: none;
 }
