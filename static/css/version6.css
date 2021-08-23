@@ -1,0 +1,548 @@
+html{
+    background-color: rgb(248,248,250);
+    margin: auto;
+}
+body{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+/* menu / navbar */
+.menu{
+    display: flex;
+    border: 1px solid rgb(237,237,237);
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0% 6%;
+}
+.menu_company{
+    font-size: 24px;
+    font-family: 'Monoton', sans-serif;
+    width: 170px;
+}
+.menu_content{
+    margin-left: 10%;
+}
+.menu_content_page{
+    font-family: 'Roboto', sans-serif;
+    margin: 0 15px;
+    width: 44px;
+}
+.menu_content_page a:hover{
+    color: orange;
+    cursor: pointer;
+}
+.menu_right{
+    display: flex;
+}
+
+.dropbtn {
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.dropdown_left{
+    margin-left: 40%;
+}
+.fa-folder-plus, .fa-user{
+    font-size: 20px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 5px 12px;
+    border-radius: 10px;
+    margin-left: -80px;
+}
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 4px 8px;
+    border-radius: 10px;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.dropdown:hover .dropbtn{
+    color: orange;
+}
+/* 첫번째 칸 - 기업 소개 */
+.content_first{
+    padding: 2%;
+    height: 342px;
+    background-color: rgba(130, 168, 212, 0.1);
+}
+.content_first_left{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.content_first_left_exp{
+    padding-left: 5%;
+}
+.content_first_left_icon{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    margin-top: 20px;
+    width: 90%;
+}
+.content_first_left_exp h1{
+    font-size: 28px;
+}
+.content_first_left_exp_first{
+    display: flex;
+}
+#content_first_left_exp_first_second{
+    color: orange;
+}
+#content_first_left_exp_second{
+    font-size: 28px;
+    margin-top: -20px;
+}
+.content_first_left_exp h2{
+    color: orange;
+}
+.content_first_left_exp h3{
+    margin-top: -12px;
+    font-size: 16px;
+    opacity: 0.5;
+}
+.left_icon{
+    padding: 20px;
+    border-radius: 50%;
+    border: 1px solid orange;
+}
+.content_first_left_icon{
+    width: 330px;
+    margin: auto;
+}
+.content_first_left_icon_content{
+    text-align: center;
+}
+.content_first_left_icon_content > i{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    animation: Rotating 0.3s infinite;
+}
+.content_first_left_icon_content > h4{
+    margin-top: -20px;
+}
+.content_first_left_icon_content > h6{
+    margin-top: -20px;
+    opacity: 0.5;
+    font-size: 9px;
+}
+.content_first_right{
+    width: 50%;
+    display: none;
+}
+.content_first_right_paper{
+    margin: 10% 10%;
+    height: 500px;
+    width: 80%;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.content_first_right_paper_image{
+    width: 100%;
+    height: 100%;
+}
+/* 두번째 칸 - 인스트럭션 + 지원서 */
+.content_second_h2{
+    padding-top: 40px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.content_second{
+    padding: 2%;
+}
+.content_second_left{
+    height: 484px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content_second_left_application{
+    padding: 0% 20%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.content_second_left_application > h2{
+    margin-top: 37px;
+}
+.content_second_left_application_submit{
+    border: 1px solid black;
+    text-align: center;
+    padding: 20px 0px;
+    border-radius: 10px;
+}
+.content_second_select{
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+.content_second_selects{
+    width: 30%;
+}
+.underline{
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+}
+.content_second_name, .content_second_email{
+    height: 30px;
+}
+.content_second_private{
+    margin: 20px 0px;
+}
+.content_second_submit{
+    margin: 20px 0px;
+    border-radius: 50px;
+    width: 100px;
+    background-color: rgba(130, 168, 212, 0.1);
+}
+.content_second_left_application_inst{
+    text-align: center;
+}
+#content_second_left_application_inst_first{
+    color: orange;
+}
+#content_second_left_application_inst_second{
+    margin-top: -16px;
+}
+.content_second_right{
+    height: 440px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.content_second_right_instruction{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, .5);
+    display: flex;
+    flex-direction: column;
+}
+.content_second_right_instruction > h2{
+    margin-top: 37px;
+    text-align: center;
+}
+.content_second_right_instruction_image{
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 250px;
+}
+.content_second_right_instruction_content{
+    display: flex;
+}
+.content_second_right_instruction p{
+    font-size: 15px;
+    text-align: start;
+    margin-bottom: -10px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+.fa-circle{
+    font-size: 1px;
+}
+.content_second_search{
+    text-align: center;
+    margin: 2px;
+    width: 30%;
+}
+.content_second_h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+/**/
+.content_dtime{
+    text-align: center;
+    padding: 0% 2%;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.content_dtime h1{
+    font-size: 20px;
+}
+/**/
+.content_issue{
+    padding: 0% 2%;
+    margin: 5% 0%;
+    background-color: rgba(130, 168, 212, 0.1);
+}
+.content_issue_title{
+    padding-top: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 2%;
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.content_issue_category{
+    display: flex;
+    justify-content: center;
+}
+.content_issue_category_list{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 90px;
+    margin-top: 20px;
+}
+.content_issue_category_list h3{
+    margin: 0px 10px;
+    font-size: 16px;
+}
+.category_list_third{
+    width: 112px;
+}
+.category_list_fourth{
+    width: 132px;
+}
+.content_issue_category_list h3:hover{
+    color: orange;
+    cursor: pointer;
+}
+.content_issue_category_list:focus{
+    border: 1px solid black;
+}
+.content_issue_list{
+    padding-bottom: 50px;
+}
+.list_content{
+    margin-top: 9px;
+    padding: 0px 10px;
+}
+.list_content_border{
+    border-top: 1px solid rgb(146, 140, 140);
+    /* border-bottom: 1px solid rgb(146, 140, 140); */
+}
+.list_content a{
+    font-size: 12px;
+}
+.list_content h3{
+    font-size: 12px;
+}
+.list_content_link:hover{
+    color: orange;
+}
+
+/* 다섯번째 칸 - 취업 준비 자료 */
+.content_ready{
+    padding: 0% 2%;
+}
+.content_ready_title{
+    padding-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 2%;
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.content_ready_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content_ready_content_contents{
+    border: 1px solid black;
+    margin: 10px;
+    width: 64%;
+}
+.content_ready_content_contents:hover{
+    border: 1px solid orange;
+}
+#content_ready_content_contents_name{
+    text-align: center;
+    opacity: .7;
+}
+#content_ready_content_contents_exp{
+    display: none;
+}
+.content_ready_content_contents:hover #content_ready_content_contents_exp{
+    display: inline;
+}
+iframe{
+    width: 100%;
+    height: 160px;
+}
+.content_ready_content_contents h5{
+    font-size: 15px;
+}
+.mobile_no{
+    display: none;
+}
+.footer{
+    margin-top: 40px;
+    text-align: center;
+}
+#footer_letter{
+    background-color: orange;
+    opacity: .7;
+    border-radius: 10px;
+}
+#footer_letter:hover{
+    opacity: 1;
+}
+#letter{
+    border: 1px solid black; 
+    margin: 0px 20px; 
+    width: auto; 
+    padding: 20px;
+    margin-top: 20px;
+}
+.letter_center{
+    display: flex;
+    justify-content: center;
+}
+/*feedback*/
+#feedback{
+    border: 1px solid black; 
+    width: auto; 
+    margin: 0px 10px;
+    padding: 20px; 
+    margin-top: 20px
+}
+#feedback h1{
+    text-align: center;
+}
+#feedback h2{
+    text-align: center;
+}
+#feedback h4{
+    opacity: .5;
+}
+#feedback_submit{
+    display: flex;
+    justify-content: center;
+}
+/*로그인*/
+.login{
+    text-align: center;
+    background-color: rgba(130, 168, 212, 0.1);
+    padding: 60px 0px;
+    width: 76vw;
+    height: 40vh;
+    margin:auto;
+    margin-top: 50px;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login_socialaccount{
+    text-align: center;
+    padding-bottom: 30px;
+}
+.login_socialaccount_or{
+    border: 1px dotted black;
+}
+.login_socialaccount_providers{
+    display: flex;
+    justify-content: center;
+}
+.login_socialaccount_providers_list{
+    border: 1px solid orange;
+    height: 80px;
+    width: 200px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 191, 72);
+}
+.login_socialaccount_providers_list:hover{
+    opacity: .7;
+}
+.fa-google{
+    margin: 7px;
+}
+.fa-google_icon_exp{
+    margin-top: -7px;
+}
+/*로그아웃*/
+.logout{
+    text-align: center;
+    padding: 60px 0px;
+    background-color: rgba(130, 168, 212, 0.1);
+    width: 70vw;
+    height: 40vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    border-radius: 10%;
+}
+.logout_button{
+    padding: 30px;
+    font-size: 30px;
+    font-weight: 800;
+    border-radius: 10%;
+}
+.logout_button:hover{
+    opacity: .5;
+}
+/* 회원가입 */
+.signup_onlygoogle{
+    margin: 30px 0px;
+    opacity: .7;
+    font-size: 20px;
+}
+/*마이페이지*/
+.mypage{
+    background-color: rgba(130, 168, 212, 0.1);
+    padding: 20px;
+    width: 80vw;
+    height: 40vh;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 50px;
+}
+#mypage_first_title{
+    text-align: center;
+}
+.mypage_first{
+    text-align: center;
+    margin: auto;
+}
+.mypage_name{
+    width: 60px;
+}
+.mypage_school_number{
+    display: none;
+}
+.mypage_job_type{
+    display: none;
+}
+.mypage_first_head_th{
+    border: 2px solid orange;
+}
+.mypage_first_body_td{
+    /* border-bottom: 2px solid orange; */
+}
