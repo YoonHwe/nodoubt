@@ -63,7 +63,7 @@
             <h2>신청서</h2>
             <div class="content_second_left_application_submit">
                 {% if user.is_authenticated %}
-                <form action = "{% url 'main:request_create' %}" method = "post">
+                <form id="content_second_left_application_submit_form" action = "{% url 'main:request_create' %}" method = "post">
                     {% csrf_token %}
                     <div class="content_second_select">
                         <select class="content_second_selects" name="employ_type" id="employ_type">

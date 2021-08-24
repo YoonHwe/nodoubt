@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('main', '0002_alter_request_employ_type'),
+        ('main', '0001_initial'),
     ]
 
     operations = [
         migrations.AlterField(
             model_name='request',
             name='employ_type',
-            field=models.CharField(choices=[('정규', '정규'), ('인턴', '인턴'), ('IPP', 'IPP')], max_length=20),
+            field=models.CharField(choices=[('인턴', '인턴'), ('IPP', 'IPP'), ('정규', '정규')], max_length=20),
         ),
     ]

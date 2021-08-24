@@ -382,6 +382,7 @@ a{
     border: 1px solid black;
     margin: 10px;
     width: 64%;
+    text-align: center;
 }
 .content_ready_content_contents:hover{
     border: 1px solid orange;
