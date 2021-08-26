@@ -4,6 +4,7 @@
 {% block content %}
 <div id="feedback">
 	<h1>피드백 / 요청사항</h1>
+	{% if user.is_authenticated %}
 	<h4>※ 제목과 내용은 필수적으로 작성해주셔야 합니다.</h4>
 	<form action = "{% url 'main:feedback_create' %}" method = "post" enctype="multipart/form-data">
     	{% csrf_token %}
@@ -16,5 +17,12 @@
 			<button type="submit">제출</button>
 		</div>
 	</form>
+	{% else %}
+	<div id="feedback_notlogin">
+		<h2 id="feedback_signup">구글 로그인 후 가능</h4>
+		<a href="{% url 'account_login' %}"><button>구글 로그인</button></a>
+	</div>	
+	{% endif %}
+
 </div>
 {% endblock %}
