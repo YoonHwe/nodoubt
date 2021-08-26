@@ -438,6 +438,11 @@ iframe{
     display: flex;
     justify-content: center;
 }
+#feedback_notlogin{
+    border: 1px solid black;
+    text-align: center;
+    padding: 30% 0%;
+}
 /*로그인*/
 .login{
     text-align: center;
