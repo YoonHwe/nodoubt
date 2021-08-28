@@ -1,9 +1,9 @@
-const clockTitle = document.querySelector(".content_dtime h2");
+const clockTitle = document.querySelector(".content_second_dtime h2");
 function getClock() {
     const date = new Date();
     const targetDay = new Date();
-    targetDay.setMonth(7);
-    targetDay.setDate(25);
+    targetDay.setMonth(8);
+    targetDay.setDate(6);
     targetDay.setHours(0);
     targetDay.setMinutes(0);
     targetDay.setSeconds(0);

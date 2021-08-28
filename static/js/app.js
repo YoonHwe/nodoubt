@@ -46,10 +46,10 @@ function paintList(event){
         category_second.style.color = "orange";
         category_third.style.color = "black";
         category_fourth.style.color = "black";
-        first.innerHTML = "<a class='list_content_link' href='https://www.inflearn.com/' target='_blank'><h2>인프런</h2></a><h3 style='opacity: 0.5; margin-left: 10px;'>다양한 직무의 입문자들을 위한 강의가 많으며, 한정적인 무료 강의를 제공</h3>";
-        second.innerHTML = "<a class='list_content_link' href='https://fastcampus.co.kr/' target='_blank'><h2>패스트캠퍼스</h2></a><h3 style='opacity: 0.5; margin-left: 10px;'>현직자들의 노하우를 배울 수 있는 강의가 많으며, 전문성이 떨어지거나 가격이 비싼 경우가 있음</h3>";
-        third.innerHTML = "<a class='list_content_link' href='https://tacademy.skplanet.com/live/player/listCategory.action' target='_blank'><h2>T 아카데미</h2></a><h3 style='opacity: 0.5; margin-left: 10px;'>SK Planet에서 운영하는 ICT 전문 인재 양성을 위한 온라인 강의 플랫폼</h3>";
-        fourth.innerHTML = "<a class='list_content_link' href='https://www.boostcourse.org/' target='_blank'><h2>부스트코스</h2></a><h3 style='opacity: 0.5; margin-left: 10px;'>Naver Connect가 운영하는 프로젝트 기반의 IT 관련 무료 온라인 강의 플랫폼</h3>";
+        first.innerHTML = "<a class='list_content_link' href='https://www.hackers.co.kr/' target='_blank'><h2>해커스토익</h2></a><h3 style='opacity: 0.5; margin-left: 10px;'>토익, 오픽 등 모든 어학 시험의 유료 강의를 제공</h3>";
+        second.innerHTML = "<a class='list_content_link' href='https://www.pagodastar.com/' target='_blank'><h2>파고다</h2></a><h3 style='opacity: 0.5; margin-left: 10px;'>토익, 오픽 등 모든 어학 시험의 유료 강의를 제공</h3>";
+        third.innerHTML = "<a class='list_content_link' href='https://www.wowpass.com/' target='_blank'><h2>와우패스</h2></a><h3 style='opacity: 0.5; margin-left: 10px;'>사회조사분석사, CFA 등 경영학 관련 자격증의 유료 강의를 제공</h3>";
+        fourth.innerHTML = "<a class='list_content_link' href='https://www.dataedu.kr/' target='_blank'><h2>데이터에듀</h2></a><h3 style='opacity: 0.5; margin-left: 10px;'>ADP, ADSP 시험에 대한 자체 제작 교재 및 인강을 유료로 제공</h3>";
         fifth.innerHTML = "<a class='list_content_link' href='http://www.itbtm.com/main2/intro.php' target='_blank'><h2>유동근의 IT버팀목</h2></a><h3 style='opacity: 0.5; margin-left: 10px;'>컴퓨터 활용 능력 시험 온라인 강의 사이트</h3>";
         sixth.innerHTML = "";
     }
@@ -78,3 +78,20 @@ function paintList(event){
         sixth.innerHTML = "<a class='list_content_link' href='https://cafe.naver.com/specup' target='_blank'><h2>스펙업</h2></a><h3 style='opacity: 0.5; margin-left: 10px;'>취업정보 및 스펙을 위한 정보를 공유하는 커뮤니티</h3>";
     }
 }
+
+window.onload = function() {
+    
+    function onClick() {
+        document.querySelector('.modal_wrap').style.display ='block';
+        document.querySelector('.black_bg').style.display ='block';
+        console.log("clicked");
+    }   
+    function offClick() {
+        document.querySelector('.modal_wrap').style.display ='none';
+        document.querySelector('.black_bg').style.display ='none';
+    }
+
+    document.getElementById('modal_btn').addEventListener('click', onClick);
+    document.querySelector('.modal_close').addEventListener('click', offClick);
+
+};
