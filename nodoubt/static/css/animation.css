@@ -1,0 +1,19 @@
+@keyframes goLeft{
+    0%{
+        width: 0%;
+        opacity: 0;
+    }
+    100%{
+        width: 92%;
+        opacity: 1;
+    }
+}
+
+@keyframes goOpacityUp{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
