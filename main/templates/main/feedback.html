@@ -9,7 +9,7 @@
 	<form action = "{% url 'main:feedback_create' %}" method = "post" enctype="multipart/form-data">
     	{% csrf_token %}
     	<p>제목: <input required type="text" name="title" size="30"></p>
-    	<p>내용: <textarea required type="text" name="content" id="" cols="34" rows="4"></textarea></p>
+    	<p>내용: <textarea required type="text" name="content" id="" cols="31" rows="4"></textarea></p>
     	<p>첨부파일: <input type="file" name="image"></p>
     	<p>답변을 받을 이메일: <input type="text" name="email" size="30"></p>
 		<br>

@@ -94,7 +94,6 @@ a{
 .content_first{
     padding: 4% 12% 2% 12%;
     background-color: rgba(130, 168, 212, 0.1); 
-    border: 3px solid greenyellow;
     animation: goOpacityUp 2s ease-in-out;
     font-family: 'Noto Sans KR', sans-serif;
 }
@@ -164,7 +163,6 @@ a{
 /* 두번째 칸 - 인스트럭션 + 지원서 */
 .content_second{ 
     padding: 2% 10% 4% 10%; 
-    border: 3px solid orange;
     animation: goOpacityUp 2s ease-in-out;
 }
 .content_second_upper{
@@ -402,7 +400,6 @@ a{
 /**/
 .content_issue{
     padding: 0% 10%;
-    border: 3px solid purple;
     background-color: rgba(130, 168, 212, 0.1);
 }
 .content_issue_title{
@@ -452,7 +449,6 @@ a{
 /* 다섯번째 칸 - 취업 준비 자료 */
 .content_ready{
     padding: 0% 8%;
-    border: 3px solid teal;
     padding-top: 40px; 
     padding-bottom: 20px;
 
@@ -664,11 +660,10 @@ iframe{
 .mypage{
     background-color: rgba(130, 168, 212, 0.1);
     padding: 80px;
-    width: 40vw;
+    width: 60vw;
     height: 40vh;
     border-radius: 10px;
-    margin: auto;
-    margin-top: 50px;
+    margin: 50px auto;
     animation: goOpacityUp 2s ease-in-out;
 }
 #mypage_first_title{

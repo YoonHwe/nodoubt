@@ -94,7 +94,6 @@ a{
 /* 첫번째 칸 - 기업 소개 */
 .content_first{
     background-color: rgba(130, 168, 212, 0.1); 
-    border: 3px solid greenyellow;
     animation: goOpacityUp 2s ease-in-out;
     font-family: 'Noto Sans KR', sans-serif;
 }
@@ -165,7 +164,6 @@ a{
 /* 두번째 칸 - 인스트럭션 + 지원서 */
 .content_second{ 
     padding: 2% 6% 4% 6%; 
-    border: 3px solid orange;
     animation: goOpacityUp 2s ease-in-out;
 }
 .content_second_upper{
@@ -409,7 +407,6 @@ a{
 /**/
 .content_issue{
     padding: 0% 6%;
-    border: 3px solid purple;
     background-color: rgba(130, 168, 212, 0.1);
 }
 .content_issue_title{
@@ -465,7 +462,6 @@ a{
 /* 다섯번째 칸 - 취업 준비 자료 */
 .content_ready{
     padding: 0% 4%;
-    border: 3px solid teal;
     padding-top: 40px; 
     padding-bottom: 20px;
 
@@ -649,7 +645,7 @@ iframe{
     text-align: center;
     padding: 60px 0px;
     background-color: rgba(130, 168, 212, 0.1);
-    width: 40vw;
+    width: 76vw;
     height: 40vh;
     margin: 40px auto;
     display: flex;
@@ -672,16 +668,16 @@ iframe{
     margin: 30px 0px;
     opacity: .7;
     animation: goOpacityUp 2s ease-in-out;
+    font-size: 20px;
 }
 /*마이페이지*/
 .mypage{
     background-color: rgba(130, 168, 212, 0.1);
     padding: 80px;
-    width: 40vw;
+    width: 72vw;
     height: 40vh;
     border-radius: 10px;
-    margin: auto;
-    margin-top: 50px;
+    margin: 50px auto;
     animation: goOpacityUp 2s ease-in-out;
 }
 #mypage_first_title{
