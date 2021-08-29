@@ -51,7 +51,7 @@ function paintList(event){
         third.innerHTML = "<a class='list_content_link' href='https://www.wowpass.com/' target='_blank'><h2>와우패스</h2></a><h3 style='opacity: 0.5; margin-left: 10px;'>사회조사분석사, CFA 등 경영학 관련 자격증의 유료 강의를 제공</h3>";
         fourth.innerHTML = "<a class='list_content_link' href='https://www.dataedu.kr/' target='_blank'><h2>데이터에듀</h2></a><h3 style='opacity: 0.5; margin-left: 10px;'>ADP, ADSP 시험에 대한 자체 제작 교재 및 인강을 유료로 제공</h3>";
         fifth.innerHTML = "<a class='list_content_link' href='http://www.itbtm.com/main2/intro.php' target='_blank'><h2>유동근의 IT버팀목</h2></a><h3 style='opacity: 0.5; margin-left: 10px;'>컴퓨터 활용 능력 시험 온라인 강의 사이트</h3>";
-        sixth.innerHTML = "<a class='list_content_link' href='http://www.itbtm.com/main2/intro.php' target='_blank'><h2>인프런</h2></a><h3 style='opacity: 0.5; margin-left: 10px;'>실무에 필요한 온라인 강의를 제공</h3>";
+        sixth.innerHTML = "<a class='list_content_link' href='https://www.inflearn.com/' target='_blank'><h2>인프런</h2></a><h3 style='opacity: 0.5; margin-left: 10px;'>실무에 필요한 온라인 강의를 제공</h3>";
     }
     if(event === 3){        
         category_first.style.color = "black";
