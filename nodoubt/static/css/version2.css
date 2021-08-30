@@ -285,7 +285,8 @@ a{
     width: 100%;
 }
 .content_second_selects{
-    width: 30%;
+    text-align: center;
+    width: 80px;
 }
 .content_second_select_input{
     display: flex; 

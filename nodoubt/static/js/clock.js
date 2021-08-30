@@ -1,12 +1,13 @@
 const clockTitle = document.querySelector(".content_second_dtime h2");
 function getClock() {
     const date = new Date();
-    const targetDay = new Date();
-    targetDay.setMonth(8);
-    targetDay.setDate(6);
-    targetDay.setHours(0);
-    targetDay.setMinutes(0);
-    targetDay.setSeconds(0);
+    // const targetDay = new Date();
+    // targetDay.setMonth(8);
+    // targetDay.setDate(6);
+    // targetDay.setHours(0);
+    // targetDay.setMinutes(0);
+    // targetDay.setSeconds(0);
+    const targetDay = new Date(2021, 8, 6, 0, 0, 0);
     const month = String(date.getMonth()).padStart(2, "0");
     const day = String(date.getDate()).padStart(2, "0");
     const hour = String(date.getHours()).padStart(2, "0");
