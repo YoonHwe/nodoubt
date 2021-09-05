@@ -148,10 +148,10 @@ a{
     display: flex; 
     justify-content: space-between; 
     margin: 0 auto;
-    padding: 2% 2% 2% 2%;
+    padding: 2% 0% 2% 0%;
 }
 .content_first_lower_content{
-    width: 30%; 
+    width: 33%; 
     text-align: center;
 }
 .content_first_lower_content i{
@@ -163,7 +163,7 @@ a{
 }
 .content_first_lower_content h5{
     opacity: .6;
-    font-size: 8px;
+    font-size: 6px;
 }
 /* 두번째 칸 - 인스트럭션 + 지원서 */
 .content_second{ 
@@ -406,6 +406,62 @@ a{
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 2%;
+}
+/**/
+.content_popular{
+    padding: 0% 6%;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.content_popular_title{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 2%;
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.content_popular_top{
+    text-align: center;
+    padding: 20px 0px;
+}
+.content_popular_top_contents{
+    display: inline-block;
+    position: relative;
+    border: 1px solid black; 
+    width: 120px;
+    height: 80px;
+    padding: 0px 2px;
+    margin: 12px 4px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    vertical-align: middle;
+    text-align: left;
+}
+#content_popular_top_contents_company{
+    font-size: 14px;
+    font-weight: 600;
+    margin: 10px 0px 6px 0px;
+}
+#content_popular_top_contents_job{
+    font-size: 10px;
+    font-weight: 400;
+    margin: 6px 0px;
+}
+#content_popular_top_contents_year{
+    font-size: 6px;
+    margin: 6px 0px 0px 0px;
+    font-weight: 300;
+}
+.content_popular_top_contents a{
+    font-size: 4px;
+    position: absolute;
+    right: 4px;
+    bottom: 2px;
+    padding: 2px;
+}
+.content_popular_top_contents:hover{
+    background-color: orange;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 /**/
 .content_issue{

@@ -19,7 +19,7 @@
             </div>
             <h1 class="content_first_upper_middle_h1">선배들은 어떻게 취업했을까?</h1>
             <h3 class="content_first_upper_middle_h3_first">궁금한 선배들의 스펙 + 자소서 한 줄 POINT까지</h3>
-            <h3 class="content_first_upper_middle_h3_second">@ 이메일로 받아보는 스펙 정보 @</h3>
+            <h3 class="content_first_upper_middle_h3_second">@ NODOUBT이 드리는 선배들의 취업 정보 @</h3>
         </div>
         <!-- 윗쪽의 오른쪽 -->
         <div class="content_first_upper_right">
@@ -31,12 +31,12 @@
     <div class="content_first_lower">
         <div class="content_first_lower_content">
             <i class="fas fa-user-graduate fa-3x"></i>
-            <h3>취업 정보 제공</h3>
-            <h5>신청서 작성 시 정보를<br>제공해드립니다!</h5>
+            <h3>취업 정보방</h3>
+            <h5>선배들의 취업 정보를<br>제공해드립니다!</h5>
         </div>
         <div class="content_first_lower_content">
             <i class="far fa-newspaper fa-3x"></i>
-            <h3>취업 정보통</h3>
+            <h3>취업 사이트</h3>
             <h5>취업에 도움되는 사이트를<br>알려드립니다!</h5>                
         </div>
         <div class="content_first_lower_content">
@@ -63,7 +63,7 @@
     </div>
     <div class="content_second_dtime">
         <h1 class="content_second_dtime_h1">NEW CONTENT 배포일: 9월 6일 월요일</h1>
-        <h2 class="content_second_dtime_clock">00:00:00</h2>
+        <h2 class="content_second_dtime_clock">[NODOUBT] 9월 2주차 메일 발송 완료</h2>
         <!-- <div class="content_second_dtime_input">
             <input class="content_second_dtime_input_button" id="modal_btn" type="button" value="자료 신청하기">
         </div> -->
@@ -119,72 +119,25 @@
     </div>
 </div>
 
-<!-- <div class="content_data_count" style="text-align: center;">
-    <h1>NODOUBT이 보유하고 있는 선배의 자료 개수</h1>
-    <table class="content_data_table" style="border: 1px solid black; margin: auto;">
-        <thead class="content_data_table_first">
-            <tr>
-                <th colspan="3" style="border: 1px solid green;">총 자료 개수: 50개</th>
-            </tr>
-        </thead>
-        <thead class="content_data_table_second">
-            <tr>
-                <th scope="col" id="board" style="border: 1px solid blue;">정규</th>
-                <th scope="col" id="board" style="border: 1px solid blue;">인턴</th>
-                <th scope="col" id="board" style="border: 1px solid blue;">IPP</th>
-            </tr>
-        </thead>
-        <tbody class="content_data_table_third">
-            <tr>
-                <td style="border: 1px solid orange;">12개</td>
-                <td style="border: 1px solid orange;">23개</td>
-                <td style="border: 1px solid orange;">34개</td>
-            </tr>
-        </tbody>
-    </table>
-</div> -->
-
-<!-- <div class="content_popular">
-    <div class="content_popular_title">인기 자소서 TOP 8</div>
-    <div class="content_popular_top">
+<div class="content_popular">
+    <div class="content_popular_title">선배들의 취업 정보</div>
+    <div class="content_popular_top" >
         {% for data in datas %}
         <div class="content_popular_top_contents">
-            <h4>{{data.company}}</h4>
-            <h5>{{data.job}}</h5>
-            <h6>{{data.employed_year}}</h6>
-            <a href ="{%url 'main:detail' data.id %}">...자세히</a>
+            <p id="content_popular_top_contents_company">{{data.company}}</p>                
+            <p id="content_popular_top_contents_job">{{data.job}}</p>
+            <p id="content_popular_top_contents_year">{{data.employed_year}}</p>
+            <a href ="{%url 'main:detail' data.id %}">...열어보기</a>
         </div>
         {%endfor%}
     </div>
-    <div class="content_popular_bottom" style="display: flex; margin: 0 auto; display: space-between; border: 1px solid black;">
-        <div class="content_popular_bottom_contents" style="border: 1px solid greenyellow;">
-            <h4>곰표베이커리하우스</h4>
-            <h5>sbjfsabnjlkfnqwpknfpiqwnipfbqwiofbqwip</h5>
-            <h6>2021년도</h6>
-        </div>
-        <div class="content_popular_bottom_contents" style="border: 1px solid greenyellow;">
-            <h4>삼성전자</h4>
-            <h5>sbjfsabnjlkfnqwpknfpiqwnipfbqwiofbqwip</h5>
-            <h6>2021년도</h6>
-        </div>
-        <div class="content_popular_bottom_contents" style="border: 1px solid greenyellow;">
-            <h4>LG전자</h4>
-            <h5>sbjfsabnjlkfnqwpknfpiqwnipfbqwiofbqwip</h5>
-            <h6>2021년도</h6>
-        </div>
-        <div class="content_popular_bottom_contents" style="border: 1px solid greenyellow;">
-            <h4>LG전자</h4>
-            <h5>sbjfsabnjlkfnqwpknfpiqwnipfbqwiofbqwip</h5>
-            <h6>2021년도</h6>
-        </div>
-    </div>
-    <div>
+    <div style="text-align: center;">
         <h2><a href="{% url 'main:new' %}">자소서 업로드</a></h2>
     </div>    
-</div> -->
+</div>
 
 <div class="content_issue">
-    <div class="content_issue_title">취업에 도움되는 정보통</div>
+    <div class="content_issue_title">취업에 도움되는 사이트</div>
     <div class="content_issue_category">
         <a class="content_issue_category_list category_list_first" onclick="paintList(1)"><h3><i class="fas fa-school fa-2x"></i><br>학교</h3></a>
         <a class="content_issue_category_list category_list_second" onclick="paintList(2)"><h3><i class="fas fa-chalkboard-teacher fa-2x"></i><br>인강</h3></a>

@@ -1,13 +1,10 @@
-const clockTitle = document.querySelector(".content_second_dtime h2");
+const clockTitle = document.querySelector(".content_second_dtime_clock");
 function getClock() {
+    const contentPopular = document.querySelector(".content_popular_top");
+    const contentPopularLast = contentPopular.lastElementChild;
+    const targetYear = contentPopularLast.childNodes[5];
     const date = new Date();
-    // const targetDay = new Date();
-    // targetDay.setMonth(8);
-    // targetDay.setDate(6);
-    // targetDay.setHours(0);
-    // targetDay.setMinutes(0);
-    // targetDay.setSeconds(0);
-    const targetDay = new Date(2021, 8, 6, 0, 0, 0);
+    const targetDay = new Date(2021, 8, 13, 0, 0, 0);
     const month = String(date.getMonth()).padStart(2, "0");
     const day = String(date.getDate()).padStart(2, "0");
     const hour = String(date.getHours()).padStart(2, "0");
@@ -24,10 +21,10 @@ function getClock() {
     const minuteGap = Math.floor(timeGap / (1000 * 60)) % 60;
     const secondGap = Math.floor(timeGap / 1000) % 60;
     if(timeGap <= 0){
-        clockTitle.innerText = "[NODOUBT] 9월 2주차 메일 발송 완료";
+        targetDay.innerText = "D - Day"
     }
     else{
-        clockTitle.innerText = `D - ${dayGap}일 ${hourGap}시간 ${minuteGap}분 ${secondGap}초`;
+        targetYear.innerText = `D - ${dayGap}일 ${hourGap}시간 ${minuteGap}분 ${secondGap}초`;
     }
 }
 

@@ -1,26 +1,88 @@
-<!-- {% extends 'base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 
 {% block content %}
 
 {% if user.is_authenticated %}
-<h1>{{data.company}}</h1>
-<br>
-<br>직무: {{data.job}}
-<br>취업년도: {{data.employed_year}}
-<br>날짜: {{data.pub_date}}
 <br>
 {% if data.image %}
     <p><img src="{{data.image.url}}" alt="사진"></p>
 {% endif %}
-<br><p>{{data.body}}</p>
-
+<br>
+<div id="detail_body">{{data.body}}</div>
+<div style="text-align: center; margin-top: 80px; ">
+    <h1>선배님의 정보가 도움이 되었다면?</h1>
+    <span href="#" class="like" name="{{data.company}}" value="Like">
+        {% if user in data.like_user_set.all %}
+        <div class="alt-service-icon">
+            <i class="fas fa-heart fa-3x" id="like-icon" style="color: red;"></i>
+        </div>
+        {% else %}
+        <div class="alt-service-icon">
+            <i class="far fa-heart fa-3x" id="like-icon" style="color:red;"></i>
+        </div>
+        {% endif %}
+        <h3 id="count-{{data.id}}_like" class="alt-services-title font-alt">
+            좋아요
+            {% if data.like_count == 0 %}
+            0개
+            {% else %}
+            {{post.like_count}}개
+            {% endif %}
+        </h3>
+    </span>
+    <a href="{% url 'main:showmain' %}"><button style="padding: 12px;">메인 화면으로 돌아가기</button></a>
+</div>
 <br><br><br><br>
+
+
+<!-- <br>
 <a href="{% url 'main:edit' data.id %}">수정하기</a>
-<a href="{% url 'main:delete' data.id %}">삭제하기</a>
+<br>
+<a href="{% url 'main:delete' data.id %}">삭제하기</a> -->
 {% else %}
 <h3>로그인 후 이용 가능</h3>
-<a href="{% url 'account_login' %}">로그인</a>
-<a href="{% url 'account_signup' %}">회원가입</a>
+<a href="{% url 'account_login' %}">구글 로그인</a>
 {% endif %}
-{% endblock %} -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script>
+    $(".like").click(function(){
+        var pk = $(this).attr('name')
+        $.ajax({
+            url : "{% url 'main:like_toggle' data.pk %}",
+            data : {'pk':pk,'csrfmiddlewaretoken': '{{ csrf_token }}'},
+            type:"POST",
+            dataType:"json",
+            
+            success: function(response){
+
+                if (response.like_count==null){
+                    alert("로그인이 필요합니다.");
+                    window.location.replace('/accounts/login/')
+                }
+                else{
+                    if (response.result == "like"){
+                        $('#like-icon').removeClass();
+                        $('#like-icon').addClass('fas fa-heart fa-3x');
+                    }
+                    else{
+                        $('#like-icon').removeClass();
+                        $('#like-icon').addClass('far fa-heart fa-3x');
+                    }
+
+                    $('#count-{{ data.id }}_like').html('좋아요 '+response.like_count+'개');
+                }
+            },
+
+            error: function(request, status, error){
+                alert("로그인이 필요합니다.")
+	            alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error); 
+        	},
+         });
+    })
+ </script>
+
+{% endblock %}
+

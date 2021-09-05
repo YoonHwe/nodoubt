@@ -17,5 +17,6 @@ urlpatterns = [
     path('letter/',views.letter, name="letter"),
     path('feedback/',views.feedback, name="feedback"),
     path('feedback_create/',views.feedback_create, name="feedback_create"),
+    path('like_toggle/<int:post_id>/', views.like_toggle, name="like_toggle"),
 ]
     
