@@ -28,7 +28,7 @@ def create(request):
     new_data.employed_year = request.POST['employed_year']
     new_data.pub_date = timezone.now() 
     new_data.body = request.POST['body']
-    new_data.image = request.FILES['image']
+    new_data.image = request.FILES.get('image')
     new_data.save()
     return redirect('main:detail', new_data.id)
 
