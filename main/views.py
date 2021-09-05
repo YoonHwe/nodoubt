@@ -64,9 +64,6 @@ def request_create(request):
     new_request.save()
     return redirect('main:showmain') 
 
-def sample(request):
-    return render(request, 'main/sample.html')
-
 def letter(request):
     return render(request, 'main/letter.html')
 
