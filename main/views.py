@@ -43,7 +43,7 @@ def update(request, id):
     update_data.employed_year = request.POST['employed_year']
     update_data.pub_date = timezone.now() 
     update_data.body = request.POST['body']
-    update_data.image = request.FILES['image']
+    update_data.image = request.FILES.get('image')
     update_data.save()
     return redirect('main:detail', update_data.id)
 
