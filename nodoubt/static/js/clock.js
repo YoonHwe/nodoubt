@@ -24,7 +24,7 @@ function getClock() {
     const minuteGap = Math.floor(timeGap / (1000 * 60)) % 60;
     const secondGap = Math.floor(timeGap / 1000) % 60;
     if(timeGap <= 0){
-        clockTitle.innerText = "D - Day";
+        clockTitle.innerText = "[NODOUBT] 9월 2주차 메일 발송 완료";
     }
     else{
         clockTitle.innerText = `D - ${dayGap}일 ${hourGap}시간 ${minuteGap}분 ${secondGap}초`;
