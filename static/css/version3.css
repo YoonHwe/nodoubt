@@ -664,6 +664,37 @@ iframe{
     text-align: center;
     padding: 30% 0%;
 }
+/*디테일 detail*/
+#detail_tail{
+    margin-top: 80px;
+    text-align: center;
+}
+#detail_tail_title{   
+}
+#detail_tail_button{
+    padding: 12px; 
+    border-radius: 10px;
+}
+#detail_tail_button:hover{
+    background-color: orange;
+}
+#like-icon{
+    color: red;
+}
+#like-icon:hover{
+    color: rgb(255, 116, 116);
+}
+#detail_tail_login{
+    text-align: center; 
+    padding: 200px 100px; 
+    background-color: rgba(130, 168, 212, 0.1);;
+}
+#detail_tail_login_button{
+    padding: 20px 40px; 
+    background-color: orange; 
+    border-radius: 10px;
+    font-weight: bold;
+}
 /*로그인*/
 .login{
     text-align: center;

@@ -10,16 +10,16 @@
 {% endif %}
 <br>
 <div id="detail_body">{{data.body}}</div>
-<div style="text-align: center; margin-top: 80px; ">
-    <h1>선배님의 정보가 도움이 되었다면?</h1>
+<div id="detail_tail">
+    <h1 id="detail_tail_title">선배님의 정보가 도움이 되었다면?</h1>
     <span href="#" class="like" name="{{data.company}}" value="Like">
         {% if user in data.like_user_set.all %}
         <div class="alt-service-icon">
-            <i class="fas fa-heart fa-3x" id="like-icon" style="color: red;"></i>
+            <i class="fas fa-heart fa-3x" id="like-icon"></i>
         </div>
         {% else %}
         <div class="alt-service-icon">
-            <i class="far fa-heart fa-3x" id="like-icon" style="color:red;"></i>
+            <i class="far fa-heart fa-3x" id="like-icon"></i>
         </div>
         {% endif %}
         <h3 id="count-{{data.id}}_like" class="alt-services-title font-alt">
@@ -31,7 +31,7 @@
             {% endif %}
         </h3>
     </span>
-    <a href="{% url 'main:showmain' %}"><button style="padding: 12px;">메인 화면으로 돌아가기</button></a>
+    <a href="{% url 'main:showmain' %}"><button id="detail_tail_button">메인 화면으로 돌아가기</button></a>
 </div>
 <br><br><br><br>
 
@@ -41,10 +41,10 @@
 <br>
 <a href="{% url 'main:delete' data.id %}">삭제하기</a> -->
 {% else %}
-<div style="text-align: center; padding: 200px 100px; background-color: rgba(130, 168, 212, 0.1);;">
+<div id="detail_tail_login">
     <div>
-        <h2 style="">로그인 후 이용 가능</h2>
-        <a href="{% url 'account_login' %}"><button style="padding: 20px 40px; background-color: orange; border-radius: 10px;">구글 로그인</button></a>
+        <h2>로그인 후 이용 가능</h2>
+        <a href="{% url 'account_login' %}"><button id="detail_tail_login_button">구글 로그인</button></a>
     </div>
     
 </div>
