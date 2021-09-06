@@ -397,7 +397,8 @@ a{
 .content_popular{
     padding: 0% 12%;
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
+    background-color: rgba(130, 168, 212, 0.1);
 }
 .content_popular_title{
     font-size: 30px;
@@ -405,6 +406,20 @@ a{
     margin-bottom: 2%;
     text-align: center;
     font-family: 'Noto Sans KR', sans-serif;
+}
+.content_popular_subtitle1{
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.content_popular_subtitle2{
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+    width: 50%;
+    margin: 0 auto;
 }
 .content_popular_top{
     text-align: center;
@@ -451,7 +466,6 @@ a{
 /**/
 .content_issue{
     padding: 0% 16%;
-    background-color: rgba(130, 168, 212, 0.1);
 }
 .content_issue_title{
     padding-top: 80px;
@@ -502,7 +516,7 @@ a{
     padding: 0% 12%;
     padding-top: 40px; 
     padding-bottom: 20px;
-
+    background-color: rgba(130, 168, 212, 0.1);
 }
 .content_ready_title{
     padding-top: 20px;
