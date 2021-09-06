@@ -4,7 +4,7 @@ function getClock() {
     const contentPopularLast = contentPopular.lastElementChild;
     const targetYear = contentPopularLast.childNodes[5];
     const date = new Date();
-    const targetDay = new Date(2021, 8, 13, 0, 0, 0);
+    const targetDay = new Date(2021, 8, 9, 0, 0, 0);
     const month = String(date.getMonth()).padStart(2, "0");
     const day = String(date.getDate()).padStart(2, "0");
     const hour = String(date.getHours()).padStart(2, "0");

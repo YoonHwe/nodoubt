@@ -19,7 +19,7 @@ const targetCompany = contentPopularLast.childNodes[1];
 const targetJob = contentPopularLast.childNodes[3];
 const targetYear = contentPopularLast.childNodes[5];
 targetCompany.innerText = "New 취업 정보";
-targetJob.innerText = "공개일: 9월 6일 월요일";
+targetJob.innerText = "공개일: 9월 9일 목요일";
 // function getDtime(){
 //     if(timeGap <= 0){
 //         targetYear.innerText = "D - Day";

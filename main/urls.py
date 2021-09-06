@@ -14,6 +14,7 @@ urlpatterns = [
     path('delete/<str:id>',views.delete, name="delete"),
     path('request_create/',views.request_create, name="request_create"),
     path('letter/',views.letter, name="letter"),
+    path('sample1/',views.sample1, name="sample1"),
     path('feedback/',views.feedback, name="feedback"),
     path('feedback_create/',views.feedback_create, name="feedback_create"),
     path('like_toggle/<int:post_id>/', views.like_toggle, name="like_toggle"),

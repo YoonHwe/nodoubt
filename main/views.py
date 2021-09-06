@@ -14,6 +14,10 @@ def showmain(request):
 def introduce(request):
     return render(request, 'main/introduce.html')
 
+def sample1(request):
+    return render(request, 'main/sample1.html')
+
+
 def detail(request, id):
     data = get_object_or_404(Data, pk = id)
     return render(request, 'main/detail.html', {'data': data})
