@@ -93,7 +93,7 @@ a{
 /* 첫번째 칸 - 기업 소개 */
 .content_first{
     padding: 4% 12% 2% 12%;
-    background-color: rgba(130, 168, 212, 0.1); 
+    background-color: rgba(130, 168, 212, 0.1);
     animation: goOpacityUp 2s ease-in-out;
     font-family: 'Noto Sans KR', sans-serif;
 }

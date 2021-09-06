@@ -36,13 +36,19 @@
 <br><br><br><br>
 
 
-<br>
+<!-- <br>
 <a href="{% url 'main:edit' data.id %}">수정하기</a>
 <br>
-<a href="{% url 'main:delete' data.id %}">삭제하기</a>
+<a href="{% url 'main:delete' data.id %}">삭제하기</a> -->
 {% else %}
-<h3>로그인 후 이용 가능</h3>
-<a href="{% url 'account_login' %}">구글 로그인</a>
+<div style="text-align: center; padding: 200px 100px; background-color: rgba(130, 168, 212, 0.1);;">
+    <div>
+        <h2 style="">로그인 후 이용 가능</h2>
+        <a href="{% url 'account_login' %}"><button style="padding: 20px 40px; background-color: orange; border-radius: 10px;">구글 로그인</button></a>
+    </div>
+    
+</div>
+
 {% endif %}
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
