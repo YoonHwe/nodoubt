@@ -1,7 +1,7 @@
 const clockTitle = document.querySelector(".content_second_dtime_clock");
 function getClock() {
     const promiseDay = new Date();
-    const targetDay = new Date(2021, 8, 13, 0, 0, 0);
+    const targetDay = new Date(2021, 8, 18, 0, 0, 0);
     const month = String(promiseDay.getMonth()).padStart(2, "0");
     const day = String(promiseDay.getDate()).padStart(2, "0");
     const hour = String(promiseDay.getHours()).padStart(2, "0");
