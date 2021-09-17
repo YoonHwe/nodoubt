@@ -5,14 +5,14 @@ contentPopularLastAnchor.addEventListener("click",popularReady);
 const targetCompany = contentPopularLast.childNodes[1];
 const targetJob = contentPopularLast.childNodes[3];
 const targetYear = contentPopularLast.childNodes[5];
-targetJob.innerText = "공개일: 9월 18일 금요일";
+targetJob.innerText = "공개일: 9월 24일 금요일";
 
 function getClock() {
     const contentPopular = document.querySelector(".content_popular_top");
     const contentPopularLast = contentPopular.lastElementChild;
     const targetYear = contentPopularLast.childNodes[5];
     const date = new Date();
-    const targetDay = new Date(2021, 8, 18, 0, 0, 0);
+    const targetDay = new Date(2021, 8, 24, 0, 0, 0);
     const month = String(date.getMonth()).padStart(2, "0");
     const day = String(date.getDate()).padStart(2, "0");
     const hour = String(date.getHours()).padStart(2, "0");
