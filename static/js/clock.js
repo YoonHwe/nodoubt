@@ -1,7 +1,7 @@
 const clockTitle = document.querySelector(".content_second_dtime_clock");
 function getClock() {
     const promiseDay = new Date();
-    const targetDay = new Date(2021, 8, 27, 0, 0, 0);
+    const targetDay = new Date(2021, 9, 4, 0, 0, 0);
     const month = String(promiseDay.getMonth()).padStart(2, "0");
     const day = String(promiseDay.getDate()).padStart(2, "0");
     const hour = String(promiseDay.getHours()).padStart(2, "0");
@@ -18,7 +18,7 @@ function getClock() {
     const minuteGap = Math.floor(timeGap / (1000 * 60)) % 60;
     const secondGap = Math.floor(timeGap / 1000) % 60;
     if(timeGap <= 0){
-        clockTitle.innerText = "신청 마감"
+        clockTitle.innerText = "[ 신청 마감 ] - 다음 신청 기간: 10/5일 00시 ~ 10월 11일 00시"
     }
     else{
         clockTitle.innerText = `D - ${dayGap}일 ${hourGap}시간 ${minuteGap}분 ${secondGap}초`;
