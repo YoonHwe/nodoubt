@@ -10,6 +10,7 @@
 {% endif %}
 <br>
 <div id="detail_body">{{data.body}}</div>
+<div class="loader"></div>
 <div id="detail_tail">
     <h1 id="detail_tail_title">선배님의 정보가 도움이 되었다면?</h1>
     <span href="#" class="like" name="{{data.company}}" value="Like">
@@ -33,7 +34,6 @@
     </span>
     <a href="{% url 'main:showmain' %}"><button id="detail_tail_button">메인 화면으로 돌아가기</button></a>
 </div>
-<br><br><br><br>
 
 
 <!-- <br>
@@ -41,8 +41,8 @@
 <br>
 <a href="{% url 'main:delete' data.id %}">삭제하기</a> -->
 {% else %}
-<div id="detail_tail_login" style="border: 1px solid black;">
-    <div style="border: 1px solid black;">
+<div id="detail_tail_login">
+    <div>
         <h2>로그인 후 이용 가능</h2>
         <a href="{% url 'account_login' %}"><button id="detail_tail_login_button">구글 로그인</button></a>
     </div>
@@ -89,6 +89,5 @@
          });
     })
  </script>
-
 {% endblock %}
 
