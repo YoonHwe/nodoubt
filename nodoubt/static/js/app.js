@@ -1,3 +1,5 @@
+alert("현재 웹 사이트 업데이트 진행 중입니다. 3월 1일에 재오픈하겠습니다.");
+
 function fnMove(seq){
     var offset = $(".content_" + seq).offset();
     $('html, body').animate({scrollTop : offset.top}, 400);
