@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div id="board_detail">
+	<div>
+		<h1 id="board_detail_title">공지사항</h1>
+		<div id="board_detail_info">
+			<p id="board_detail_writer">관리자</p>
+			<p id="board_detail_pubdate"></p>
+		</div>
+		<div id="board_detail_content">
+			<textarea disabled>
+안녕하세요. NODOUBT의 관리자입니다.
+
+모두가 자유롭게 이용하여 취업에 도움이 되었으면 하는 조그만 소망으로 게시판을 개설하였습니다.
+
+취업에 대한 정보, 고민, 질문 등...
+취업과 관련된 내용이면 무엇이든지 좋습니다.
+
+다만, 모두가 이용하는 공간인 만큼 상대방을 배려해주시면 감사하겠습니다.
+
+언젠가, 밝게 빛나게 될 당신의 앞길에 조금이나마 도움이 되었으면 합니다.
+			</textarea>
+		</div>
+	</div>
+	<div id="board_detail_function">
+		<a href="{% url 'main:board' %}"><button>게시판으로 돌아가기</button></a>
+	</div>	
+</div>
+{% endblock %}

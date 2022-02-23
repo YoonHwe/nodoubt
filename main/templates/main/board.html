@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+<div id="board">
+    <h1 id="board_title">자유게시판</h1>
+    <h4 id="board_subtitle">자유게시판에서 질문과 답변을 통해 서로의 정보를 공유해 봅시다.</h4>
+    <table id="board_table">
+        <thead id="board_table_head">
+            <tr>
+                <th id="board_table_head_number" class="board_table_heads">번호</th>
+                <th id="board_table_head_title" class="board_table_heads">제목</th>
+                <th id="board_table_head_writer" class="board_table_heads">작성자</th>
+                <th id="board_table_head_pubdate" class="board_table_heads">작성일자</th>
+                <th id="board_table_head_like" class="board_table_heads">추천수</th>
+            </tr>
+        </thead>
+        <tbody id="board_table_body">
+            <tr id="board_table_body_content">
+                <td id="board_table_body_number" class="board_table_bodies">공지</td>
+                <td id="board_table_body_title" class="board_table_bodies"><a href="{% url 'main:board_notice' %}">자유게시판 안내</a></td>
+                <td id="board_table_body_writer" class="board_table_bodies">관리자</td>
+                <td id="board_table_body_pubdate" class="board_table_bodies">-</td>   
+                <td id="board_table_body_like" class="board_table_bodies">-</td>             
+            </tr>
+            {% for board in boards %}
+            <tr id="board_table_body_content">
+                <td id="board_table_body_number" class="board_table_bodies">{{forloop.revcounter}}</td>
+                <td id="board_table_body_title" class="board_table_bodies"><a href="{% url 'main:board_detail' board.id %}">{{board.title_summary}}</a></td>
+                <td id="board_table_body_writer" class="board_table_bodies">{{board.writer}}</td>
+                <td id="board_table_body_pubdate" class="board_table_bodies">{{board.created_at}}</td>
+                <td id="board_table_body_like" class="board_table_bodies">{{board.board_like_count}}</td>             
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <button id="board_create_button" onclick="location.href = '{% url 'main:board_new' %}'">글 작성하기</button>
+</div>
+{% endblock %}

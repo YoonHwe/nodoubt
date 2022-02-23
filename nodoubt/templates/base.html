@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="{% static 'css/version6.css' %}" media="screen and (min-width:375px) and (max-width:424px)"/>
     <link rel="stylesheet" href="{% static 'css/version7.css' %}" media="screen and (max-width:374px)"/>
     <link rel="stylesheet" href="{% static 'css/animation.css' %}"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon.ico' %}">
     <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
@@ -42,7 +43,7 @@
 <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4F6KP2" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4F6KP2" height="0" width="0" style="display:none; visibility:hidden"></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
     <!--navbar-->
@@ -53,12 +54,5 @@
     {% endblock %}
     <!--footer-->
     {% include 'shared/footer.html' %}
-    <script src="{% static 'js/app.js' %}"></script>
-    <script src="{% static 'js/clock.js' %}"></script>
-    <script src="{% static 'js/todo.js' %}"></script>
-    <script src="{% static 'js/request.js' %}"></script>
-    <script src="{% static 'js/dropdown.js' %}"></script>
-    <script src="{% static 'js/detail.js' %}"></script>
-    <script src="{% static 'js/popular.js' %}"></script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<!-- 개인정보 처리 방침 -->
 <div id="letter">
     &nbsp;안녕하세요! 저희는 경영학부 15학번 및 16학번으로 구성된 NODOUBT 팀입니다. 저희 서비스가 드리는 사용자분들과의 약속입니다.<br><br>
     1. 개인정보의 처리 목적<br>&nbsp;(‘http://nodoubt.site/’ 이하 ‘NODOUBT’) 은(는) 자체 컨텐츠 제공의 목적을 위하여 개인정보를 처리하고 있으며, 그 외의 용도로는 이용하지 않습니다.<br><br>
@@ -22,7 +23,6 @@
     <div class="letter_center">
         <a href="{% url 'main:feedback' %}"><button>피드백 및 요청사항 남기기</button></a><br><br>
     </div>
-    
     <div class="letter_center">- NODOUBT 드림 -</div>
 </div>
 {% endblock %}

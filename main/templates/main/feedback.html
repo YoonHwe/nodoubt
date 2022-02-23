@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block content %}
+<!-- 피드백 / 요청사항 작성 -->
 <div id="feedback">
 	<h1>피드백 / 요청사항</h1>
 	{% if user.is_authenticated %}
@@ -23,6 +23,5 @@
 		<a href="{% url 'account_login' %}"><button>구글 로그인</button></a>
 	</div>	
 	{% endif %}
-
 </div>
 {% endblock %}

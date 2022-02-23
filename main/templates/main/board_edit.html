@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div id="board_new">
+	<h1>글 수정하기</h1>
+	<form action = "{% url 'main:board_update' board.id %}" method = "post" enctype="multipart/form-data">
+    	{% csrf_token %}
+    	<p>제목<br><br><input type="text" name="title" value="{{board.title}}" id="board_new_input_title"></p>
+		<p>내용<br><br><textarea name="body" id="board_new_input_content">{{board.body}}</textarea></p>
+        <p>사진: <input type="file" name="image" value=""></p>
+        <div id="board_new_button_submit">
+			<button type="submit">등록</button>
+		</div >
+	</form>
+</div>
+{% endblock %}

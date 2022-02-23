@@ -1,12 +1,15 @@
 <!-- Footer -->
 <div class="footer">
-    <div class="footer_company">
-        <a href="{% url 'main:showmain' %}">NODOUBT</a>
-    </div>
     <div class="footer_letter">
-        <a href="{% url 'main:letter' %}"><button>NODOUBT이 드리는 편지</button></a>
+        <h1 id="footer_content">취준생 여러분의 취업 성공을 응원합니다.</h1>
+        <h1 id="footer_content">취준생들이 느낄 불편과 힘듦을</h1>
+        <h1 id="footer_content">조금이나마 덜어주고 싶었습니다.</h1>
     </div>
-    <div class="footer_feedback">
-        <a href="{% url 'main:feedback' %}"><button>피드백/질문 작성하기</button></a>
+    <div id="footer_link">
+        <div>
+            <a id="footer_company" href="{% url 'main:showmain' %}">NODOUBT</a>
+        </div>
+        <a href="{% url 'main:feedback' %}"><button>문의사항</button></a>
+        <a href="{% url 'main:letter' %}"><button>개인정보 처리방침</button></a>
     </div>
 </div>

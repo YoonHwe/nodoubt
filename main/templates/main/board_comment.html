@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div id="board_comment_edit">
+    <h1>댓글 수정하기</h1>
+    <div>
+        <form action="{% url 'main:update_board_comment' board_comment.id %}" method="POST">
+            {% csrf_token %}
+            <input type="text" name='content' placeholder="댓글내용입력" id="comment_create_input" value="{{board_comment.content}}">
+            <input type="submit" value="확인">
+        </form>
+    </div>
+</div>
+{% endblock%}

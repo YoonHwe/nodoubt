@@ -1,16 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block content %}
 
 {% if user.is_authenticated %}
-<br>
-{% if data.image %}
-    <p><img src="{{data.image.url}}" alt="사진"></p>
-{% endif %}
-<br>
+<!-- 선배들의 취업 정보 상세 -->
+<br><br>
+<div id="detail_head">
+    <div class="loader"></div>
+</div>
 <div id="detail_body">{{data.body}}</div>
-<div class="loader"></div>
 <div id="detail_tail">
     <h1 id="detail_tail_title">선배님의 정보가 도움이 되었다면?</h1>
     <span href="#" class="like" name="{{data.company}}" value="Like">
@@ -32,27 +30,21 @@
             {% endif %}
         </h3>
     </span>
-    <a href="{% url 'main:showmain' %}"><button id="detail_tail_button">메인 화면으로 돌아가기</button></a>
+    <a href="{% url 'main:showmain' %}"><button id="detail_tail_button">홈으로 돌아가기</button></a>
 </div>
-
-
-<!-- <br>
-<a href="{% url 'main:edit' data.id %}">수정하기</a>
-<br>
-<a href="{% url 'main:delete' data.id %}">삭제하기</a> -->
+<br><br><br><br>
 {% else %}
 <div id="detail_tail_login">
     <div>
-        <h2>로그인 후 이용 가능</h2>
+        <h4>로그인 후 이용 가능</h4>
         <a href="{% url 'account_login' %}"><button id="detail_tail_login_button">구글 로그인</button></a>
     </div>
-    
 </div>
-
 {% endif %}
-
+{% if user.is_authenticated %}
+<script src="{% static 'js/detail.js' %}"></script>
+{% endif %}
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
 <script>
     $(".like").click(function(){
         var pk = $(this).attr('name')
@@ -63,7 +55,6 @@
             dataType:"json",
             
             success: function(response){
-
                 if (response.like_count==null){
                     alert("로그인이 필요합니다.");
                     window.location.replace('/accounts/login/')
@@ -77,11 +68,9 @@
                         $('#like-icon').removeClass();
                         $('#like-icon').addClass('far fa-heart fa-3x');
                     }
-
                     $('#count-{{ data.id }}_like').html('좋아요 '+response.like_count+'개');
                 }
             },
-
             error: function(request, status, error){
                 alert("로그인이 필요합니다.")
 	            alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error); 
@@ -90,4 +79,3 @@
     })
  </script>
 {% endblock %}
-

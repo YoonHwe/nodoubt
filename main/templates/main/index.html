@@ -1,170 +1,320 @@
 {% extends 'base.html' %}
 {% load static %}
-<!---->
 {% block content %}
 <!-- 컨텐츠 1층 -->
 <div class="content_first">
-    <!-- 컨텐츠 1층의 윗쪽 -->
-    <div class="content_first_upper">
-        <!-- 윗쪽의 왼쪽 -->
-        <div class="content_first_upper_left">
-            <!-- <p>뭐부터 시작해야 하지...?</p>
-            <p>다른 사람들은<br>어떻게 시작할까...?</p> -->
+    <!-- 컨텐츠 1층의 왼쪽 -->
+    <div class="content_first_left">
+        <!-- 왼쪽의 위쪽 -->
+        <div class="content_first_left_upper">
+            <p>취업 준비에 확신이 없을 때</p>
+            <p>나의 첫 커리어 시작을 위한 컨텐츠</p>
         </div>
-        <!-- 윗쪽의 가운데 -->
-        <div class="content_first_upper_middle">
-            <div class="content_first_upper_middle_top">
-                <h1>정답 없는</h1>
-                <h1>&nbsp;취업 준비</h1>
-            </div>
-            <h1 class="content_first_upper_middle_h1">선배들은 어떻게 취업했을까?</h1>
-            <h3 class="content_first_upper_middle_h3_first">궁금한 선배들의 스펙 + 자소서 한 줄 POINT까지</h3>
-            <h3 class="content_first_upper_middle_h3_second">@ NODOUBT이 드리는 선배들의 취업 정보 @</h3>
-        </div>
-        <!-- 윗쪽의 오른쪽 -->
-        <div class="content_first_upper_right">
-            <!-- <p>노답? 정답이 없다</p>
-            <p>모든 가능성이 열려 있다<p> -->
+        <div class="content_first_left_lower">
+            <ul class="content_first_left_lower_label">NODOUBT의 컨텐츠 로드맵</ul>
+            <ul class="content_first_left_lower_option">
+                <li><a onclick="fnMove('popular')">&nbsp;O&nbsp;선배들의 취업정보&nbsp;&nbsp;<i class="fas fa-chevron-right"></i></a></li>
+                <li><a onclick="fnMove('issue')">&nbsp;O&nbsp;취업 준비가 처음일 때&nbsp;&nbsp;<i class="fas fa-chevron-right"></i></a></li>
+                <li><a onclick="fnMove('ready')">&nbsp;O&nbsp;나의 자소서가 불안하다면&nbsp;&nbsp;<i class="fas fa-chevron-right"></i></a></li>
+                <li><a onclick="fnMove('interview')">&nbsp;O&nbsp;면접에 대하여&nbsp;&nbsp;<i class="fas fa-chevron-right"></i></a></li>
+            </ul>
         </div>
     </div>
-    <!-- 컨텐츠 1층의 아랫쪽 -->
-    <div class="content_first_lower">
-        <div class="content_first_lower_content">
-            <i class="fas fa-user-graduate fa-3x"></i>
-            <h3>취업 정보방</h3>
-            <h5>선배들의 취업 정보를<br>제공해드립니다!</h5>
+    <!-- 컨텐츠 1층의 오른쪽 -->
+    <div class="content_first_right"></div>
+</div>
+<!-- 컨텐츠 2층 -->
+<div class="content_second">
+    <!--왼쪽-->
+    <div class="content_second_upper_left">
+        <img src="{% static 'images/second_right_image.jpg' %}">
+    </div>
+    <!--오른쪽-->
+    <div class="content_second_upper_right">
+        <h1>선배님들의 지원으로<br>만들어진 자료입니다.<br>정말 감사드립니다.</h1>
+        <br><br>
+        <p>&nbsp;후배에게 취업 정보 <strong id="modal_btn">제공하기</strong>&nbsp;<i id="content_second_upper_right_arrow" class="fas fa-long-arrow-alt-left"></i></p>
+    </div>
+    <!--제공하기 팝업-->
+    <div class="black_bg"></div>
+    <div class="content_second_left modal_wrap">
+        <div class="modal_close">
+            <a>X</a>
         </div>
-        <div class="content_first_lower_content">
-            <i class="far fa-newspaper fa-3x"></i>
-            <h3>취업 사이트</h3>
-            <h5>취업에 도움되는 사이트를<br>알려드립니다!</h5>                
-        </div>
-        <div class="content_first_lower_content">
-            <i class="fab fa-youtube fa-3x"></i>
-            <h3>취업 유튜브</h3>
-            <h5>취업 관련 전문 유튜브를<br>알려드립니다!</h5>
+        <div class="content_second_left_application">
+            <h2>자료 제공 신청서</h2>
+            <div class="content_second_left_application_submit">
+                {% if user.is_authenticated %}
+                <form id="content_second_left_application_submit_form" action = "{% url 'main:request_create' %}" method = "post">
+                    {% csrf_token %}
+                    <div class="content_second_select">
+                        <select class="content_second_selects" name="employ_type" id="employ_type">
+                            <option value="">채용 유형</option>
+                            <option value="정규">정규</option>
+                            <option value="인턴">인턴</option>
+                        </select>
+                    </div>
+                    <div class="content_second_select_input_one">
+                        회사명:&nbsp;<input class="underline content_second_inputs" type="text" id="company_title" name="company_name" placeholder="  동국전자" required>
+                    </div>
+                    <div class="content_second_select_input_two">
+                        학과:&nbsp;<input class="underline content_second_inputs" type="text" id="school_major" name="school_major" placeholder="  경영학부" required>
+                    </div>
+                    <div class="content_second_select_input_three">
+                        이름:&nbsp;<input class="underline content_second_inputs" type="text" id="name" name="name" placeholder="  허윤회" required>
+                    </div>
+                    <div class="content_second_select_input_four">
+                        이메일:&nbsp;<input class="underline content_second_inputs" type="text" id="email" name="email" placeholder="  abc@gmail.com" required>
+                    </div>
+                    <div class="content_second_select_input_five">
+                        전화번호:&nbsp;<input class="underline content_second_inputs" type="text" id="phone_num" name="phone_num" placeholder="  010-1234-5678" required>
+                    </div>
+                    <div class="content_second_submit_box">
+                        <input class="content_second_submit" type="submit" value="신청서 제출">
+                    </div>
+                </form>
+                {% else %}
+                <br><br><br><br>
+                <h4 id="content_second_left_application_submit_signup">구글 로그인 후 가능</h4>
+                <a href="{% url 'account_login' %}"><button>구글 로그인</button></a>
+                <br><br><br><br>
+                {% endif %}
+            </div>
+            <div class="content_second_left_application_inst">
+                <h5 id="content_second_left_application_inst_first">제출을 완료하시면</h5>
+                <h5 id="content_second_left_application_inst_second">빠른 시일 내에</h5>
+                <h5 id="content_second_left_application_inst_second">연락드리겠습니다.</h5>
+            </div>
         </div>
     </div>
 </div>
-<!---->
-<!--두번째 컨텐츠-->
-<div class="content_second">
-    <div class="content_second_upper">
-        <!--왼쪽-->
-        <div class="content_second_upper_left">
-            <h2>NODOUBT이 드리는 선배들의 취업 정보</h2>
-            <h1>저희 서비스에서는<br>이러한 정보를 얻을 수 있습니다.</h1>
-            <h4>&nbsp;&nbsp;•  선배의 스펙<br><br>&nbsp;&nbsp;•  선배의 자소서 한줄 POINT<br><br>&nbsp;&nbsp;•  NODOUBT의 간단한 요약</h4>
-        </div>
-        <!--오른쪽-->
-        <div class="content_second_upper_right">
-            <img src="{% static 'images/second_right_image.jpg' %}">
-        </div>
-    </div>
-    <div class="content_second_dtime">
-        <h1 class="content_second_dtime_h1">[10월 4주차] 신청 마감일: 11월 8일 00시</h1>
-        <h2 class="content_second_dtime_clock">--</h2>
-        <div class="content_second_dtime_input">
-            <input class="content_second_dtime_input_button" id="modal_btn" type="button" value="자료 신청하기">
-        </div>
-        <div class="black_bg"></div>
-        <div class="content_second_left modal_wrap">
-            <div class="modal_close">
-                <a>X</a>
-            </div>
-            <div class="content_second_left_application">
-                <h2>신청서</h2>
-                <div class="content_second_left_application_submit">
-                    {% if user.is_authenticated %}
-                    <form id="content_second_left_application_submit_form" action = "{% url 'main:request_create' %}" method = "post">
-                        {% csrf_token %}
-                        <div class="content_second_select">
-                            <select class="content_second_selects" name="employ_type" id="employ_type">
-                                <option value="">채용 유형</option>
-                                <option value="정규">정규</option>
-                                <option value="인턴">인턴</option>
-                                <option value="IPP">IPP</option>
-                            </select>
-                        </div>
-                        <div class="content_second_select_input">
-                            선호직무:&nbsp;<input class="underline content_second_name" type="text" id="job_type" name="job_type" placeholder="  마케팅" required>
-                        </div>
-                        <div class="content_second_select_input_two">
-                            이름:&nbsp;<input class="underline content_second_name" type="text" id="name" name="name" placeholder="  홍길동" required>
-                        </div>
-                        <div class="content_second_select_input_two">
-                            학번:&nbsp;<input class="underline content_second_school_number" type="text" id="school_number" name="school_number" placeholder="  2016111667" required>
-                        </div>
-                        <div class="content_second_select_input_three">
-                            이메일:&nbsp;<input class="underline content_second_email" type="text" id="email" name="email" placeholder="  abc@gmail.com" required>
-                        </div>
-                        <div class="content_second_submit_box">
-                            <input class="content_second_submit" type="submit" value="신청서 제출">
-                        </div>
-                    </form>
+<!-- 선배들의 취업 정보 -->
+<div class="content_popular">
+    <div class="content_popular_title">공개된 선배들의 취업정보</div>
+    <!-- 취업 정보 리스트 -->
+    <div class="content_popular_top">
+        {% for data in datas %}
+            <a class="content_popular_top_box" href ="{%url 'main:detail' data.id %}">
+                <div class="content_popular_top_contents">
+                    {% if data.image %}
+                    <img src="{{data.image.url}}">
+                    <p id="content_popular_top_contents_company">{{data.company}}</p>
+                    <span id="content_popular_top_contents_job">{{data.job}}</span>
                     {% else %}
-                    <br><br><br><br>
-                    <h4 id="content_second_left_application_submit_signup">구글 로그인 후 가능</h4>
-                    <a href="{% url 'account_login' %}"><button>구글 로그인</button></a>
-                    <br><br><br><br>
+                    <p id="content_popular_top_contents_company">{{data.company}}</p>                
+                    <p id="content_popular_top_contents_job">{{data.job}}</p>
                     {% endif %}
                 </div>
-                <div class="content_second_left_application_inst">
-                    <h5 id="content_second_left_application_inst_first">두 명의 선배 정보를</h5>
-                    <h5 id="content_second_left_application_inst_second">11월 8일 월요일까지</h5>
-                    <h5 id="content_second_left_application_inst_second">이메일로 보내드립니다!</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="content_popular">
-    <div class="content_popular_title">선배들의 취업 정보</div>
-    <div class="content_popular_subtitle1">⭐ 특별 공개 자료 ⭐</div>
-    <div class="content_popular_subtitle2">[도움이 되었다면 <i class="fas fa-heart" style="color: red;"></i>는 필수입니다]</div>
-    <div class="content_popular_top" >
-        {% for data in datas %}
-        <div class="content_popular_top_contents">
-            <p id="content_popular_top_contents_company">{{data.company}}</p>                
-            <p id="content_popular_top_contents_job">{{data.job}}</p>
-            <p id="content_popular_top_contents_year">{{data.employed_year}}</p>
-            <a href ="{%url 'main:detail' data.id %}">...열어보기</a>
-        </div>
+            </a>
         {%endfor%}
     </div>
-    <!-- <div style="text-align: center;">
-        <h2><a href="{% url 'main:new' %}">자소서 업로드</a></h2>
-    </div>     -->
 </div>
-
-<!-- <div class="content_popular">
-    <div class="content_popular_title">선배들의 취업 정보</div>
-    <div class="content_popular_top" >
-        <div class="content_popular_top_contents">
-            <p id="content_popular_top_contents_company">대한제분</p>                
-            <p id="content_popular_top_contents_job">영업직</p>
-            <p id="content_popular_top_contents_year">2021년도 입사</p>
-            <a href ="{%url 'main:sample1' %}">...열어보기</a>
-        </div>
-        <div class="content_popular_top_contents">
-            <p id="content_popular_top_contents_company">대한제분</p>                
-            <p id="content_popular_top_contents_job">영업직</p>
-            <p id="content_popular_top_contents_year">2021년도 입사</p>
-            <a href ="{%url 'main:sample1' %}">...열어보기</a>
-        </div>
-    </div>
-</div> -->
-
+<!-- 컨텐츠 3층 -->
 <div class="content_issue">
-    <div class="content_issue_title">취업에 도움되는 사이트</div>
-    <div class="content_issue_category">
-        <a class="content_issue_category_list category_list_first" onclick="paintList(1)"><h3><i class="fas fa-school fa-2x"></i><br>학교</h3></a>
-        <a class="content_issue_category_list category_list_second" onclick="paintList(2)"><h3><i class="fas fa-chalkboard-teacher fa-2x"></i><br>인강</h3></a>
-        <a class="content_issue_category_list category_list_third" onclick="paintList(3)"><h3><i class="fas fa-newspaper fa-2x"></i><br>뉴스레터</h3></a>
-        <a class="content_issue_category_list category_list_fourth" onclick="paintList(4)"><h3><i class="fas fa-users fa-2x"></i><br>커뮤니티</h3></a>
+    <!-- 직무 -->
+    <div id="content_issue_first_title">직무에 대한 정보 알아보기</div>
+    <!-- 3개 묶음(for PC) -->
+    <div class="content_issue_first">
+        <div id="content_issue_first">
+            <div id="content_issue_video">
+                <iframe id="content_issue_video_iframe" src="https://www.youtube.com/embed/Hg1gC8bq-6o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="content_issue_video_title">마케팅</p>
+                <p id="content_issue_video_subtitle">인싸담당자</p>
+            </div>
+            <div id="content_issue_video">
+                <iframe id="content_issue_video_iframe" src="https://www.youtube.com/embed/k9S7Tx-GSmQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="content_issue_video_title">영업관리</p>
+                <p id="content_issue_video_subtitle">인싸담당자</p>
+            </div>
+            <div id="content_issue_video">
+                <iframe id="content_issue_video_iframe" src="https://www.youtube.com/embed/I5BfKqOkp1Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="content_issue_video_title">재무</p>
+                <p id="content_issue_video_subtitle">취준진담</p>
+            </div>
+        </div>
+        <div id="content_issue_second">
+            <div id="content_issue_video">
+                <iframe id="content_issue_video_iframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="content_issue_video_title">서비스기획</p>
+                <p id="content_issue_video_subtitle">MOTINO 모티노</p>
+            </div>
+            <div id="content_issue_video">
+                <iframe id="content_issue_video_iframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="content_issue_video_title">전략기획</p>
+                <p id="content_issue_video_subtitle">채널횻횻</p>
+            </div>
+            <div id="content_issue_video">
+                <iframe id="content_issue_video_iframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="content_issue_video_title">인사총무</p>
+                <p id="content_issue_video_subtitle">HR인사잡썰</p>
+            </div>
+        </div>
+        <div id="content_issue_third">
+            <div id="content_issue_video">
+                <iframe id="content_issue_video_iframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="content_issue_video_title">공기업</p>
+                <p id="content_issue_video_subtitle">인싸담당자</p>
+            </div>
+            <div id="content_issue_video">
+                <iframe id="content_issue_video_iframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="content_issue_video_title">IT</p>
+                <p id="content_issue_video_subtitle">코딩알려주는누나</p>
+            </div>
+            <div id="content_issue_video">
+                <iframe id="content_issue_video_iframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="content_issue_video_title">직무 선정 가이드</p>
+                <p id="content_issue_video_subtitle">토게토게</p>
+            </div>
+        </div>
+        <p class="controls">
+            <span class="prev"> < </span>
+            <span class="present">? / ?</span>
+            <span class="next"> > </span>
+        </p>
     </div>
-    <div class="content_issue_list">
+    <!-- 2개 묶음(for tablet) -->
+    <div class="content_issue_tablet">
+        <div id="content_issue_tablet_first">
+            <div id="content_issue_tablet_video">
+                <iframe id="content_issue_tablet_video_iframe" src="https://www.youtube.com/embed/Hg1gC8bq-6o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="content_issue_tablet_video_title">마케팅</p>
+                <p id="content_issue_tablet_video_subtitle">인싸담당자</p>
+            </div>
+            <div id="content_issue_tablet_video">
+                <iframe id="content_issue_tablet_video_iframe" src="https://www.youtube.com/embed/k9S7Tx-GSmQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="content_issue_tablet_video_title">영업관리</p>
+                <p id="content_issue_tablet_video_subtitle">인싸담당자</p>
+            </div>
+        </div>
+        <div id="content_issue_tablet_second">
+            <div id="content_issue_tablet_video">
+                <iframe id="content_issue_tablet_video_iframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="content_issue_tablet_video_title">재무</p>
+                <p id="content_issue_tablet_video_subtitle">취준진담</p>
+            </div>
+            <div id="content_issue_tablet_video">
+                <iframe id="content_issue_tablet_video_iframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="content_issue_tablet_video_title">서비스기획</p>
+                <p id="content_issue_tablet_video_subtitle">MOTINO 모티노</p>
+            </div>
+        </div>
+        <div id="content_issue_tablet_third">
+            <div id="content_issue_tablet_video">
+                <iframe id="content_issue_tablet_video_iframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="content_issue_tablet_video_title">전략기획</p>
+                <p id="content_issue_tablet_video_subtitle">채널횻횻</p>
+            </div>
+            <div id="content_issue_tablet_video">
+                <iframe id="content_issue_tablet_video_iframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="content_issue_tablet_video_title">인사총무</p>
+                <p id="content_issue_tablet_video_subtitle">HR인사잡썰</p>
+            </div>
+        </div>
+        <div id="content_issue_tablet_fourth">
+            <div id="content_issue_tablet_video">
+                <iframe id="content_issue_tablet_video_iframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="content_issue_tablet_video_title">공기업</p>
+                <p id="content_issue_tablet_video_subtitle">인싸담당자</p>
+            </div>
+            <div id="content_issue_tablet_video">
+                <iframe id="content_issue_tablet_video_iframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="content_issue_tablet_video_title">IT</p>
+                <p id="content_issue_tablet_video_subtitle">코딩알려주는누나</p>
+            </div>
+        </div>
+        <div id="content_issue_tablet_fifth">
+            <div id="content_issue_tablet_video">
+                <iframe id="content_issue_tablet_video_iframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="content_issue_tablet_video_title">직무 선정 가이드</p>
+                <p id="content_issue_tablet_video_subtitle">토게토게</p>
+            </div>
+        </div>
+        <p id="tablet_controls">
+            <span id="tablet_prev"> < </span>
+            <span id="tablet_present">? / ?</span>
+            <span id="tablet_next"> > </span>
+        </p>
+    </div>
+    <!-- 1개 묶음(for mobile) -->
+    <div class="content_issue_mobile">
+        <div id="content_issue_mobile_first">
+            <div id="content_issue_mobile_video">
+                <iframe id="content_issue_mobile_video_iframe" src="https://www.youtube.com/embed/Hg1gC8bq-6o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="content_issue_mobile_video_title">마케팅</p>
+                <p id="content_issue_mobile_video_subtitle">인싸담당자</p>
+            </div>
+        </div>
+        <div id="content_issue_mobile_second">
+            <div id="content_issue_mobile_video">
+                <iframe id="content_issue_mobile_video_iframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="content_issue_mobile_video_title">영업관리</p>
+                <p id="content_issue_mobile_video_subtitle">인싸담당자</p>
+            </div>
+        </div>
+        <div id="content_issue_mobile_third">
+            <div id="content_issue_mobile_video">
+                <iframe id="content_issue_mobile_video_iframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="content_issue_mobile_video_title">재무</p>
+                <p id="content_issue_mobile_video_subtitle">취준진담</p>
+            </div>
+        </div>
+        <div id="content_issue_mobile_fourth">
+            <div id="content_issue_mobile_video">
+                <iframe id="content_issue_mobile_video_iframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="content_issue_mobile_video_title">서비스기획</p>
+                <p id="content_issue_mobile_video_subtitle">MOTINO 모티노</p>
+            </div>
+        </div>
+        <div id="content_issue_mobile_fifth">
+            <div id="content_issue_mobile_video">
+                <iframe id="content_issue_mobile_video_iframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="content_issue_mobile_video_title">전략기획</p>
+                <p id="content_issue_mobile_video_subtitle">채널횻횻</p>
+            </div>
+        </div>
+        <div id="content_issue_mobile_sixth">
+            <div id="content_issue_mobile_video">
+                <iframe id="content_issue_mobile_video_iframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="content_issue_mobile_video_title">인사총무</p>
+                <p id="content_issue_mobile_video_subtitle">HR인사잡썰</p>
+            </div>
+        </div>
+        <div id="content_issue_mobile_seventh">
+            <div id="content_issue_mobile_video">
+                <iframe id="content_issue_mobile_video_iframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="content_issue_mobile_video_title">공기업</p>
+                <p id="content_issue_mobile_video_subtitle">인싸담당자</p>
+            </div>
+        </div>
+        <div id="content_issue_mobile_eighth">
+            <div id="content_issue_mobile_video">
+                <iframe id="content_issue_mobile_video_iframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="content_issue_mobile_video_title">IT</p>
+                <p id="content_issue_mobile_video_subtitle">코딩알려주는누나</p>
+            </div>
+        </div>
+        <div id="content_issue_mobile_ninth">
+            <div id="content_issue_mobile_video">
+                <iframe id="content_issue_mobile_video_iframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="content_issue_mobile_video_title">직무 선정 가이드</p>
+                <p id="content_issue_mobile_video_subtitle">토게토게</p>
+            </div>
+        </div>
+        <p id="mobile_controls">
+            <span id="mobile_prev"> < </span>
+            <span id="mobile_present">? / ?</span>
+            <span id="mobile_next"> > </span>
+        </p>
+    </div>
+    <!-- 자격증 -->
+    <div class="content_issue_second_title">자격증 기초부터 천천히 준비하기</div>
+    <div class="content_issue_second_category">
+        <a class="content_issue_second_category_list category_list_first" onclick="paintList(1)"><h3>어학</h3><br></a>
+        <a class="content_issue_second_category_list category_list_second" onclick="paintList(2)"><h3>국가자격</h3><br></a>
+        <a class="content_issue_second_category_list category_list_third" onclick="paintList(3)"><h3>민간자격</h3><br></a>
+        <a class="content_issue_second_category_list category_list_fourth" onclick="paintList(4)"><h3>기타</h3><br></a>
+    </div>
+    <div class="content_issue_second_list">
         <div class="list_content list_first"></div>
         <div class="list_content list_second"></div>
         <div class="list_content list_third"></div>
@@ -173,49 +323,123 @@
         <div class="list_content list_sixth"></div>
     </div>
 </div>
-<!---->
+<!-- 컨텐츠 4-1층(자기소개서) -->
 <div class="content_ready">
-    <div class="content_ready_title">취업 준비를 영상과 함께</div>
+    <div class="content_ready_title">자기소개서 작성 시 참고할 것</div>
+    <div class="content_ready_subtitle">&nbsp;&nbsp;&nbsp;<i class="far fa-dot-circle"></i>&nbsp;동국대학교 관련 링크는 동국대학교 홈페이지 로그인 후 링크 재방문</div>
     <div class="content_ready_content">
         <div class="content_ready_content_contents">
-            <iframe src="https://www.youtube.com/embed/0tLTEg-ftvI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <h5 id="content_ready_content_contents_title">막막한 나의 취준에 그저 빛이 되어 줄 '취업준비 순서 5단계'</h5>
-            <h5 id="content_ready_content_contents_name">인사담당자</h6>
-            <h5 id="content_ready_content_contents_exp">취업 준비를 막 시작한 사람들에게 가이드를 제시해주는 영상</h5>
+            <a href = "https://ddp.dongguk.edu/site/educe/guestbook/list1?menuid=001005004002&searchselect=name_company&step1=i&step2=0&menuid=001005004002&currentpage=1" target="_blank">
+                <img src="{% static 'images/dongguk.png' %}">
+                <p id="content_ready_content_contents_title">주요 기업 정보</p>
+                <p id="content_ready_content_contents_name">동국대학교</p>
+                <p id="content_ready_content_contents_exp">기업 정보 조회 서비스</p>
+            </a>
         </div>
         <div class="content_ready_content_contents">
-            <iframe src="https://www.youtube.com/embed/eGv5EAMF8OQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <h5 id="content_ready_content_contents_title">면접관이 5초만 봐도 합격시키고 싶은 자소서 작성법 3가지</h5>
-            <h5 id="content_ready_content_contents_name">면접왕 이형</h5>
-            <h5 id="content_ready_content_contents_exp">경험과 성과를 작성할 때 좋은 예시가 될 수 있는 영상</h5>
+            <a href = "https://ddp.dongguk.edu/site/educe/play/playview?menuid=001005004001&play_goods=152&searchplayapt=4" target="_blank">
+                <img src="{% static 'images/dongguk.png' %}">
+                <p id="content_ready_content_contents_title">자기소개서 교육</p>
+                <p id="content_ready_content_contents_name">동국대학교(에듀스)</p>
+                <p id="content_ready_content_contents_exp">자기소개서 작성 인터넷 강의</p>
+            </a>
         </div>
         <div class="content_ready_content_contents">
-            <iframe src="https://www.youtube.com/embed/4XJ10opMdL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <h5 id="content_ready_content_contents_title">면접관이 절대 안믿는 vs. 합격시키는 지원자의 답변</h5>
-            <h5 id="content_ready_content_contents_name">면접왕 이형</h5>
-            <h5 id="content_ready_content_contents_exp">면접 상황극을 통해 여러 질문들에 대한 모범사례를 보여주는 영상</h5>
+            <a href = "https://ddp.dongguk.edu/site/educe/guestbook/list4?menuid=001005004003" target="_blank">
+                <img src="{% static 'images/dongguk.png' %}">
+                <p id="content_ready_content_contents_title">자기소개서 작성 TIP</p>
+                <p id="content_ready_content_contents_name">동국대학교</p>
+                <p id="content_ready_content_contents_exp">자기소개서 문항별 답변과 작성 TIP 제공</p>
+            </a>
         </div>
     </div>
-    <div class="content_ready_content mobile_no">
+    <div class="content_ready_content">
         <div class="content_ready_content_contents">
-            <iframe src="https://www.youtube.com/embed/ZqfwtKByb0c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <h5 id="content_ready_content_contents_title">오픽 세부 진단서 사기다!!!</h5>
-            <h5 id="content_ready_content_contents_name">오픽노잼</h5>
-            <h5 id="content_ready_content_contents_exp">오픽의 색다른 공부법을 제시하는 채널</h5>
+            <a href = "https://ddp.dongguk.edu/site/educe/guestbook/list1?menuid=001005004002&searchselect=name_company&step1=i&step2=0&menuid=001005004002&currentpage=1" target="_blank">
+                <img src="{% static 'images/dongguk.png' %}">
+                <p id="content_ready_content_contents_title">합격자 자소서 공유</p>
+                <p id="content_ready_content_contents_name">동국대학교(에듀스)</p>
+                <p id="content_ready_content_contents_exp">기업별 자소서 문항에 맞는 합격자의 자소서를 볼 수 있음</p>
+            </a>
         </div>
         <div class="content_ready_content_contents">
-            <iframe src="https://www.youtube.com/embed/UIYGNvEVPI4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <h5 id="content_ready_content_contents_title">[취준진담 Ep.01] 역지사지 면접 | SBS 스페셜</h5>
-            <h5 id="content_ready_content_contents_name">달리 [SBS 교양 공식채널]</h5>
-            <h5 id="content_ready_content_contents_exp">실제 취준생들과 기업 면접관이 역할을 바꿔 면접을 진행하는 실험을 통해 취준생들의 고충을 보여주는 영상</h5>
+            <a href = "https://ddp.dongguk.edu/site/counsel/coal/jobReservlist?menuid=001004012&counseltype=9" target="_blank">
+                <img src="{% static 'images/dongguk.png' %}">
+                <p id="content_ready_content_contents_title">글쓰기 상담</p>
+                <p id="content_ready_content_contents_name">동국대학교</p>
+                <p id="content_ready_content_contents_exp">학교에서 제공하는 학업 관련 보고서와 에세이, 취업을 위한 자기소개서 상담 서비스</p>
+            </a>
         </div>
         <div class="content_ready_content_contents">
-            <iframe src="https://www.youtube.com/embed/mvM69ilcxas" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <h5 id="content_ready_content_contents_title">공기업 지원 꿀팁! 공기업 지원하는데 이 영상을 안보고 한다구?</h5>
-            <h5 id="content_ready_content_contents_name">인싸 담당자</h5>
-            <h5 id="content_ready_content_contents_exp">공기업 취업준비를 시작한 사람들에게 가이드를 제공해주는 영상</h5>
+            <a href = "https://brunch.co.kr/@kindoublej#articles" target="_blank">
+                <img src="{% static 'images/brunch.png' %}">
+                <p id="content_ready_content_contents_title">하리하리</p>
+                <p id="content_ready_content_contents_name">브런치(블로그)</p>
+                <p id="content_ready_content_contents_exp">기업별 자소서 문항의 예시를 작성하여 샘플로 제공</p>
+            </a>
         </div>
     </div>
 </div>
-
+<!-- 컨텐츠 4-2층(면접) -->
+<div class="content_interview">
+    <div class="content_interview_title">면접에 필요한 과정</div>
+    <div class="content_interview_subtitle">&nbsp;&nbsp;&nbsp;<i class="far fa-dot-circle"></i>&nbsp;동국대학교 관련 링크는 동국대학교 홈페이지 로그인 후 링크 재방문</div>
+    <div class="content_interview_content">
+        <div class="content_interview_content_contents">
+            <a href = "https://ddp.dongguk.edu/site/educe/guestbook/list6?menuid=001005006002#none" target="_blank">
+                <img src="{% static 'images/dongguk.png' %}">
+                <p id="content_interview_content_contents_title">면접 가이드</p>
+                <p id="content_interview_content_contents_name">동국대학교</p>
+                <p id="content_interview_content_contents_exp">기업별 면접에 대한 구체적인 정보 제공</p>
+            </a>
+        </div>
+        <div class="content_interview_content_contents">
+            <a href = "https://ddp.dongguk.edu/site/educe/information/list4?menuid=001005006003" target="_blank">
+                <img src="{% static 'images/dongguk.png' %}">
+                <p id="content_interview_content_contents_title">면접 후기</p>
+                <p id="content_interview_content_contents_name">동국대학교</p>
+                <p id="content_interview_content_contents_exp">기업 면접을 경험한 학생들의 정보 공유</p>
+            </a>
+        </div>
+        <div class="content_interview_content_contents">
+            <a href="https://www.youtube.com/watch?v=N_sSVyOCdXA" target="_blank">
+                <img src="{% static 'images/youtube.png' %}">
+                <p id="content_interview_content_contents_title">1분 자기소개는 이렇게..</p>
+                <p id="content_interview_content_contents_name">면접왕이형</p>
+                <p id="content_interview_content_contents_exp">면접시 1분 자기소개 말하기 방법에 대한 팁을 제공</p>
+            </a>
+        </div>
+    </div>
+    <div class="content_interview_content">
+        <div class="content_interview_content_contents">
+            <a href="https://www.youtube.com/watch?v=qAXAdqpKL6s" target="_blank">
+                <img src="{% static 'images/youtube.png' %}">
+                <p id="content_interview_content_contents_title">준비 안하면 면접 광탈하는..</p>
+                <p id="content_interview_content_contents_name">면접왕이형</p>
+                <p id="content_interview_content_contents_exp">면접 시 가장 많이 질문하는 중요한 질문 5개에 대한 설명, 예시, 팁을 제공</p>
+            </a>
+        </div>
+        <div class="content_interview_content_contents">
+            <a href="https://www.youtube.com/watch?v=AOwZ-iEXDko" target="_blank">
+                <img src="{% static 'images/youtube.png' %}">
+                <p id="content_interview_content_contents_title">면접 질문 유형만 알면..</p>
+                <p id="content_interview_content_contents_name">인싸담당자</p>
+                <p id="content_interview_content_contents_exp">면접 질문 유형에 대해 정리하고 설명. 대비하는 방법을 제시</p>
+            </a>
+        </div>
+        <div class="content_interview_content_contents">
+            <a href="https://www.youtube.com/watch?v=Qyk-h7e34uI" target="_blank">
+                <img src="{% static 'images/youtube.png' %}">
+                <p id="content_interview_content_contents_title">前 삼성 면접관의 모의면접</p>
+                <p id="content_interview_content_contents_name">취업사이다</p>
+                <p id="content_interview_content_contents_exp">전 삼성 면접관과 함께 따라하는 모의 면접 훈련 동영상</p>
+            </a>
+        </div>
+    </div>
+</div>
+<script src="{% static 'js/app.js' %}"></script>
+{% if user.is_authenticated %}
+<script src="{% static 'js/request.js' %}"></script>
+{% endif %}
+<script src="{% static 'js/carousel.js' %}"></script>
 {% endblock %}
