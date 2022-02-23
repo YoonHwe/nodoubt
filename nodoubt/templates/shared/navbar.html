@@ -13,7 +13,7 @@
                     {% csrf_token %}
                     <a id="nav_logout_anchor">로그아웃</a>
                 </form>
-                <a class="dropdown-content_mycontent" href="{% url 'main:career' %}">내 컨텐츠</a>
+                <!-- <a class="dropdown-content_mycontent" href="{% url 'main:career' %}">내 컨텐츠</a> -->
                 <a class="dropdown-content_mypage" href="{% url 'main:board' %}">자유게시판</a>
                 {% else %}
                 <a href="{% url 'account_login' %}">로그인</a>
