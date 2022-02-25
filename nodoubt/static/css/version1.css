@@ -95,18 +95,14 @@ a{
     margin-top: 10px;
 }
 .content_first_left_lower_option li{
-    opacity: .5;
     list-style: none;
 }
-.content_first_left_lower_option li:hover{
-    opacity: 1;
-}
+
 .content_first_left_lower_option a{
+    display: inline-block;
     font-size: 20px;
     color: black;
-    opacity: .5;
-    display: flex; 
-    align-items: center;
+    opacity: .3;
 }
 .content_first_left_lower_option a:hover{
     opacity: 1;
@@ -363,7 +359,6 @@ a{
 .content_issue{
     padding: 0% 12%;
     background-color: rgba(155, 155, 155, 0.1);
-    /* background-color: rgba(130, 168, 212, 0.1); */
 }
 #content_issue_second, #content_issue_third, #content_issue_tablet_second, #content_issue_tablet_third,#content_issue_tablet_fourth, #content_issue_tablet_fifth, #content_issue_mobile_second, #content_issue_mobile_third, #content_issue_mobile_fourth,#content_issue_mobile_fifth, #content_issue_mobile_sixth, #content_issue_mobile_seventh, #content_issue_mobile_eighth, #content_issue_mobile_ninth{
     display: none;
@@ -536,6 +531,7 @@ a{
     margin: 0px 20px;
     padding: 2px;
     font-weight: 400;
+    font-size: 24px;/**/
 }
 .content_issue_second_category_list h3:hover{
     color: orange;
@@ -556,12 +552,15 @@ a{
 .list_content_border{
     border-top: 1px solid rgb(146, 140, 140);
 }
+.list_content_link h2{
+    font-size: 20px;/**/
+}
 .list_content_link:hover{
     color: orange;
 }
 #list_content_link_tag{
     border: 1px solid black;
-    font-size: 16px;
+    font-size: 12px;/**/
     padding: 0px 4px;
     border-radius: 10px;
     font-weight: 400;
@@ -586,6 +585,8 @@ a{
 }
 .content_ready_subtitle{
     font-size: 8px;
+    margin-top: -16px;
+    margin-bottom: 4px;
 }
 .content_ready_content{
     display:flex;
@@ -647,6 +648,8 @@ a{
 }
 .content_interview_subtitle{
     font-size: 8px;
+    margin-top: -16px;
+    margin-bottom: 4px;
 }
 .content_interview_content{
     display:flex;
@@ -704,7 +707,6 @@ a{
     margin: 0% 4%;
     padding: 2% 12%;
     border-top: 3px solid black;
-    font-family: 'Noto Sans KR', sans-serif;
 }
 .footer_letter{
     width: 70%;
@@ -715,15 +717,15 @@ a{
 }
 #footer_content{
     font-size: 28px;
-    font-weight: 700;
     margin-top: -18px;
+    font-weight: 400;
 }
 #footer_content:first-child{
     margin-top: 0px;
 }
 #footer_link{
     width: 30%;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 /*letter*/
@@ -900,10 +902,11 @@ a{
 /*마이페이지*/
 .mypage{
     background-color: rgba(130, 168, 212, 0.1);
-    padding: 130px 0px;
+    padding: 80px 0px;
     margin: 0px auto;
     animation: goOpacityUp 2s ease-in-out;
     font-family: 'Noto Sans KR', sans-serif;
+    min-height: 60vh;
 }
 #mypage_first_title{
     text-align: center;
@@ -934,6 +937,7 @@ a{
 #board{
     padding: 4% 12%;
     background-color: rgba(155, 155, 155, 0.1);
+    min-height: 60vh;
 }
 #board_title{
     font-family: 'Noto Sans KR', sans-serif;
