@@ -94,18 +94,13 @@ a{
     margin-top: -10px;
 }
 .content_first_left_lower_option li{
-    opacity: .5;
     list-style: none;
 }
-.content_first_left_lower_option li:hover{
-    opacity: 1;
-}
 .content_first_left_lower_option a{
+    display: inline-block;
     font-size: 16px;
     color: black;
-    opacity: .5;
-    display: flex; 
-    align-items: center;
+    opacity: .3;
 }
 .content_first_left_lower_option a:hover{
     opacity: 1;
@@ -350,12 +345,12 @@ a{
     margin: 20px 0px 8px 0px;
 }
 #content_popular_top_contents_company{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     margin: 4px 0px 4px 0px;
 }
 #content_popular_top_contents_job{
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     margin: 4px 0px;
 }
@@ -453,6 +448,7 @@ a{
     margin: 0px 20px;
     padding: 2px;
     font-weight: 400;
+    font-size: 20px;
 }
 .content_issue_second_category_list h3:hover{
     color: orange;
@@ -474,17 +470,14 @@ a{
     border-top: 1px solid rgb(146, 140, 140);
 }
 .list_content h2{
-    font-size: 22px;
-}
-.list_content h3{
-    font-size: 14px;
+    font-size: 16px;
 }
 .list_content_link:hover{
     color: orange;
 }
 #list_content_link_tag{
     border: 1px solid black;
-    font-size: 14px;
+    font-size: 8px;
     padding: 0px 4px;
     border-radius: 10px;
     font-weight: 400;
@@ -510,6 +503,8 @@ a{
 }
 .content_ready_subtitle{
     font-size: 8px;
+    margin-top: -16px;
+    margin-bottom: 4px;
 }
 .content_ready_content{
     display:flex;
@@ -573,6 +568,8 @@ a{
 }
 .content_interview_subtitle{
     font-size: 8px;
+    margin-top: -16px;
+    margin-bottom: 4px;
 }
 .content_interview_content{
     display:flex;
@@ -641,15 +638,15 @@ a{
 }
 #footer_content{
     font-size: 20px;
-    font-weight: 700;
     margin-top: -14px;
+    font-weight: 400;
 }
 #footer_content:first-child{
     margin-top: 0px;
 }
 #footer_link{
     width: 30%;
-    padding-top: 14px;
+    padding-top: 19px;
 }
 
 /*letter*/
@@ -822,10 +819,11 @@ a{
 /* 마이페이지 */
 .mypage{
     background-color: rgba(130, 168, 212, 0.1);
-    padding: 120px 0px;
+    padding: 60px 0px;
     margin: 0px auto;
     animation: goOpacityUp 2s ease-in-out;
     font-family: 'Noto Sans KR', sans-serif;
+    min-height: 60vh;
 }
 #mypage_first_title{
     text-align: center;
@@ -857,6 +855,7 @@ a{
 #board{
     padding: 4% 10%;
     background-color: rgba(155, 155, 155, 0.1);
+    min-height: 60vh;
 }
 #board_title{
     font-size: 28px;

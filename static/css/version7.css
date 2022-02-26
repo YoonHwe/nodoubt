@@ -106,10 +106,10 @@ a{
     opacity: 1;
 }
 .content_first_left_lower_option a{
+    display: inline-block;
     font-size: 12px;
-    opacity: .5;
-    display: flex; 
-    align-items: center;
+    color: black;
+    opacity: .3;
 }
 .content_first_left_lower_option a:hover{
     opacity: 1;
@@ -348,12 +348,12 @@ a{
     margin: 14px 0px 4px 0px;
 }
 #content_popular_top_contents_company{
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     margin: 4px 0px 0px 0px;
 }
 #content_popular_top_contents_job{
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 400;
 }
 .content_popular_top_contents:hover{
@@ -452,6 +452,7 @@ a{
     margin: 0px 20px;
     padding: 2px;
     font-weight: 400;
+    font-size: 14px;
 }
 .content_issue_second_category_list h3:hover{
     color: orange;
@@ -473,17 +474,14 @@ a{
     border-top: 1px solid rgb(146, 140, 140);
 }
 .list_content h2{
-    font-size: 12px;
-}
-.list_content h3{
-    font-size: 5px;
+    font-size: 14px;
 }
 .list_content_link:hover{
     color: orange;
 }
 #list_content_link_tag{
     border: 1px solid black;
-    font-size: 5px;
+    font-size: 4px;
     padding: 0px 2px;
     border-radius: 10px;
     font-weight: 400;
@@ -648,7 +646,6 @@ a{
 }
 #footer_content{
     font-size: 6px;
-    border: 1px solid black;
     margin-top: -6px;
 }
 
@@ -831,10 +828,11 @@ a{
 /*마이페이지*/
 .mypage{
     background-color: rgba(130, 168, 212, 0.1);
-    padding: 40px 0px;
+    padding: 20px 0px;
     margin: 0px auto;
     animation: goOpacityUp 2s ease-in-out;
     font-family: 'Noto Sans KR', sans-serif;
+    min-height: 60vh;
 }
 #mypage_first_title{
     text-align: center;
@@ -872,6 +870,7 @@ a{
 #board{
     padding: 4% 4%;
     background-color: rgba(155, 155, 155, 0.1);
+    min-height: 60vh;
 }
 #board_title{
     font-size: 22px;
