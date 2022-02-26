@@ -348,12 +348,12 @@ a{
     margin: 14px 0px 4px 0px;
 }
 #content_popular_top_contents_company{
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     margin: 4px 0px 0px 0px;
 }
 #content_popular_top_contents_job{
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 400;
 }
 .content_popular_top_contents:hover{
