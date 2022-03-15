@@ -30,4 +30,5 @@ urlpatterns = [
     path('sample/',views.sample, name="sample"),
     path('board_like_toggle/<int:post_id>/', views.board_like_toggle, name="board_like_toggle"),
     path('board_notice/',views.board_notice, name="board_notice"),
+    path('disallowed_useragent/',views.disallowed_useragent, name="disallowed_useragent"),
 ]

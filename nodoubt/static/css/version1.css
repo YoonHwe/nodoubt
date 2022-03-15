@@ -830,7 +830,7 @@ a{
     background-color: rgba(130, 168, 212, 0.1);
     padding: 60px 0px;
     width: 40vw;
-    height: 40vh;
+    min-height: 40vh;
     margin:auto;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -838,6 +838,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     animation: goOpacityUp 2s ease-in-out;
 }
 .login_socialaccount{

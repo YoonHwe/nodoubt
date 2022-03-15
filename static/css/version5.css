@@ -742,7 +742,7 @@ a{
     background-color: rgba(130, 168, 212, 0.1);
     padding: 40px 0px;
     width: 60vw;
-    height: 40vh;
+    min-height: 40vh;
     margin:auto;
     margin-top: 50px;
     margin-bottom: 50px;

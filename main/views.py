@@ -150,6 +150,9 @@ def sample(request):
 def board_notice(request):
     return render(request, 'main/board_notice.html')
 
+def disallowed_useragent(request):
+    return render(request, 'error/403.html')
+
 @login_required
 @require_POST
 
