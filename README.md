@@ -7,19 +7,30 @@
 
 ## 프로젝트 소개
 <div>
-    <h3>나와 같은 학교 같은 과 선배들은 어디로 어떻게 취업했을까?</h3>
+    <p style="font-size: 18px;">나와 같은 학교 같은 과 선배들은 어디로 어떻게 취업했을까?</p>
     <p>진로의 방향성을 잡지 못하거나 원하는 진로를 위해 어떠한 노력을 해야 하는지 등...</p>
     <p>취업 준비 과정에서 어려움을 느끼는 수 많은 학우들을 보았습니다.</p>
     <p>'같은 학교 같은 과'라는 유사성을 가진, 선배들의 취업 과정을 제공함으로써</p>
     <p>조금이나마 취업 준비에 도움을 얻을 수 있는 서비스를 만들고자 하였습니다.</p>
 </div>
 <div style="display: flex;">
-    <img src="readme_imgs/2022-1.jpeg" style="width: 20%; height: 20%;">
-    <img src="readme_imgs/2022-2.jpeg" style="width: 20%; height: 20%;">
-    <img src="readme_imgs/2022-3.jpeg" style="width: 20%; height: 20%;">
-    <img src="readme_imgs/2022-4.jpeg" style="width: 20%; height: 20%;">
+    <img src="readme_imgs/2022-1.jpeg" style="width: 23%; height: 23%;">
+    <img src="readme_imgs/2022-2.jpeg" style="width: 23%; height: 23%;">
+    <img src="readme_imgs/2022-3.jpeg" style="width: 23%; height: 23%;">
+    <img src="readme_imgs/2022-4.jpeg" style="width: 23%; height: 23%;">
 </div>
-<br><br>
+
+## 기술 스택
+|    HTML    |    CSS     |    JS    |  Django   |
+| :--------: | :--------: | :------: |  :-----:  |
+|  ![html]   |  ![css]    |  ![js]   | ![django] |
+[html]: /readme_imgs/tech_stack/html.svg
+[css]: /readme_imgs/tech_stack/css.svg
+[js]: /readme_imgs/tech_stack/javascript.svg
+[django]: /readme_imgs/tech_stack/django.svg
+
+## 구현 기능
+
 <h5>히스토리</h5>
 2021/8/24(화) -> 베타 버전 배포<br>
 2021/8/30(월) -> 정식 버전 배포<br>
