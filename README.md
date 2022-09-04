@@ -23,7 +23,7 @@
 ## 기술 스택
 |    HTML    |    CSS     |    JS    |  Django   |
 | :--------: | :--------: | :------: |  :-----:  |
-|  <svg src="readme_imgs/tech_stack/html.svg"></svg>   |  <svg src="readme_imgs/tech_stack/css.svg"></svg>    |  <svg src="readme_imgs/tech_stack/javascript.svg"></svg>   | <svg src="readme_imgs/tech_stack/django.svg"></svg> |
+|  <img src="readme_imgs/tech_stack/html.svg"></img>   |  <img src="readme_imgs/tech_stack/css.svg"></img>    |  <img src="readme_imgs/tech_stack/javascript.svg"></img>   | <img src="readme_imgs/tech_stack/django.svg"></img> |
 <!-- [html]: readme_imgs/tech_stack/html.svg
 [css]: readme_imgs/tech_stack/css.svg
 [js]: readme_imgs/tech_stack/javascript.svg
