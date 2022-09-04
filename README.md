@@ -52,6 +52,11 @@
 <img src="readme_imgs/function_col/function4_link.gif" style="width: 50%">
 <p>취업 준비에 유용한 영상 또는 자격증 사이트 등에 대한 링크를 제공</p>
 
+### 기능 5 [소셜 로그인 및 게시판 작성]
+<img src="readme_imgs/function_col/function5_post.gif" style="width: 50%">
+<p>구글 계정을 통한 소셜 로그인 기능</p>
+<p>게시판 작성, 수정, 삭제 기능</p>
+
 ## History
 2021/8/24(화) -> 베타 버전 배포<br>
 2021/8/30(월) -> 정식 버전 배포<br>
