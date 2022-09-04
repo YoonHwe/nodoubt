@@ -32,16 +32,25 @@
 ## 구현 기능
 
 ### 기능 1 [카테고리 이동]
-<img src="readme_imgs/function1_move.gif" style="width: 50%">
+<img src="readme_imgs/function_col/function1_move.gif" style="width: 50%">
 <p>각 카테고리를 클릭할 시, 해당 카테고리의 내용으로 이동</p>
 
 ### 기능 2 [취업 정보 제공하기]
 <div style="display: flex;">
-  <img src="readme_imgs/function2_form.gif" style="width: 45%">
-  <img src="readme_imgs/function2_form.png" style="width: 45%">
+  <img src="readme_imgs/function_col/function2_form.gif" style="width: 45%">
+  <img src="readme_imgs/function_col/function2_form.png" style="width: 45%">
 </div>
 <p>후배들에게 취업 정보를 제공하기 위해, form 제출</p>
 <p>제출된 form 확인 후, 취업 정보 내용 수집 위해 interview 시행</p>
+
+### 기능 3 [취업 정보 보기]
+<img src="readme_imgs/function_col/function3_view.gif" style="width: 50%">
+<p>메인 화면에 등록된 취업 정보 클릭 후, NODOUBT 자체 제작 컨텐츠 보기</p>
+<p>좋아요 기능 탑재</p>
+
+### 기능 4 [취업 관련 사이트]
+<img src="readme_imgs/function_col/function4_link.gif" style="width: 50%">
+<p>취업 준비에 유용한 영상 또는 자격증 사이트 등에 대한 링크를 제공</p>
 
 ## History
 2021/8/24(화) -> 베타 버전 배포<br>
