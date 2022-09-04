@@ -31,7 +31,19 @@
 
 ## 구현 기능
 
-<h5>히스토리</h5>
+### 기능 1 [카테고리 이동]
+<img src="readme_imgs/function1_move.gif" style="width: 50%">
+<p>각 카테고리를 클릭할 시, 해당 카테고리의 내용으로 이동</p>
+
+### 기능 2 [취업 정보 제공하기]
+<div style="display: flex;">
+  <img src="readme_imgs/function2_form.gif" style="width: 45%">
+  <img src="readme_imgs/function2_form.png" style="width: 45%">
+</div>
+<p>후배들에게 취업 정보를 제공하기 위해, form 제출</p>
+<p>제출된 form 확인 후, 취업 정보 내용 수집 위해 interview 시행</p>
+
+## History
 2021/8/24(화) -> 베타 버전 배포<br>
 2021/8/30(월) -> 정식 버전 배포<br>
 2021/9/6(월) -> [NODOUBT] 9월 2주차 자료 전달 완료 & 사이트 운영 방식 변경(공개형)<br>
