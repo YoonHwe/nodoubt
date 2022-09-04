@@ -23,11 +23,11 @@
 ## 기술 스택
 |    HTML    |    CSS     |    JS    |  Django   |
 | :--------: | :--------: | :------: |  :-----:  |
-|  ![html]   |  ![css]    |  ![js]   | ![django] |
-[html]: /readme_imgs/tech_stack/html.svg
-[css]: /readme_imgs/tech_stack/css.svg
-[js]: /readme_imgs/tech_stack/javascript.svg
-[django]: /readme_imgs/tech_stack/django.svg
+|  <svg src="readme_imgs/tech_stack/html.svg"></svg>   |  <svg src="readme_imgs/tech_stack/css.svg"></svg>    |  <svg src="readme_imgs/tech_stack/javascript.svg"></svg>   | <svg src="readme_imgs/tech_stack/django.svg"></svg> |
+<!-- [html]: readme_imgs/tech_stack/html.svg
+[css]: readme_imgs/tech_stack/css.svg
+[js]: readme_imgs/tech_stack/javascript.svg
+[django]: readme_imgs/tech_stack/django.svg -->
 
 ## 구현 기능
 
